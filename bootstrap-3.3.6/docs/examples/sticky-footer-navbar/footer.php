@@ -7,7 +7,6 @@
  * @since Aerotur 1.0
  */
  ?>
-
  <div class="container-fluid">
    <div class=row>
      <div class="footer-four" id="footer-four">
