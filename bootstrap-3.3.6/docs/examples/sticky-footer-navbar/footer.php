@@ -6,42 +6,52 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
+    $rodape = get_rodape();
  ?>
- 
+ <section style="<?php if($grupo_aerotur['ativar_footer'] == false){echo 'display:none;';} ?>" id="footer">
+   <div id="footer"></div>
  <div class="container-fluid">
    <div class=row>
      <div class="footer-four" id="footer-four">
        <div class="container">
          <div class="col-xs-2 col-sm-2 col-md-2">
-           <h4>EMPRESA</h4>
+           <h4><?= $rodape['texto_topico_rodape_horizontal1']?></h4>
            <ul class="list-unstyled">
-             <a href="#"><li>50 anos</li></a>
-             <a href="#"><li>Institucional</li></a>
-             <a href="#"><li>Equipe</li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical2']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical3']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical4']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical5']?></li></a>
            </ul>
          </div>
          <div class="col-xs-2 col-sm-2 col-md-2">
-           <h4>PACOTES</h4>
+           <h4><?= $rodape['texto_topico_rodape_horizontal2']?></h4>
            <ul class="list-unstyled">
-             <a href="#"><li>Nacionais</li></a>
-             <a href="#"><li>Internacionais</li></a>
-             <a href="#"><li>Cruzeiro</li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical6']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical7']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical8']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical9']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical10']?></li></a>
            </ul>
          </div>
          <div class="col-xs-2 col-sm-2 col-md-2">
-           <h4>BLOG</h4>
+           <h4><?= $rodape['texto_topico_rodape_horizontal3']?></h4>
            <ul class="list-unstyled">
-             <a href="#"><li>oMde</li></a>
-             <a href="#"><li>Aerotur Disney</li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical11']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical12']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical13']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical14']?></li></a>
+             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical15']?></li></a>
            </ul>
          </div>
          <div class="col-xs-3 col-sm-3 col-md-3">
-           <h4>LOJAS</h4>
+           <h4><?= $rodape['texto_topico_rodape_horizontal4']?></h4>
              <ul class="list-unstyled">
-               <a href="#"><li>Matriz</li></a>
-               <a href="#"><li>Shopping Cidade Jardim</li></a>
-               <a href="#"><li>Aeroporto Aluízio Alves</li></a>
-               <a href="#"><li>Recife</li></a>
+               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical16']?></li></a>
+               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical17']?></li></a>
+               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical18']?></li></a>
+               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical19']?></li></a>
+               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical20']?></li></a>
              </ul>
          </div>
          <div class="col-xs-3 col-sm-3 col-md-3">
@@ -56,7 +66,7 @@
      </div> <!-- FIM footer-four -->
    </div> <!-- FIM row -->
  </div> <!-- FIM container-fluid -->
-
+</section>
  <div class="container-fluid">
    <div class="row">
      <div class="footer-five">

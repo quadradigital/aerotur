@@ -6,8 +6,8 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-
-get_header(); ?>
+     get_header();
+?>
   <body>
 
     <!-- Fixed navbar -->
@@ -649,42 +649,9 @@ get_header(); ?>
           </div> <!-- FIM container -->
         </div> <!-- FIM row -->
       </div> <!-- FIM container-fluid -->
-
-      <div class=container-fluid id="bg-footer-two">
-        <div class="row">
-          <div class="container">
-            <div class="footer-two" id="footer-two">
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <p class="">GRUPO AEROTUR</p>
-              </div>
-            </div> <!-- FIM footer-two -->
-          </div>
-        </div> <!-- FIM row -->
-      </div> <!-- FIM container-fluid -->
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="footer-three">
-            <div class="container">
-              <div class="col-xs-2 col-sm-2 col-md-2">
-              <a href="#"><img src="<?php bloginfo('template_url') ?>/imgs/aeroviag.png" height="54" width="181" class="img-responsive center-block"></a>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
-                <a href="#"><img src="<?php bloginfo('template_url') ?>/imgs/aerocorp.png" height="54" width="181" class="img-responsive center-block"></a>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
-                <a href="#"><img src="<?php bloginfo('template_url') ?>/imgs/aeroteen.png" height="54" width="181" class="img-responsive center-block"></a>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
-                <a href="#"><img src="<?php bloginfo('template_url') ?>/imgs/aeroserv.png" height="54" width="181" class="img-responsive center-block"></a>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
-                <a href="#"><img src="<?php bloginfo('template_url') ?>/imgs/aeroviag.png" height="54" width="181" class="img-responsive center-block"></a>
-              </div>
-            </div>
-          </div> <!-- FIM footer-three -->
-        </div> <!-- FIM row -->
-      </div> <!-- FIM container-fluid -->
+      <!--start GRUPO AEROTUR -->
+      <?php include('grupo-aerotur.php') ?>
+      <!--end GRUPO AEROTUR -->
 <!--start  FOOTER  -->
 <?php get_footer(); ?>
 <!--end  FOOTER  -->
