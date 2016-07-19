@@ -23,7 +23,7 @@
 
      <!-- CONFIGURAÇÃO DO MAPS -->
 
-      <!--<script async defer
+      <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF88DKo2KBtZe2VK30w1b9GEefAxuYa2Q&signed_in=true&callback=initMap"></script>
 
     <script>
@@ -45,7 +45,7 @@
        });
      }
 
-   </script>-->
+   </script>
 
      <!-- EOF~ CONFIGURAÇÃO DO MAPS -->
 
