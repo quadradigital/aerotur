@@ -8,7 +8,6 @@
  */
     $rodape = get_rodape();
  ?>
-
  <section style="<?php if($rodape['ativar_footer'] == false){echo 'display:none;';} ?>" id="footer">
    <div id="footer"></div>
  <div class="container-fluid">
