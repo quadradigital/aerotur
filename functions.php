@@ -111,4 +111,129 @@ function get_redes_sociais(){
 
   return $arr;
 }
+
+function get_razoes(){
+  $page = get_page_by_title('razões');
+  $id = $page->ID;
+  $arr['ativar_razao'] = get_field('ativar_razao', $id);
+  $arr['banner1'] = get_field('banner1', $id);
+  $arr['banner2'] = get_field('banner2', $id);
+  $arr['banner3'] = get_field('banner3', $id);
+
+  return $arr;
+}
+
+function get_newsletter(){
+  $page = get_page_by_title('newsletter');
+  $id = $page->ID;
+  $arr['ativar_news'] = get_field('ativar_news', $id);
+
+  return $arr;
+}
+
+function get_recomendacoes(){
+  $page = get_page_by_title('recomendações');
+  $id = $page->ID;
+  $arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
+
+  return $arr;
+}
+
+function get_blog(){
+  $page = get_page_by_title('blog');
+  $id = $page->ID;
+  $arr['ativar_blog'] = get_field('ativar_blog', $id);
+
+  return $arr;
+}
+
+function get_promocao(){
+  $page = get_page_by_title('promoções');
+  $id = $page->ID;
+  $arr['ativar_promocao'] = get_field('ativar_promocao', $id);
+
+  return $arr;
+}
+
+function get_ofertas(){
+  $page = get_page_by_title('ofertas de passagens');
+  $id = $page->ID;
+  $arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
+
+  return $arr;
+}
+
+function get_monte_sua_viagem(){
+  $page = get_page_by_title('monte sua viagem');
+  $id = $page->ID;
+  $arr['ativar_monte'] = get_field('ativar_monte', $id);
+
+  return $arr;
+}
+
+function get_banner_topo(){
+  $page = get_page_by_title('banner topo');
+  $id = $page->ID;
+  $arr['ativar_banner_topo'] = get_field('ativar_banner_topo', $id);
+  $arr['banner1'] = get_field('banner1', $id);
+  $arr['banner2'] = get_field('banner2', $id);
+  $arr['banner3'] = get_field('banner3', $id);
+
+  return $arr;
+}
+
+function get_menu(){
+  $page = get_page_by_title('menu topo');
+  $id = $page->ID;
+  $arr['ativar_menu'] = get_field('ativar_menu', $id);
+  $arr['texto_menu1'] = get_field('texto_menu1', $id);
+  $arr['texto_menu2'] = get_field('texto_menu2', $id);
+  $arr['texto_menu3'] = get_field('texto_menu3', $id);
+  $arr['texto_menu4'] = get_field('texto_menu4', $id);
+  $arr['texto_menu5'] = get_field('texto_menu5', $id);
+
+  return $arr;
+}
+
+function get_menu_superior(){
+  $page = get_page_by_title('menu topo superior');
+  $id = $page->ID;
+
+  $arr['texto_link1'] = get_field('texto_link1', $id);
+  $arr['link1'] = get_field('link1', $id);
+  $arr['link2'] = get_field('link2', $id);
+  $arr['link3'] = get_field('link3', $id);
+  $arr['link4'] = get_field('link4', $id);
+  $arr['link5'] = get_field('link5', $id);
+
+  $arr['texto_link2'] = get_field('texto_link2', $id);
+  $arr['link6'] = get_field('link6', $id);
+  $arr['link7'] = get_field('link7', $id);
+  $arr['link8'] = get_field('link8', $id);
+  $arr['link9'] = get_field('link9', $id);
+  $arr['link10'] = get_field('link10', $id);
+
+  $arr['texto_link3'] = get_field('texto_link3', $id);
+  $arr['link11'] = get_field('link11', $id);
+  $arr['link12'] = get_field('link12', $id);
+  $arr['link13'] = get_field('link13', $id);
+  $arr['link14'] = get_field('link14', $id);
+  $arr['link15'] = get_field('link15', $id);
+
+  $arr['texto_link4'] = get_field('texto_link4', $id);
+  $arr['link16'] = get_field('link16', $id);
+  $arr['link17'] = get_field('link17', $id);
+  $arr['link18'] = get_field('link18', $id);
+  $arr['link19'] = get_field('link19', $id);
+  $arr['link20'] = get_field('link20', $id);
+
+  $arr['texto_link5'] = get_field('texto_link5', $id);
+  $arr['link21'] = get_field('link21', $id);
+  $arr['link22'] = get_field('link22', $id);
+  $arr['link23'] = get_field('link23', $id);
+  $arr['link24'] = get_field('link24', $id);
+  $arr['link25'] = get_field('link25', $id);
+
+  return $arr;
+}
 ?>
