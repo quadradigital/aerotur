@@ -14,10 +14,10 @@
      <div class="row">
        <div class="container">
          <div class="col-xs-12 col-sm-12 col-md-12" id="titulo-recomendacoes">
-           <p id="titulo-color">ENCONTRE O SEU LUGAR NO MUNDO COM ESTAS</p>
-           <h2 id="subtitulo-color">OFERTAS DE PASSAGENS</h2>
-           <p id="subtitulo-table-passagens">Preços a incluir taxas e encargos</p>
-           <p id="promocoes-subtitulo">O menor preço em Passagens Aéreas e as melhores datas para voos pelo Brasil e o Mundo marcando sua origem abaixo:</p>
+           <p id="titulo-color"><?= $ofertas['texto_superior']?></p>
+           <h2 id="subtitulo-color"><?= $ofertas['texto_inferior']?></h2>
+           <p id="subtitulo-table-passagens"><?= $ofertas['observacoes']?></p>
+           <p id="promocoes-subtitulo"><?= $ofertas['descricao']?></p>
          </div>
        </div>
      </div> <!-- FIM row -->
@@ -28,129 +28,82 @@
          <div class= "col-xs-6 col-sm-6 col-md-6 list-side-left">
             <div class="list-group">
                <span class="list-group-item painel-titulo">
-                 <span class="pull-left pull-down-text">Destinos saindo de Natal/RN</span>
+                 <span class="pull-left pull-down-text">Destinos saindo de <?= $ofertas['cidade_origem']?></span>
                  <span class="pull-right pull-down-text">a partir de:</span>
                </span>
+               <?php
+               if(!empty($ofertas['companhia_aerea1']['url'])){
+               ?>
                <a href="#" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo1.png"></span>
+                   <span class="pull-left"><img src="<?= $ofertas['companhia_aerea1']['url']?>"></span>
                  </div>
                  <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Orlando</span>
+                   <span class="pull-left pull-left-cidade pull-down-text"><?= $ofertas['destino_companhia_aerea1']?></span>
                  </div>
                  <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 1.667,00</span>
+                   <span class="pull-right pull-down-text"><?= $ofertas['valor_inicial_companhia1']?></span>
                  </div>
                </a>
+               <?php }
+               if(!empty($ofertas['companhia_aerea2']['url'])){
+               ?>
                <a href="#" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo2.png"></span>
+                   <span class="pull-left"><img src="<?= $ofertas['companhia_aerea2']['url']?>"></span>
                  </div>
                  <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Montreal</span>
+                   <span class="pull-left pull-left-cidade pull-down-text"><?= $ofertas['destino_companhia_aerea2']?></span>
                  </div>
                  <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 2.331,00</span>
+                   <span class="pull-right pull-down-text"><?= $ofertas['valor_inicial_companhia2']?></span>
                  </div>
                </a>
+               <?php }
+               if(!empty($ofertas['companhia_aerea3']['url'])){
+               ?>
                <a href="#" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo3.png"></span>
+                   <span class="pull-left"><img src="<?= $ofertas['companhia_aerea3']['url']?>"></span>
                  </div>
                  <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Punta Cana</span>
+                   <span class="pull-left pull-left-cidade pull-down-text"><?= $ofertas['destino_companhia_aerea3']?></span>
                  </div>
                  <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 2.842,00</span>
+                   <span class="pull-right pull-down-text"><?= $ofertas['valor_inicial_companhia3']?></span>
                  </div>
                </a>
+               <?php }
+               if(!empty($ofertas['companhia_aerea4']['url'])){
+               ?>
                <a href="#" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo4.png"></span>
+                   <span class="pull-left"><img src="<?= $ofertas['companhia_aerea4']['url']?>"></span>
                  </div>
                  <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Rio de Janeiro</span>
+                   <span class="pull-left pull-left-cidade pull-down-text"><?= $ofertas['destino_companhia_aerea4']?></span>
                  </div>
                  <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 610,00</span>
+                   <span class="pull-right pull-down-text"><?= $ofertas['valor_inicial_companhia4']?></span>
                  </div>
                </a>
+               <?php }
+               if(!empty($ofertas['companhia_aerea5']['url'])){
+               ?>
                <a href="#" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo5.png"></span>
+                   <span class="pull-left"><img src="<?= $ofertas['companhia_aerea5']['url']?>"></span>
                  </div>
                  <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Porto Alegre</span>
+                   <span class="pull-left pull-left-cidade pull-down-text"><?= $ofertas['destino_companhia_aerea5']?></span>
                  </div>
                  <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 990,00</span>
+                   <span class="pull-right pull-down-text"><?= $ofertas['valor_inicial_companhia5']?></span>
                  </div>
                </a>
+               <?php }?>
              </div>
          </div>
-         <div class= "col-xs-6 col-sm-6 col-md-6 list-side-right">
-           <div class="list-group">
-               <span class="list-group-item painel-titulo">
-                 <span class="pull-left pull-down-text">Destinos saindo de Natal/RN</span>
-                 <span class="pull-right pull-down-text">a partir de:</span>
-               </span>
-               <a href="#" class="list-group-item ofertas-item-lista">
-                 <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo1.png"></span>
-                 </div>
-                 <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Orlando</span>
-                 </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 1.667,00</span>
-                 </div>
-               </a>
-               <a href="#" class="list-group-item ofertas-item-lista">
-                 <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo2.png"></span>
-                 </div>
-                 <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Montreal</span>
-                 </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 2.331,00</span>
-                 </div>
-               </a>
-               <a href="#" class="list-group-item ofertas-item-lista">
-                 <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo3.png"></span>
-                 </div>
-                 <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Punta Cana</span>
-                 </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 2.842,00</span>
-                 </div>
-               </a>
-               <a href="#" class="list-group-item ofertas-item-lista">
-                 <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo4.png"></span>
-                 </div>
-                 <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Rio de Janeiro</span>
-                 </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 610,00</span>
-                 </div>
-               </a>
-               <a href="#" class="list-group-item ofertas-item-lista">
-                 <div class="col-xs-1 col-sm-1 col-md-1">
-                   <span class="pull-left"><img src="<?php bloginfo('template_url') ?>/imgs/voo5.png"></span>
-                 </div>
-                 <div class="col-xs-8 col-sm-8 col-md-8">
-                   <span class="pull-left pull-left-cidade pull-down-text">Porto Alegre</span>
-                 </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3">
-                   <span class="pull-right pull-down-text">R$ 990,00</span>
-                 </div>
-               </a>
-             </div>
-           </div>
        </div>
    </div>
 </section>

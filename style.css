@@ -353,24 +353,14 @@ code {
 }
 
 .promo-1 {
-  background-image: url("imgs/promo-allure.png");
-  height: 278px;
-  width: 378px;
-  margin-right: 1px;
+  margin-bottom: 10px;
 }
 
 .promo-2 {
-  background-image: url("imgs/promo-dubai.png");
-  height: 278px;
-  width: 378px;
+  margin-bottom: 10px;
 }
 
-.promo-3 {
-  background-image: url("imgs/promo-noronha.png");
-  height: 278px;
-  width: 378px;
-  margin-left: 1px;
-}
+
 
 .bg-blogs {
   background-image: url("imgs/blogs.png");

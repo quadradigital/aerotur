@@ -151,6 +151,12 @@ function get_promocao(){
   $page = get_page_by_title('promoções');
   $id = $page->ID;
   $arr['ativar_promocao'] = get_field('ativar_promocao', $id);
+  $arr['texto_superior'] = get_field('texto_superior', $id);
+  $arr['texto_inferior'] = get_field('texto_inferior', $id);
+  $arr['descricao'] = get_field('descricao', $id);
+  $arr['imagem1'] = get_field('imagem1', $id);
+  $arr['imagem2'] = get_field('imagem2', $id);
+  $arr['imagem3'] = get_field('imagem3', $id);
 
   return $arr;
 }
@@ -158,7 +164,33 @@ function get_promocao(){
 function get_ofertas(){
   $page = get_page_by_title('ofertas de passagens');
   $id = $page->ID;
+
   $arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
+  $arr['texto_superior'] = get_field('texto_superior', $id);
+  $arr['texto_inferior'] = get_field('texto_inferior', $id);
+  $arr['observacoes'] = get_field('observacoes', $id);
+  $arr['descricao'] = get_field('descricao', $id);
+  $arr['cidade_origem'] = get_field('cidade_origem', $id);
+
+  $arr['companhia_aerea1'] = get_field('companhia_aerea1', $id);
+  $arr['destino_companhia_aerea1'] = get_field('destino_companhia_aerea1', $id);
+  $arr['valor_inicial_companhia1'] = get_field('valor_inicial_companhia1', $id);
+
+  $arr['companhia_aerea2'] = get_field('companhia_aerea2', $id);
+  $arr['destino_companhia_aerea2'] = get_field('destino_companhia_aerea2', $id);
+  $arr['valor_inicial_companhia2'] = get_field('valor_inicial_companhia2', $id);
+
+  $arr['companhia_aerea3'] = get_field('companhia_aerea3', $id);
+  $arr['destino_companhia_aerea3'] = get_field('destino_companhia_aerea3', $id);
+  $arr['valor_inicial_companhia3'] = get_field('valor_inicial_companhia3', $id);
+
+  $arr['companhia_aerea4'] = get_field('companhia_aerea4', $id);
+  $arr['destino_companhia_aerea4'] = get_field('destino_companhia_aerea4', $id);
+  $arr['valor_inicial_companhia4'] = get_field('valor_inicial_companhia4', $id);
+
+  $arr['companhia_aerea5'] = get_field('companhia_aerea5', $id);
+  $arr['destino_companhia_aerea5'] = get_field('destino_companhia_aerea5', $id);
+  $arr['valor_inicial_companhia5'] = get_field('valor_inicial_companhia5', $id);
 
   return $arr;
 }
@@ -167,6 +199,7 @@ function get_monte_sua_viagem(){
   $page = get_page_by_title('monte sua viagem');
   $id = $page->ID;
   $arr['ativar_monte'] = get_field('ativar_monte', $id);
+  $arr['texto_botao'] = get_field('texto_botao', $id);
 
   return $arr;
 }
@@ -200,39 +233,24 @@ function get_menu_superior(){
   $id = $page->ID;
 
   $arr['texto_link1'] = get_field('texto_link1', $id);
-  $arr['link1'] = get_field('link1', $id);
-  $arr['link2'] = get_field('link2', $id);
-  $arr['link3'] = get_field('link3', $id);
-  $arr['link4'] = get_field('link4', $id);
-  $arr['link5'] = get_field('link5', $id);
+  $arr['texto_link1_menu1'] = get_field('texto_link1_menu1', $id);
+  $arr['link1_menu1'] = get_field('link1_menu1', $id);
 
   $arr['texto_link2'] = get_field('texto_link2', $id);
-  $arr['link6'] = get_field('link6', $id);
-  $arr['link7'] = get_field('link7', $id);
-  $arr['link8'] = get_field('link8', $id);
-  $arr['link9'] = get_field('link9', $id);
-  $arr['link10'] = get_field('link10', $id);
+  $arr['texto_link1_menu2'] = get_field('texto_link1_menu2', $id);
+  $arr['link1_menu2'] = get_field('link1_menu2', $id);
 
   $arr['texto_link3'] = get_field('texto_link3', $id);
-  $arr['link11'] = get_field('link11', $id);
-  $arr['link12'] = get_field('link12', $id);
-  $arr['link13'] = get_field('link13', $id);
-  $arr['link14'] = get_field('link14', $id);
-  $arr['link15'] = get_field('link15', $id);
+  $arr['texto_link1_menu3'] = get_field('texto_link1_menu3', $id);
+  $arr['link1_menu3'] = get_field('link1_menu3', $id);
 
   $arr['texto_link4'] = get_field('texto_link4', $id);
-  $arr['link16'] = get_field('link16', $id);
-  $arr['link17'] = get_field('link17', $id);
-  $arr['link18'] = get_field('link18', $id);
-  $arr['link19'] = get_field('link19', $id);
-  $arr['link20'] = get_field('link20', $id);
+  $arr['texto_link1_menu4'] = get_field('texto_link1_menu4', $id);
+  $arr['link1_menu4'] = get_field('link1_menu4', $id);
 
   $arr['texto_link5'] = get_field('texto_link5', $id);
-  $arr['link21'] = get_field('link21', $id);
-  $arr['link22'] = get_field('link22', $id);
-  $arr['link23'] = get_field('link23', $id);
-  $arr['link24'] = get_field('link24', $id);
-  $arr['link25'] = get_field('link25', $id);
+  $arr['texto_link1_menu5'] = get_field('texto_link1_menu5', $id);
+  $arr['link1_menu5'] = get_field('link1_menu5', $id);
 
   return $arr;
 }

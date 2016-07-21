@@ -14,7 +14,7 @@
      <div class="row">
        <div class="container">
          <div class= "col-xs-12 col-sm-12 col-md-12 no-padding-right">
-           <span class="pull-right monte-sua-viagem">Monte sua viagem</span>
+           <span class="pull-right monte-sua-viagem"><?= $monte['texto_botao']?></span>
          </div>
        </div>
      </div>

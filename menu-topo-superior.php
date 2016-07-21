@@ -26,51 +26,31 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><?= $menu_superior['texto_link1']?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><?= $menu_superior['link1']?></a></li>
-            <li><a href="#"><?= $menu_superior['link2']?></a></li>
-            <li><a href="#"><?= $menu_superior['link3']?></a></li>
-            <li><a href="#"><?= $menu_superior['link4']?></a></li>
-            <li><a href="#"><?= $menu_superior['link5']?></a></li>
+            <li><a href="<?= $menu_superior['link1_menu1']?>" target="_blank"><?= $menu_superior['texto_link1_menu1']?></a></li>
           </ul>
        </li>
        <li class="dropdown">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><?= $menu_superior['texto_link2']?> <span class="caret"></span></a>
          <ul class="dropdown-menu">
-           <li><a href="#"><?= $menu_superior['link6']?></a></li>
-           <li><a href="#"><?= $menu_superior['link7']?></a></li>
-           <li><a href="#"><?= $menu_superior['link8']?></a></li>
-           <li><a href="#"><?= $menu_superior['link9']?></a></li>
-           <li><a href="#"><?= $menu_superior['link10']?></a></li>
+           <li><a href="<?= $menu_superior['link1_menu2']?>" target="_blank"><?= $menu_superior['texto_link1_menu2']?></a></li>
          </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><?= $menu_superior['texto_link3']?> <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#"><?= $menu_superior['link11']?></a></li>
-          <li><a href="#"><?= $menu_superior['link12']?></a></li>
-          <li><a href="#"><?= $menu_superior['link13']?></a></li>
-          <li><a href="#"><?= $menu_superior['link14']?></a></li>
-          <li><a href="#"><?= $menu_superior['link15']?></a></li>
+          <li><a href="<?= $menu_superior['link1_menu3']?>" target="_blank"><?= $menu_superior['texto_link1_menu3']?></a></li>
         </ul>
      </li>
      <li class="dropdown">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><?= $menu_superior['texto_link4']?> <span class="caret"></span></a>
        <ul class="dropdown-menu">
-         <li><a href="#"><?= $menu_superior['link16']?></a></li>
-         <li><a href="#"><?= $menu_superior['link17']?></a></li>
-         <li><a href="#"><?= $menu_superior['link18']?></a></li>
-         <li><a href="#"><?= $menu_superior['link19']?></a></li>
-         <li><a href="#"><?= $menu_superior['link20']?></a></li>
+         <li><a href="<?= $menu_superior['link1_menu4']?>" target="_blank"><?= $menu_superior['texto_link1_menu4']?></a></li>
        </ul>
     </li>
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><?= $menu_superior['texto_link5']?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><?= $menu_superior['link21']?></a></li>
-            <li><a href="#"><?= $menu_superior['link22']?></a></li>
-            <li><a href="#"><?= $menu_superior['link23']?></a></li>
-            <li><a href="#"><?= $menu_superior['link24']?></a></li>
-            <li><a href="#"><?= $menu_superior['link25']?></a></li>
+            <li><a href="<?= $menu_superior['link1_menu5']?>" target="_blank"><?= $menu_superior['texto_link1_menu5']?></a></li>
           </ul>
         </li>
       </ul>
