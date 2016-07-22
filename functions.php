@@ -1,5 +1,12 @@
 <?php
 
+function customLoginLogo() {
+	echo '<style type="text/css">
+		h1 a { background-image: url("http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/imgs/logo-aerotur.png") !important; background-size:auto !important; width:300px !important; height:100px !important; padding-bottom:20px !important; }
+	</style>';
+}
+add_action('login_head', 'customLoginLogo');
+
 function get_rodape(){
   $page = get_page_by_title('rodapé');
   $id = $page->ID;

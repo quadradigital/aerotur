@@ -7,7 +7,29 @@
  * @since Aerotur 1.0
  */
     $blog = get_blog();
- ?>
+
+    $args_post = array('post_type' => 'post', 'posts_per_page'=>400);
+    $myposts_post = get_posts( $args_post );
+    foreach ( $myposts_post as $post_post ){
+      setup_postdata( $post_post );
+      $id_post = $post_post->ID;
+      $titulo_post = get_the_title($id_post);
+      $tipo_post = get_field('tipo_post', $id_post);
+      $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(400,400)) ;
+      $resumo_post = get_field('resumo', $id_post);
+      $conteudo_post = wp_strip_all_tags(get_the_content(), false);
+      $posttags = get_the_tags($id_post);
+      $link_post = get_post_permalink($id_post);
+    }
+    if($tags1==0){
+                   $tags = '<a href="'.get_site_url().'/posts/?tag='.$tag->name.'">'.$tag->name.'</a>';
+                   $tags1 = 1;
+               }else{
+                   $tags = $tags.', <a href="'.get_site_url().'/posts/?tag='.$tag->name.'">'.$tag->name.'</a>';
+               }
+             }
+           }
+  ?>
  <section style="<?php if($blog['ativar_blog'] == false){echo 'display:none;';} ?>" id="blog">
    <div id="blog"></div>
 <div class="container-fluid space-down">
