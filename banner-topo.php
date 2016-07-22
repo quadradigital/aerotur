@@ -9,7 +9,6 @@
     $banner_topo = get_banner_topo();
  ?>
  <section style="<?php if($banner_topo['ativar_banner_topo'] == false){echo 'display:none;';} ?>" id="banner_topo">
-   <div id="banner_topo"></div>
 <div class="container-fluid">
   <div class="row">
     <ul id="slider-topo">
