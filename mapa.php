@@ -23,11 +23,13 @@
        </div> <!-- FIM container -->
      </div> <!-- FIM row -->
    </div> <!-- FIM container-fluid -->
- </section>
-  <footer class="footer">
+
+
     <div class="container-fluid">
       <div class="row">
         <div id="maps">
         </div>
       </div>
     </div>
+    </section>
+<footer class="footer">

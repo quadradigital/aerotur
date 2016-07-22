@@ -65,15 +65,19 @@ function get_enderecos(){
   $id = $page->ID;
   $arr['ativar_enderecos'] = get_field('ativar_enderecos', $id);
   $arr['texto_loja1'] = get_field('texto_loja1', $id);
+  $arr['ddd1'] = get_field('ddd1', $id);
   $arr['telefone_loja1'] = get_field('telefone_loja1', $id);
   $arr['endereco_loja1'] = get_field('endereco_loja1', $id);
   $arr['texto_loja2'] = get_field('texto_loja2', $id);
+  $arr['ddd2'] = get_field('ddd2', $id);
   $arr['telefone_loja2'] = get_field('telefone_loja2', $id);
   $arr['endereco_loja2'] = get_field('endereco_loja2', $id);
   $arr['texto_loja3'] = get_field('texto_loja3', $id);
+  $arr['ddd3'] = get_field('ddd3', $id);
   $arr['telefone_loja3'] = get_field('telefone_loja3', $id);
   $arr['endereco_loja3'] = get_field('endereco_loja3', $id);
   $arr['texto_loja4'] = get_field('texto_loja4', $id);
+  $arr['ddd4'] = get_field('ddd4', $id);
   $arr['telefone_loja4'] = get_field('telefone_loja4', $id);
   $arr['endereco_loja4'] = get_field('endereco_loja4', $id);
 
@@ -86,14 +90,19 @@ function get_contato_plantao(){
   $arr['ativar_contato_plantao'] = get_field('ativar_contato_plantao', $id);
   $arr['cidade1'] = get_field('cidade1', $id);
   $arr['telefone_cidade1'] = get_field('telefone_cidade1', $id);
+  $arr['telefone2_cidade1'] = get_field('telefone2_cidade1', $id);
   $arr['cidade2'] = get_field('cidade2', $id);
   $arr['telefone_cidade2'] = get_field('telefone_cidade2', $id);
+  $arr['telefone2_cidade2'] = get_field('telefone2_cidade2', $id);
   $arr['cidade3'] = get_field('cidade3', $id);
   $arr['telefone_cidade3'] = get_field('telefone_cidade3', $id);
+  $arr['telefone2_cidade3'] = get_field('telefone2_cidade3', $id);
   $arr['cidade4'] = get_field('cidade4', $id);
   $arr['telefone_cidade4'] = get_field('telefone_cidade4', $id);
+  $arr['telefone2_cidade4'] = get_field('telefone2_cidade4', $id);
   $arr['cidade5'] = get_field('cidade5', $id);
   $arr['telefone_cidade5'] = get_field('telefone_cidade5', $id);
+  $arr['telefone2_cidade5'] = get_field('telefone2_cidade5', $id);
 
   return $arr;
 }

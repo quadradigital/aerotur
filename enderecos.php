@@ -19,7 +19,7 @@
              <p><?= $enderecos['texto_loja1']?></p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $enderecos['telefone_loja1']?></p>
+             <p><span id="ddd-tel"><?= $enderecos['ddd1']?></span><?= $enderecos['telefone_loja1']?></p>
            </div>
            <hr class="endereco"></hr>
            <div id="footer-one-endereco">
@@ -31,7 +31,7 @@
              <p><?= $enderecos['texto_loja2']?></p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $enderecos['telefone_loja2']?></p>
+             <p><span id="ddd-tel"><?= $enderecos['ddd2']?></span><?= $enderecos['telefone_loja2']?></p>
            </div>
            <hr class="endereco"></hr>
            <div id="footer-one-endereco">
@@ -43,7 +43,7 @@
              <p><?= $enderecos['texto_loja3']?></p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $enderecos['telefone_loja3']?></p>
+             <p><span id="ddd-tel"><?= $enderecos['ddd3']?></span><?= $enderecos['telefone_loja3']?></p>
            </div>
            <hr class="endereco"></hr>
            <div id="footer-one-endereco">
@@ -55,7 +55,7 @@
              <p><?= $enderecos['texto_loja4']?></p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $enderecos['telefone_loja4']?></p>
+             <p><span id="ddd-tel"><?= $enderecos['ddd4']?></span><?= $enderecos['telefone_loja4']?></p>
            </div>
            <hr class="endereco"></hr>
            <div id="footer-one-endereco">

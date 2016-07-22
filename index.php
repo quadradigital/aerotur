@@ -63,6 +63,10 @@
       <?php include('redes-sociais.php') ?>
       <!--end REDES SOCIAIS -->
 
+      <!--start ENDEREÇOS -->
+      <?php include('enderecos.php') ?>
+      <!--end ENDEREÇOS -->
+
       <!--start GRUPO AEROTUR -->
       <?php include('grupo-aerotur.php') ?>
       <!--end GRUPO AEROTUR -->

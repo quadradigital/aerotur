@@ -74,6 +74,9 @@
                <hr id="hr-phone"></hr>
              </div>
 
+             <?php
+             if(!empty($contato_plantao['cidade1'])){
+             ?>
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
                  <p class="pull-right" id="cidade"><?= $contato_plantao['cidade1']?>:</p>
@@ -81,8 +84,13 @@
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
                  <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone_cidade1']?></p>
                </div>
+               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                 <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone2_cidade1']?></p>
+               </div>
              </div>
-
+             <?php }
+             if(!empty($contato_plantao['cidade2'])){
+             ?>
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
                  <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade2']?>:</p>
@@ -90,8 +98,13 @@
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
                  <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade2']?></p>
                </div>
+               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade2']?></p>
+               </div>
              </div>
-
+             <?php }
+             if(!empty($contato_plantao['cidade3'])){
+             ?>
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
                  <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade3']?>:</p>
@@ -99,8 +112,13 @@
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
                  <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade3']?></p>
                </div>
+               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade3']?></p>
+               </div>
              </div>
-
+             <?php }
+             if(!empty($contato_plantao['cidade4'])){
+             ?>
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
                  <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade4']?>:</p>
@@ -108,8 +126,13 @@
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
                  <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade4']?></p>
                </div>
+               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade4']?></p>
+               </div>
              </div>
-
+             <?php }
+             if(!empty($contato_plantao['cidade5'])){
+             ?>
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
                  <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade5']?>:</p>
@@ -117,8 +140,11 @@
                <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
                  <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade5']?></p>
                </div>
+               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade5']?></p>
+               </div>
              </div>
-
+             <?php } ?>
          </div>
         </div>
        </div>
