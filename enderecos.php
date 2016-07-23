@@ -9,12 +9,11 @@
     $enderecos = get_enderecos();
  ?>
  <section style="<?php if($enderecos['ativar_enderecos'] == false){echo 'display:none;';} ?>" id="enderecos">
-   <div id="enderecos"></div>
  <div class="container-fluid" id="bg-footer-one">
    <div class="row">
      <div  class="container">
        <div class="footer-one" id="footer-one">
-         <div class="col-xs-3 col-sm-3 col-md-3">
+         <div class="col-xs-12 col-sm-3 col-md-3">
            <div id="footer-one-local">
              <p><?= $enderecos['texto_loja1']?></p>
            </div>
@@ -26,7 +25,7 @@
              <p><?= $enderecos['endereco_loja1']?></p>
            </div>
          </div>
-         <div class="col-xs-3 col-sm-3 col-md-3">
+         <div class="col-xs-12 col-sm-3 col-md-3">
            <div id=footer-one-local>
              <p><?= $enderecos['texto_loja2']?></p>
            </div>
@@ -38,7 +37,7 @@
              <p><?= $enderecos['endereco_loja2']?></p>
            </div>
          </div>
-         <div class="col-xs-3 col-sm-3 col-md-3">
+         <div class="col-xs-12 col-sm-3 col-md-3">
            <div id=footer-one-local>
              <p><?= $enderecos['texto_loja3']?></p>
            </div>
@@ -50,7 +49,7 @@
              <p><?= $enderecos['endereco_loja3']?></p>
            </div>
          </div>
-         <div class="col-xs-3 col-sm-3 col-md-3">
+         <div class="col-xs-12 col-sm-3 col-md-3">
            <div id=footer-one-local>
              <p><?= $enderecos['texto_loja4']?></p>
            </div>

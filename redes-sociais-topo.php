@@ -8,7 +8,7 @@
  */
     $redessociais = get_redes_sociais();
  ?>
-<div class="col-xs-3 col-sm-3 col-md-3 pull-right social-top-icons">
+<div class="col-xs-12 col-sm-3 col-md-3 pull-right social-top-icons hidden-xs">
   <ul class="list-unstyled list-inline pull-right">
     <?php
     if(!empty($redessociais['facebook'])){

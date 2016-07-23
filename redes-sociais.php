@@ -14,12 +14,12 @@
   <div clss="row">
     <div class="container">
       <div class="footer-zero">
-        <div class="col-xs-4 col-sm-4 col-md-4" id="coluna-esquerda-footer-zero">
+        <div class="col-xs-4 col-md-4 coluna-social-footer-titulo" id="coluna-esquerda-footer-zero">
           <p id="titulo-red">AEROTUR NAS</p>
           <h2 id="titulo-redes">REDES SOCIAIS</h2>
         </div>
-        <div class="col-xs-8 col-sm-8 col-md-8" id="coluna-esquerda-footer-zero">
-          <ul class="list-unstyled list-inline" id="social-icons">
+        <div class="col-xs-4 col-md-4" id="coluna-esquerda-footer-zero">
+          <ul class="list-unstyled list-inline coluna-social-footer" id="social-icons">
             <?php
             if(!empty($redessociais['facebook'])){
             ?>

@@ -23,13 +23,12 @@
        </div> <!-- FIM container -->
      </div> <!-- FIM row -->
    </div> <!-- FIM container-fluid -->
-
-
-    <div class="container-fluid">
-      <div class="row">
-        <div id="maps">
-        </div>
-      </div>
-    </div>
-    </section>
+   <div class="container-fluid">
+     <div class="row">
+       <div id="maps" style="">
+          <!-- Maps API Javascript -->
+           <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCF88DKo2KBtZe2VK30w1b9GEefAxuYa2Q&amp;sensor=false"></script>
+       </div>
+     </div>
+   </div>
 <footer class="footer">

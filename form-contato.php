@@ -13,7 +13,7 @@
    <div class="container-fluid">
      <div class="row">
        <div class="container">
-         <div class="col-xs-6 col-sm-6 col-md-6">
+         <div class="col-xs-12 col-sm-6 col-md-6">
            <p id="titulo-color">ENTRE EM</p>
            <h2 id="subtitulo-color">CONTATO CONOSCO</h2>
          </div>
@@ -28,7 +28,7 @@
    <div class="container-fluid">
      <div class="row" id="contato-form">
        <div class="container">
-         <div class="col-xs-4 col-sm-4 col-md-4">
+         <div class="col-xs-12 col-sm-4 col-md-4">
            <div class="form-group">
              <div class="col-sm-12">
                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Nome" value="">
@@ -46,7 +46,7 @@
            </div>
          </div>
 
-         <div class="col-xs-4 col-sm-4 col-md-4">
+         <div class="col-xs-12 col-sm-4 col-md-4">
            <div class="form-group">
              <div class="col-sm-12">
                <textarea class="form-control input-lg" rows="4" name="mensagem" placeholder="Mensagem"></textarea>
@@ -59,7 +59,7 @@
            </div>
          </div>
 
-         <div class="col-xs-4 col-sm-4 col-md-4">
+         <div class="col-xs-12 col-sm-4 col-md-4">
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="img-phone">
                  <img src="<?php bloginfo('template_url') ?>/imgs/phone.png" height="27" width="37" class="pull-right">

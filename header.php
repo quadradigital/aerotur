@@ -18,6 +18,7 @@
      <meta name="description" content="">
      <meta name="author" content="">
      <link rel="icon" href="#">
+     <meta name="theme-color" content="#B7986D">
 
      <title><?php wp_title( '-', true, 'right'); bloginfo() ?></title>
 

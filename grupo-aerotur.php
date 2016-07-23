@@ -31,31 +31,31 @@
         <?php
         if(!empty($grupo_aerotur['logo1']['url'])){
         ?>
-        <div class="col-xs-2 col-sm-2 col-md-2">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-md-offset-1">
         <a href="<?= $grupo_aerotur['linklogo1']?>" target="_blank"><img src="<?= $grupo_aerotur['logo1']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
         <?php }
         if(!empty($grupo_aerotur['logo2']['url'])){
         ?>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
+        <div class="col-xs-12 col-sm-2 col-md-2">
         <a href="<?= $grupo_aerotur['linklogo2']?>" target="_blank"><img src="<?= $grupo_aerotur['logo2']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
         <?php }
         if(!empty($grupo_aerotur['logo3']['url'])){
         ?>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
+        <div class="col-xs-12 col-sm-2 col-md-2">
         <a href="<?= $grupo_aerotur['linklogo3']?>" target="_blank"><img src="<?= $grupo_aerotur['logo3']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
         <?php }
         if(!empty($grupo_aerotur['logo4']['url'])){
         ?>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
+        <div class="col-xs-12 col-sm-2 col-md-2">
         <a href="<?= $grupo_aerotur['linklogo4']?>" target="_blank"><img src="<?= $grupo_aerotur['logo4']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
-        <?php } 
+        <?php }
         if(!empty($grupo_aerotur['logo5']['url'])){
         ?>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-half-offset">
+        <div class="col-xs-12 col-sm-2 col-md-2 last-img-footer-three">
         <a href="<?= $grupo_aerotur['linklogo5']?>" target="_blank"><img src="<?= $grupo_aerotur['logo5']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
         <?php } ?>
