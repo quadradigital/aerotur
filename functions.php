@@ -8,9 +8,13 @@ function customLoginLogo() {
 add_action('login_head', 'customLoginLogo');
 
 function get_rodape(){
-  $page = get_page_by_title('rodapé');
-  $id = $page->ID;
-  $arr['ativar_footer'] = get_field('ativar_footer', $id);
+	$args_post = array('post_type' => 'footer', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+	}
+	$arr['ativar_footer'] = get_field('ativar_footer', $id);
   $arr['texto_topico_rodape_horizontal1'] = get_field('texto_topico_rodape_horizontal1', $id);
   $arr['texto_topico_rodape_vertical1'] = get_field('texto_topico_rodape_vertical1', $id);
   $arr['texto_topico_rodape_vertical2'] = get_field('texto_topico_rodape_vertical2', $id);
