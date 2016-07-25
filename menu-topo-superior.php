@@ -67,7 +67,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand pull-left" href="#"><img src="imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
+      <a class="navbar-brand pull-left" href="#"><img src="<?php bloginfo('template_url') ?>/imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
     </div>
     <div id="navbar1" class="collapse navbar-collapse navpersonal">
       <ul class="nav navbar-nav navbar-styles">

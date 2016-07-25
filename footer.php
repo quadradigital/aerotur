@@ -6,53 +6,32 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $rodape = get_rodape();
+    $rodape = get_ativar();
  ?>
  <section style="<?php if($rodape['ativar_footer'] == false){echo 'display:none;';} ?>" id="footer">
  <div class="container-fluid">
    <div class=row>
      <div class="footer-four" id="footer-four">
        <div class="container">
-         <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4><?= $rodape['texto_topico_rodape_horizontal1']?></h4>
-           <ul class="list-unstyled">
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical2']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical3']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical4']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical5']?></li></a>
-           </ul>
-         </div>
-         <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4><?= $rodape['texto_topico_rodape_horizontal2']?></h4>
-           <ul class="list-unstyled">
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical6']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical7']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical8']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical9']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical10']?></li></a>
-           </ul>
-         </div>
-         <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4><?= $rodape['texto_topico_rodape_horizontal3']?></h4>
-           <ul class="list-unstyled">
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical11']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical12']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical13']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical14']?></li></a>
-             <a href="#"><li><?= $rodape['texto_topico_rodape_vertical15']?></li></a>
-           </ul>
-         </div>
-         <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4><?= $rodape['texto_topico_rodape_horizontal4']?></h4>
-             <ul class="list-unstyled">
-               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical16']?></li></a>
-               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical17']?></li></a>
-               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical18']?></li></a>
-               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical19']?></li></a>
-               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical20']?></li></a>
-             </ul>
-         </div>
+         <?php
+         $args_post = array('post_type' => 'footer', 'posts_per_page'=>400, 'order'=>'ASC');
+         $myposts_post = get_posts( $args_post );
+         foreach ( $myposts_post as $post_post ){
+           setup_postdata( $post_post );
+           $id2 = $post_post->ID;
+           $rodape = get_rodape($id2);
+          ?>
+          <div class="col-xs-12 col-sm-2 col-md-2">
+            <h4><?= $rodape['texto_topico_rodape_horizontal']?></h4>
+            <ul class="list-unstyled">
+              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
+              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical2']?></li></a>
+              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical3']?></li></a>
+              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical4']?></li></a>
+              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical5']?></li></a>
+            </ul>
+          </div>
+         <? } ?>
          <div class="col-xs-12 col-sm-2 col-md-2">
            <ul class="list-unstyled" id="quinta-coluna-footer-four">
              <a href="#"><li>HOME</li></a>

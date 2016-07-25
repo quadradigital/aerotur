@@ -6,7 +6,8 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $grupo_aerotur = get_grupo_aerotur();
+    //$grupo_aerotur = get_grupo_aerotur();
+    $grupo_aerotur = get_ativar();
  ?>
 
  <section style="<?php if($grupo_aerotur['ativar_grupo'] == false){echo 'display:none;';} ?>" id="grupo">
@@ -29,36 +30,19 @@
     <div class="footer-three">
       <div class="container">
         <?php
-        if(!empty($grupo_aerotur['logo1']['url'])){
+        $args_post = array('post_type' => 'grupo_aerotur', 'posts_per_page'=>400);
+    		$myposts_post = get_posts( $args_post );
+    		foreach ( $myposts_post as $post_post ){
+    			setup_postdata( $post_post );
+    			$id2 = $post_post->ID;
+          $grupo_aerotur = get_grupo_aerotur($id2);
+          if(!empty($grupo_aerotur['logo']['url'])){
         ?>
         <div class="col-xs-12 col-sm-2 col-md-2 col-md-offset-1">
-        <a href="<?= $grupo_aerotur['linklogo1']?>" target="_blank"><img src="<?= $grupo_aerotur['logo1']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
+        <a href="<?= $grupo_aerotur['linklogo']?>" target="_blank"><img src="<?= $grupo_aerotur['logo']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
         </div>
         <?php }
-        if(!empty($grupo_aerotur['logo2']['url'])){
-        ?>
-        <div class="col-xs-12 col-sm-2 col-md-2">
-        <a href="<?= $grupo_aerotur['linklogo2']?>" target="_blank"><img src="<?= $grupo_aerotur['logo2']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
-        </div>
-        <?php }
-        if(!empty($grupo_aerotur['logo3']['url'])){
-        ?>
-        <div class="col-xs-12 col-sm-2 col-md-2">
-        <a href="<?= $grupo_aerotur['linklogo3']?>" target="_blank"><img src="<?= $grupo_aerotur['logo3']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
-        </div>
-        <?php }
-        if(!empty($grupo_aerotur['logo4']['url'])){
-        ?>
-        <div class="col-xs-12 col-sm-2 col-md-2">
-        <a href="<?= $grupo_aerotur['linklogo4']?>" target="_blank"><img src="<?= $grupo_aerotur['logo4']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
-        </div>
-        <?php }
-        if(!empty($grupo_aerotur['logo5']['url'])){
-        ?>
-        <div class="col-xs-12 col-sm-2 col-md-2 last-img-footer-three">
-        <a href="<?= $grupo_aerotur['linklogo5']?>" target="_blank"><img src="<?= $grupo_aerotur['logo5']['url']?>" height="54" width="181" class="img-responsive center-block"></a>
-        </div>
-        <?php } ?>
+      } ?>
       </div>
     </div> <!-- FIM footer-three -->
   </div> <!-- FIM row -->

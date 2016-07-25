@@ -6,61 +6,34 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $enderecos = get_enderecos();
+    $enderecos = get_ativar();
  ?>
  <section style="<?php if($enderecos['ativar_enderecos'] == false){echo 'display:none;';} ?>" id="enderecos">
  <div class="container-fluid" id="bg-footer-one">
    <div class="row">
      <div  class="container">
        <div class="footer-one" id="footer-one">
+         <?php
+           $args_post = array('post_type' => 'endereco', 'posts_per_page'=>400);
+     		   $myposts_post = get_posts( $args_post );
+     		   foreach ( $myposts_post as $post_post ){
+     			     setup_postdata( $post_post );
+     			       $id2 = $post_post->ID;
+                 $enderecos = get_enderecos($id2);
+         ?>
          <div class="col-xs-12 col-sm-3 col-md-3">
            <div id="footer-one-local">
-             <p><?= $enderecos['texto_loja1']?></p>
+             <p><?= $enderecos['texto_loja']?></p>
            </div>
            <div id="footer-one-tel">
-             <p><span id="ddd-tel"><?= $enderecos['ddd1']?></span><?= $enderecos['telefone_loja1']?></p>
+             <p><span id="ddd-tel"><?= $enderecos['ddd']?></span><?= $enderecos['telefone']?></p>
            </div>
            <hr class="endereco"></hr>
            <div id="footer-one-endereco">
-             <p><?= $enderecos['endereco_loja1']?></p>
+             <p><?= $enderecos['endereco_loja']?></p>
            </div>
          </div>
-         <div class="col-xs-12 col-sm-3 col-md-3">
-           <div id=footer-one-local>
-             <p><?= $enderecos['texto_loja2']?></p>
-           </div>
-           <div id="footer-one-tel">
-             <p><span id="ddd-tel"><?= $enderecos['ddd2']?></span><?= $enderecos['telefone_loja2']?></p>
-           </div>
-           <hr class="endereco"></hr>
-           <div id="footer-one-endereco">
-             <p><?= $enderecos['endereco_loja2']?></p>
-           </div>
-         </div>
-         <div class="col-xs-12 col-sm-3 col-md-3">
-           <div id=footer-one-local>
-             <p><?= $enderecos['texto_loja3']?></p>
-           </div>
-           <div id="footer-one-tel">
-             <p><span id="ddd-tel"><?= $enderecos['ddd3']?></span><?= $enderecos['telefone_loja3']?></p>
-           </div>
-           <hr class="endereco"></hr>
-           <div id="footer-one-endereco">
-             <p><?= $enderecos['endereco_loja3']?></p>
-           </div>
-         </div>
-         <div class="col-xs-12 col-sm-3 col-md-3">
-           <div id=footer-one-local>
-             <p><?= $enderecos['texto_loja4']?></p>
-           </div>
-           <div id="footer-one-tel">
-             <p><span id="ddd-tel"><?= $enderecos['ddd4']?></span><?= $enderecos['telefone_loja4']?></p>
-           </div>
-           <hr class="endereco"></hr>
-           <div id="footer-one-endereco">
-             <p><?= $enderecos['endereco_loja4']?></p>
-           </div>
-         </div>
+         <?php } ?>
        </div> <!-- FIM footer-one -->
      </div> <!-- FIM container -->
    </div> <!-- FIM row -->

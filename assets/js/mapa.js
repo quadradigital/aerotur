@@ -28,7 +28,7 @@ function abrirInfoBox(id, marker) {
 
 function carregarPontos() {
 
-	$.getJSON('pontos.json', function(pontos) {
+	$.getJSON('http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/assets/js/pontos.json', function(pontos) {
 
 		var latlngbounds = new google.maps.LatLngBounds();
 
@@ -37,7 +37,7 @@ function carregarPontos() {
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
 				title: "Meu ponto personalizado! :-D",
-				icon: 'assets/img/marcador.png'
+				icon: 'http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/assets/img/marcador.png'
 			});
 
 			var myOptions = {

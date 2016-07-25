@@ -7,121 +7,93 @@ function customLoginLogo() {
 }
 add_action('login_head', 'customLoginLogo');
 
-function get_rodape(){
-	$args_post = array('post_type' => 'footer', 'posts_per_page'=>400);
+function get_ativar(){
+	$args_post = array('post_type' => 'secoes', 'posts_per_page'=>400);
 	$myposts_post = get_posts( $args_post );
 	foreach ( $myposts_post as $post_post ){
 		setup_postdata( $post_post );
 		$id = $post_post->ID;
+	  $arr['ativar_banner_topo'] = get_field('ativar_banner_topo', $id);
+		$arr['ativar_footer'] = get_field('ativar_footer', $id);
+		$arr['ativar_grupo'] = get_field('ativar_grupo', $id);
+		$arr['ativar_enderecos'] = get_field('ativar_enderecos', $id);
+
+		return $arr;
 	}
-	$arr['ativar_footer'] = get_field('ativar_footer', $id);
-  $arr['texto_topico_rodape_horizontal1'] = get_field('texto_topico_rodape_horizontal1', $id);
-  $arr['texto_topico_rodape_vertical1'] = get_field('texto_topico_rodape_vertical1', $id);
-  $arr['texto_topico_rodape_vertical2'] = get_field('texto_topico_rodape_vertical2', $id);
-  $arr['texto_topico_rodape_vertical3'] = get_field('texto_topico_rodape_vertical3', $id);
-  $arr['texto_topico_rodape_vertical4'] = get_field('texto_topico_rodape_vertical4', $id);
-  $arr['texto_topico_rodape_vertical5'] = get_field('texto_topico_rodape_vertical5', $id);
-
-  $arr['texto_topico_rodape_horizontal2'] = get_field('texto_topico_rodape_horizontal2', $id);
-  $arr['texto_topico_rodape_vertical6'] = get_field('texto_topico_rodape_vertical6', $id);
-  $arr['texto_topico_rodape_vertical7'] = get_field('texto_topico_rodape_vertical7', $id);
-  $arr['texto_topico_rodape_vertical8'] = get_field('texto_topico_rodape_vertical8', $id);
-  $arr['texto_topico_rodape_vertical9'] = get_field('texto_topico_rodape_vertical9', $id);
-  $arr['texto_topico_rodape_vertical10'] = get_field('texto_topico_rodape_vertical10', $id);
-
-  $arr['texto_topico_rodape_horizontal3'] = get_field('texto_topico_rodape_horizontal3', $id);
-  $arr['texto_topico_rodape_vertical11'] = get_field('texto_topico_rodape_vertical11', $id);
-  $arr['texto_topico_rodape_vertical12'] = get_field('texto_topico_rodape_vertical12', $id);
-  $arr['texto_topico_rodape_vertical13'] = get_field('texto_topico_rodape_vertical13', $id);
-  $arr['texto_topico_rodape_vertical14'] = get_field('texto_topico_rodape_vertical14', $id);
-  $arr['texto_topico_rodape_vertical15'] = get_field('texto_topico_rodape_vertical15', $id);
-
-  $arr['texto_topico_rodape_horizontal4'] = get_field('texto_topico_rodape_horizontal4', $id);
-  $arr['texto_topico_rodape_vertical16'] = get_field('texto_topico_rodape_vertical16', $id);
-  $arr['texto_topico_rodape_vertical17'] = get_field('texto_topico_rodape_vertical17', $id);
-  $arr['texto_topico_rodape_vertical18'] = get_field('texto_topico_rodape_vertical18', $id);
-  $arr['texto_topico_rodape_vertical19'] = get_field('texto_topico_rodape_vertical19', $id);
-  $arr['texto_topico_rodape_vertical20'] = get_field('texto_topico_rodape_vertical20', $id);
-
-  return $arr;
 }
 
-function get_grupo_aerotur(){
-  $page = get_page_by_title('grupo aerotur');
-  $id = $page->ID;
-  $arr['ativar_grupo'] = get_field('ativar_grupo', $id);
-  $arr['logo1'] = get_field('logo1', $id);
-  $arr['linklogo1'] = get_field('linklogo1', $id);
-  $arr['logo2'] = get_field('logo2', $id);
-  $arr['linklogo2'] = get_field('linklogo2', $id);
-  $arr['logo3'] = get_field('logo3', $id);
-  $arr['linklogo3'] = get_field('linklogo3', $id);
-  $arr['logo4'] = get_field('logo4', $id);
-  $arr['linklogo4'] = get_field('linklogo4', $id);
-  $arr['logo5'] = get_field('logo5', $id);
-  $arr['linklogo5'] = get_field('linklogo5', $id);
+function get_rodape($id){
+	  $arr['texto_topico_rodape_horizontal'] = get_field('texto_topico_rodape_horizontal', $id);
+	  $arr['texto_topico_rodape_vertical1'] = get_field('texto_topico_rodape_vertical1', $id);
+	  $arr['texto_topico_rodape_vertical2'] = get_field('texto_topico_rodape_vertical2', $id);
+	  $arr['texto_topico_rodape_vertical3'] = get_field('texto_topico_rodape_vertical3', $id);
+	  $arr['texto_topico_rodape_vertical4'] = get_field('texto_topico_rodape_vertical4', $id);
+	  $arr['texto_topico_rodape_vertical5'] = get_field('texto_topico_rodape_vertical5', $id);
 
-  return $arr;
+  	return $arr;
 }
 
-function get_enderecos(){
-  $page = get_page_by_title('endereços');
-  $id = $page->ID;
-  $arr['ativar_enderecos'] = get_field('ativar_enderecos', $id);
-  $arr['texto_loja1'] = get_field('texto_loja1', $id);
-  $arr['ddd1'] = get_field('ddd1', $id);
-  $arr['telefone_loja1'] = get_field('telefone_loja1', $id);
-  $arr['endereco_loja1'] = get_field('endereco_loja1', $id);
-  $arr['texto_loja2'] = get_field('texto_loja2', $id);
-  $arr['ddd2'] = get_field('ddd2', $id);
-  $arr['telefone_loja2'] = get_field('telefone_loja2', $id);
-  $arr['endereco_loja2'] = get_field('endereco_loja2', $id);
-  $arr['texto_loja3'] = get_field('texto_loja3', $id);
-  $arr['ddd3'] = get_field('ddd3', $id);
-  $arr['telefone_loja3'] = get_field('telefone_loja3', $id);
-  $arr['endereco_loja3'] = get_field('endereco_loja3', $id);
-  $arr['texto_loja4'] = get_field('texto_loja4', $id);
-  $arr['ddd4'] = get_field('ddd4', $id);
-  $arr['telefone_loja4'] = get_field('telefone_loja4', $id);
-  $arr['endereco_loja4'] = get_field('endereco_loja4', $id);
+function get_grupo_aerotur($id){
+	  $arr['logo'] = get_field('logo', $id);
+	  $arr['linklogo'] = get_field('linklogo', $id);
+
+		return $arr;
+}
+
+function get_enderecos($id){
+  $arr['texto_loja'] = get_field('texto_loja', $id);
+  $arr['ddd'] = get_field('ddd', $id);
+  $arr['telefone'] = get_field('telefone', $id);
+  $arr['endereco_loja'] = get_field('endereco_loja', $id);
 
   return $arr;
-}
+	}
 
 function get_contato_plantao(){
-  $page = get_page_by_title('Formulário Contato / Plantão 24h');
-  $id = $page->ID;
-  $arr['ativar_contato_plantao'] = get_field('ativar_contato_plantao', $id);
-  $arr['cidade1'] = get_field('cidade1', $id);
-  $arr['telefone_cidade1'] = get_field('telefone_cidade1', $id);
-  $arr['telefone2_cidade1'] = get_field('telefone2_cidade1', $id);
-  $arr['cidade2'] = get_field('cidade2', $id);
-  $arr['telefone_cidade2'] = get_field('telefone_cidade2', $id);
-  $arr['telefone2_cidade2'] = get_field('telefone2_cidade2', $id);
-  $arr['cidade3'] = get_field('cidade3', $id);
-  $arr['telefone_cidade3'] = get_field('telefone_cidade3', $id);
-  $arr['telefone2_cidade3'] = get_field('telefone2_cidade3', $id);
-  $arr['cidade4'] = get_field('cidade4', $id);
-  $arr['telefone_cidade4'] = get_field('telefone_cidade4', $id);
-  $arr['telefone2_cidade4'] = get_field('telefone2_cidade4', $id);
-  $arr['cidade5'] = get_field('cidade5', $id);
-  $arr['telefone_cidade5'] = get_field('telefone_cidade5', $id);
-  $arr['telefone2_cidade5'] = get_field('telefone2_cidade5', $id);
+	$args_post = array('post_type' => 'form_contato', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+	  $arr['ativar_contato_plantao'] = get_field('ativar_contato_plantao', $id);
+	  $arr['cidade1'] = get_field('cidade1', $id);
+	  $arr['telefone_cidade1'] = get_field('telefone_cidade1', $id);
+	  $arr['telefone2_cidade1'] = get_field('telefone2_cidade1', $id);
+	  $arr['cidade2'] = get_field('cidade2', $id);
+	  $arr['telefone_cidade2'] = get_field('telefone_cidade2', $id);
+	  $arr['telefone2_cidade2'] = get_field('telefone2_cidade2', $id);
+	  $arr['cidade3'] = get_field('cidade3', $id);
+	  $arr['telefone_cidade3'] = get_field('telefone_cidade3', $id);
+	  $arr['telefone2_cidade3'] = get_field('telefone2_cidade3', $id);
+	  $arr['cidade4'] = get_field('cidade4', $id);
+	  $arr['telefone_cidade4'] = get_field('telefone_cidade4', $id);
+	  $arr['telefone2_cidade4'] = get_field('telefone2_cidade4', $id);
+	  $arr['cidade5'] = get_field('cidade5', $id);
+	  $arr['telefone_cidade5'] = get_field('telefone_cidade5', $id);
+	  $arr['telefone2_cidade5'] = get_field('telefone2_cidade5', $id);
 
-  return $arr;
+		return $arr;
+	}
 }
 
 function get_mapa(){
-  $page = get_page_by_title('mapa');
-  $id = $page->ID;
-  $arr['ativar_mapa'] = get_field('ativar_mapa', $id);
+	$args_post = array('post_type' => 'mapa_footer', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+  	$arr['ativar_mapa'] = get_field('ativar_mapa', $id);
 
-  return $arr;
+  	return $arr;
+	}
 }
 
 function get_redes_sociais(){
-  $page = get_page_by_title('redes sociais');
-  $id = $page->ID;
+	$args_post = array('post_type' => 'redes_sociais_footer', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
   $arr['ativar_redes_sociais'] = get_field('ativar_redes_sociais', $id);
   $arr['facebook'] = get_field('facebook', $id);
   $arr['instagram'] = get_field('instagram', $id);
@@ -130,33 +102,46 @@ function get_redes_sociais(){
   $arr['flickr'] = get_field('flickr', $id);
 
   return $arr;
+	}
 }
 
 function get_razoes(){
-  $page = get_page_by_title('razões');
-  $id = $page->ID;
+	$args_post = array('post_type' => 'razoes_aerotur', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
   $arr['ativar_razao'] = get_field('ativar_razao', $id);
   $arr['banner1'] = get_field('banner1', $id);
   $arr['banner2'] = get_field('banner2', $id);
   $arr['banner3'] = get_field('banner3', $id);
 
   return $arr;
+	}
 }
 
 function get_newsletter(){
-  $page = get_page_by_title('newsletter');
-  $id = $page->ID;
-  $arr['ativar_news'] = get_field('ativar_news', $id);
+	$args_post = array('post_type' => 'news', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+  	$arr['ativar_news'] = get_field('ativar_news', $id);
 
-  return $arr;
+  	return $arr;
+	}
 }
 
 function get_recomendacoes(){
-  $page = get_page_by_title('recomendações');
-  $id = $page->ID;
-  $arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
+	$args_post = array('post_type' => 'recomendacao', 'posts_per_page'=>400);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+  	$arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
 
-  return $arr;
+  	return $arr;
+	}
 }
 
 function get_blog(){
@@ -224,15 +209,10 @@ function get_monte_sua_viagem(){
   return $arr;
 }
 
-function get_banner_topo(){
-  $page = get_page_by_title('banner topo');
-  $id = $page->ID;
-  $arr['ativar_banner_topo'] = get_field('ativar_banner_topo', $id);
-  $arr['banner1'] = get_field('banner1', $id);
-  $arr['banner2'] = get_field('banner2', $id);
-  $arr['banner3'] = get_field('banner3', $id);
+function get_banner_topo($id){
+	  $arr['banner'] = get_field('banner', $id);
 
-  return $arr;
+  	return $arr;
 }
 
 function get_menu(){
