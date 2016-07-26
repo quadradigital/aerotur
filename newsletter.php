@@ -6,7 +6,7 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $newsletter = get_newsletter();
+    $newsletter = get_ativar();
  ?>
  <section style="<?php if($newsletter['ativar_news'] == false){echo 'display:none;';} ?>" id="news">
    <div id="news"></div>

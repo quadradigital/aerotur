@@ -6,7 +6,7 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $contato_plantao = get_contato_plantao();
+    $contato_plantao = get_ativar();
  ?>
  <section style="<?php if($contato_plantao['ativar_contato_plantao'] == false){echo 'display:none;';} ?>" id="contato">
    <div id="contato"></div>
@@ -75,76 +75,28 @@
              </div>
 
              <?php
-             if(!empty($contato_plantao['cidade1'])){
-             ?>
-             <div class="row">
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
-                 <p class="pull-right" id="cidade"><?= $contato_plantao['cidade1']?>:</p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone_cidade1']?></p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone2_cidade1']?></p>
-               </div>
-             </div>
-             <?php }
-             if(!empty($contato_plantao['cidade2'])){
-             ?>
-             <div class="row">
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
-                 <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade2']?>:</p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade2']?></p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade2']?></p>
-               </div>
-             </div>
-             <?php }
-             if(!empty($contato_plantao['cidade3'])){
-             ?>
-             <div class="row">
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
-                 <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade3']?>:</p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade3']?></p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade3']?></p>
-               </div>
-             </div>
-             <?php }
-             if(!empty($contato_plantao['cidade4'])){
-             ?>
-             <div class="row">
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
-                 <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade4']?>:</p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade4']?></p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade4']?></p>
-               </div>
-             </div>
-             <?php }
-             if(!empty($contato_plantao['cidade5'])){
-             ?>
-             <div class="row">
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
-                 <p class="pull-right" id="cidade-recife"><?= $contato_plantao['cidade5']?>:</p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone_cidade5']?></p>
-               </div>
-               <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
-                 <p class="pull-left" id="cidade-phone-recife"><?= $contato_plantao['telefone2_cidade5']?></p>
-               </div>
-             </div>
-             <?php } ?>
+              $args_post = array('post_type' => 'form_contato', 'posts_per_page'=>400, 'order'=>'ASC');
+           	  $myposts_post = get_posts( $args_post );
+           	  foreach ( $myposts_post as $post_post ){
+           		   setup_postdata( $post_post );
+           		    $id2 = $post_post->ID;
+                  $contato_plantao = get_contato_plantao($id2);
+
+                  if(!empty($contato_plantao['cidade'])){
+                 ?>
+                 <div class="row">
+                   <div class="col-xs-6 col-sm-6 col-md-6" id="cidade">
+                     <p class="pull-right" id="cidade"><?= $contato_plantao['cidade']?>:</p>
+                   </div>
+                   <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                     <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone']?></p>
+                   </div>
+                   <div class="col-xs-6 col-sm-6 col-md-6" id="cidade-phone">
+                     <p class="pull-left" id="cidade-phone"><?= $contato_plantao['telefone2']?></p>
+                   </div>
+                 </div>
+                 <?php }
+              } ?>
          </div>
         </div>
        </div>

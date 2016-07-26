@@ -6,16 +6,7 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $blog = get_blog();
-
-    $args_post = array('post_type' => 'post', 'posts_per_page'=>400);
-    $myposts_post = get_posts( $args_post );
-    foreach ( $myposts_post as $post_post ){
-      setup_postdata( $post_post );
-      $id_post = $post_post->ID;
-      $titulo_post = get_the_title($id_post);
-      $conteudo_post = wp_strip_all_tags(get_the_content(), false);
-    }
+    $blog = get_ativar();
   ?>
  <section style="<?php if($blog['ativar_blog'] == false){echo 'display:none;';} ?>" id="blog">
    <div id="blog"></div>
@@ -23,6 +14,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 bg-blogs">
       <div class="container">
+        <?
+        $args_post = array('post_type' => 'post', 'posts_per_page'=>1, 'order'=>'ASC');
+        $myposts_post = get_posts( $args_post );
+        foreach ( $myposts_post as $post_post ){
+          setup_postdata( $post_post );
+          $id_post = $post_post->ID;
+          $titulo_post = get_the_title($id_post);
+          $conteudo_post = wp_strip_all_tags(get_the_content(), false);
+        ?>
         <div class="col-xs-4 col-sm-4 col-md-4 bg-textbox-left">
           <h4>BLOG</h4>
           <h2><?= $titulo_post ?></h2>
@@ -44,6 +44,7 @@
 
         </div>
         <button type="button" class="btn btn-success pull-right">+ POSTS</button>
+        <? }?>
       </div>
     </div>
   </div>

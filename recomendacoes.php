@@ -6,7 +6,7 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $recomendacoes = get_recomendacoes();
+    $recomendacoes = get_ativar();
  ?>
  <section style="<?php if($recomendacoes['ativar_recomendacoes'] == false){echo 'display:none;';} ?>" id="recomendacoes">
    <div id="recomendacoes"></div>

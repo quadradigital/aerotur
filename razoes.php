@@ -6,7 +6,7 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $razoes = get_razoes();
+    $razoes = get_ativar();
  ?>
  <section style="<?php if($razoes['ativar_razao'] == false){echo 'display:none;';} ?>" id="razoes">
    <div id="razoes"></div>
@@ -27,24 +27,19 @@
       <div class="col-xs-12 col-sm-12 col-md-12">
         <ul id="slippry-demo">
           <?php
-          if(!empty($razoes['banner1']['url'])){
-          ?>
-          <li>
-            <img src="<?= $razoes['banner1']['url']?>">
-          </li>
+          $args_post = array('post_type' => 'razoes_aerotur', 'posts_per_page'=>400);
+        	$myposts_post = get_posts( $args_post );
+        	foreach ( $myposts_post as $post_post ){
+        		setup_postdata( $post_post );
+        		$id2 = $post_post->ID;
+            $razoes = get_razoes($id2);
+            if(!empty($razoes['banner']['url'])){
+            ?>
+            <li>
+              <img src="<?= $razoes['banner']['url']?>">
+            </li>
           <?php }
-          if(!empty($razoes['banner2']['url'])){
-          ?>
-          <li>
-            <img src="<?= $razoes['banner2']['url']?>">
-          </li>
-          <?php }
-          if(!empty($razoes['banner3']['url'])){
-          ?>
-          <li>
-            <img src="<?= $razoes['banner3']['url']?>">
-          </li>
-          <?php } ?>
+        } ?>
         </ul>
       </div>
     </div>

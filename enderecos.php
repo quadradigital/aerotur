@@ -14,7 +14,7 @@
      <div  class="container">
        <div class="footer-one" id="footer-one">
          <?php
-           $args_post = array('post_type' => 'endereco', 'posts_per_page'=>400);
+           $args_post = array('post_type' => 'endereco', 'posts_per_page'=>400, 'order'=>'ASC');
      		   $myposts_post = get_posts( $args_post );
      		   foreach ( $myposts_post as $post_post ){
      			     setup_postdata( $post_post );

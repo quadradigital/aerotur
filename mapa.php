@@ -6,11 +6,10 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $mapa = get_mapa();
+    $mapa = get_ativar();
  ?>
  <footer class="footer">
  <section style="<?php if($mapa['ativar_mapa'] == false){echo 'display:none;';} ?>" id="mapa">
-   <div id="mapa"></div>
    <div class="container-fluid">
      <div class="row">
        <div class="container">

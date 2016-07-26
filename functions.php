@@ -17,6 +17,14 @@ function get_ativar(){
 		$arr['ativar_footer'] = get_field('ativar_footer', $id);
 		$arr['ativar_grupo'] = get_field('ativar_grupo', $id);
 		$arr['ativar_enderecos'] = get_field('ativar_enderecos', $id);
+		$arr['ativar_redes_sociais'] = get_field('ativar_redes_sociais', $id);
+		$arr['ativar_mapa'] = get_field('ativar_mapa', $id);
+		$arr['ativar_contato_plantao'] = get_field('ativar_contato_plantao', $id);
+		$arr['ativar_razao'] = get_field('ativar_razao', $id);
+		$arr['ativar_news'] = get_field('ativar_news', $id);
+		$arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
+		$arr['ativar_blog'] = get_field('ativar_blog', $id);
+		$arr['ativar_promocao'] = get_field('ativar_promocao', $id);
 
 		return $arr;
 	}
@@ -49,52 +57,15 @@ function get_enderecos($id){
   return $arr;
 	}
 
-function get_contato_plantao(){
-	$args_post = array('post_type' => 'form_contato', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-	  $arr['ativar_contato_plantao'] = get_field('ativar_contato_plantao', $id);
-	  $arr['cidade1'] = get_field('cidade1', $id);
-	  $arr['telefone_cidade1'] = get_field('telefone_cidade1', $id);
-	  $arr['telefone2_cidade1'] = get_field('telefone2_cidade1', $id);
-	  $arr['cidade2'] = get_field('cidade2', $id);
-	  $arr['telefone_cidade2'] = get_field('telefone_cidade2', $id);
-	  $arr['telefone2_cidade2'] = get_field('telefone2_cidade2', $id);
-	  $arr['cidade3'] = get_field('cidade3', $id);
-	  $arr['telefone_cidade3'] = get_field('telefone_cidade3', $id);
-	  $arr['telefone2_cidade3'] = get_field('telefone2_cidade3', $id);
-	  $arr['cidade4'] = get_field('cidade4', $id);
-	  $arr['telefone_cidade4'] = get_field('telefone_cidade4', $id);
-	  $arr['telefone2_cidade4'] = get_field('telefone2_cidade4', $id);
-	  $arr['cidade5'] = get_field('cidade5', $id);
-	  $arr['telefone_cidade5'] = get_field('telefone_cidade5', $id);
-	  $arr['telefone2_cidade5'] = get_field('telefone2_cidade5', $id);
+function get_contato_plantao($id){
+	  $arr['cidade'] = get_field('cidade', $id);
+	  $arr['telefone'] = get_field('telefone', $id);
+	  $arr['telefone2'] = get_field('telefone2', $id);
 
 		return $arr;
-	}
 }
 
-function get_mapa(){
-	$args_post = array('post_type' => 'mapa_footer', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-  	$arr['ativar_mapa'] = get_field('ativar_mapa', $id);
-
-  	return $arr;
-	}
-}
-
-function get_redes_sociais(){
-	$args_post = array('post_type' => 'redes_sociais_footer', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-  $arr['ativar_redes_sociais'] = get_field('ativar_redes_sociais', $id);
+function get_redes_sociais($id){
   $arr['facebook'] = get_field('facebook', $id);
   $arr['instagram'] = get_field('instagram', $id);
   $arr['twitter'] = get_field('twitter', $id);
@@ -102,66 +73,24 @@ function get_redes_sociais(){
   $arr['flickr'] = get_field('flickr', $id);
 
   return $arr;
-	}
 }
 
-function get_razoes(){
-	$args_post = array('post_type' => 'razoes_aerotur', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-  $arr['ativar_razao'] = get_field('ativar_razao', $id);
-  $arr['banner1'] = get_field('banner1', $id);
-  $arr['banner2'] = get_field('banner2', $id);
-  $arr['banner3'] = get_field('banner3', $id);
-
-  return $arr;
-	}
-}
-
-function get_newsletter(){
-	$args_post = array('post_type' => 'news', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-  	$arr['ativar_news'] = get_field('ativar_news', $id);
-
-  	return $arr;
-	}
-}
-
-function get_recomendacoes(){
-	$args_post = array('post_type' => 'recomendacao', 'posts_per_page'=>400);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
-  	$arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
-
-  	return $arr;
-	}
-}
-
-function get_blog(){
-  $page = get_page_by_title('blog');
-  $id = $page->ID;
-  $arr['ativar_blog'] = get_field('ativar_blog', $id);
+function get_razoes($id){
+  $arr['banner'] = get_field('banner', $id);
 
   return $arr;
 }
 
-function get_promocao(){
-  $page = get_page_by_title('promoções');
-  $id = $page->ID;
-  $arr['ativar_promocao'] = get_field('ativar_promocao', $id);
+function get_texto_promocao($id){
   $arr['texto_superior'] = get_field('texto_superior', $id);
   $arr['texto_inferior'] = get_field('texto_inferior', $id);
   $arr['descricao'] = get_field('descricao', $id);
-  $arr['imagem1'] = get_field('imagem1', $id);
-  $arr['imagem2'] = get_field('imagem2', $id);
-  $arr['imagem3'] = get_field('imagem3', $id);
+
+  return $arr;
+}
+
+function get_banner_promocao($id){
+  $arr['banner'] = get_field('banner', $id);
 
   return $arr;
 }
