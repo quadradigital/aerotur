@@ -9,7 +9,6 @@
     $newsletter = get_ativar();
  ?>
  <section style="<?php if($newsletter['ativar_news'] == false){echo 'display:none;';} ?>" id="news">
-   <div id="news"></div>
    <div class="container-fluid space-down">
      <div class="row">
        <div class="container">
@@ -33,5 +32,4 @@
         </div>
       </div>
     </div>
-    </section>
 </section>

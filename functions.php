@@ -1,4 +1,5 @@
 <?php
+add_theme_support('menus');
 
 function customLoginLogo() {
 	echo '<style type="text/css">
@@ -25,6 +26,9 @@ function get_ativar(){
 		$arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
 		$arr['ativar_blog'] = get_field('ativar_blog', $id);
 		$arr['ativar_promocao'] = get_field('ativar_promocao', $id);
+		$arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
+		$arr['ativar_monte'] = get_field('ativar_monte', $id);
+		$arr['ativar_menu'] = get_field('ativar_menu', $id);
 
 		return $arr;
 	}
@@ -95,44 +99,41 @@ function get_banner_promocao($id){
   return $arr;
 }
 
-function get_ofertas(){
-  $page = get_page_by_title('ofertas de passagens');
-  $id = $page->ID;
-
-  $arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
+function get_texto_ofertas($id){
   $arr['texto_superior'] = get_field('texto_superior', $id);
   $arr['texto_inferior'] = get_field('texto_inferior', $id);
   $arr['observacoes'] = get_field('observacoes', $id);
   $arr['descricao'] = get_field('descricao', $id);
+
+	return $arr;
+}
+
+function get_ofertas($id){
   $arr['cidade_origem'] = get_field('cidade_origem', $id);
+  $arr['companhia_aerea'] = get_field('companhia_aerea', $id);
+  $arr['destino_companhia_aerea'] = get_field('destino_companhia_aerea', $id);
+  $arr['valor_inicial_passagem'] = get_field('valor_inicial_passagem', $id);
 
-  $arr['companhia_aerea1'] = get_field('companhia_aerea1', $id);
-  $arr['destino_companhia_aerea1'] = get_field('destino_companhia_aerea1', $id);
-  $arr['valor_inicial_companhia1'] = get_field('valor_inicial_companhia1', $id);
-
-  $arr['companhia_aerea2'] = get_field('companhia_aerea2', $id);
+	$arr['companhia_aerea2'] = get_field('companhia_aerea2', $id);
   $arr['destino_companhia_aerea2'] = get_field('destino_companhia_aerea2', $id);
-  $arr['valor_inicial_companhia2'] = get_field('valor_inicial_companhia2', $id);
+  $arr['valor_inicial_passagem2'] = get_field('valor_inicial_passagem2', $id);
 
-  $arr['companhia_aerea3'] = get_field('companhia_aerea3', $id);
+	$arr['companhia_aerea3'] = get_field('companhia_aerea3', $id);
   $arr['destino_companhia_aerea3'] = get_field('destino_companhia_aerea3', $id);
-  $arr['valor_inicial_companhia3'] = get_field('valor_inicial_companhia3', $id);
+  $arr['valor_inicial_passagem3'] = get_field('valor_inicial_passagem3', $id);
 
-  $arr['companhia_aerea4'] = get_field('companhia_aerea4', $id);
+	$arr['companhia_aerea4'] = get_field('companhia_aerea4', $id);
   $arr['destino_companhia_aerea4'] = get_field('destino_companhia_aerea4', $id);
-  $arr['valor_inicial_companhia4'] = get_field('valor_inicial_companhia4', $id);
+  $arr['valor_inicial_passagem4'] = get_field('valor_inicial_passagem4', $id);
 
-  $arr['companhia_aerea5'] = get_field('companhia_aerea5', $id);
+	$arr['companhia_aerea5'] = get_field('companhia_aerea5', $id);
   $arr['destino_companhia_aerea5'] = get_field('destino_companhia_aerea5', $id);
-  $arr['valor_inicial_companhia5'] = get_field('valor_inicial_companhia5', $id);
+  $arr['valor_inicial_passagem5'] = get_field('valor_inicial_passagem5', $id);
 
   return $arr;
 }
 
-function get_monte_sua_viagem(){
-  $page = get_page_by_title('monte sua viagem');
-  $id = $page->ID;
-  $arr['ativar_monte'] = get_field('ativar_monte', $id);
+function get_monte_sua_viagem($id){
   $arr['texto_botao'] = get_field('texto_botao', $id);
 
   return $arr;
@@ -144,42 +145,21 @@ function get_banner_topo($id){
   	return $arr;
 }
 
-function get_menu(){
-  $page = get_page_by_title('menu topo');
-  $id = $page->ID;
-  $arr['ativar_menu'] = get_field('ativar_menu', $id);
-  $arr['texto_menu1'] = get_field('texto_menu1', $id);
-  $arr['texto_menu2'] = get_field('texto_menu2', $id);
-  $arr['texto_menu3'] = get_field('texto_menu3', $id);
-  $arr['texto_menu4'] = get_field('texto_menu4', $id);
-  $arr['texto_menu5'] = get_field('texto_menu5', $id);
+function get_menu($id){
+  $arr['texto_menu'] = get_field('texto_menu', $id);
 
   return $arr;
 }
 
-function get_menu_superior(){
-  $page = get_page_by_title('menu topo superior');
-  $id = $page->ID;
+function get_menu_superior($id){
+  $arr['texto_menu'] = get_field('texto_menu', $id);
 
-  $arr['texto_link1'] = get_field('texto_link1', $id);
-  $arr['texto_link1_menu1'] = get_field('texto_link1_menu1', $id);
-  $arr['link1_menu1'] = get_field('link1_menu1', $id);
+  return $arr;
+}
 
-  $arr['texto_link2'] = get_field('texto_link2', $id);
-  $arr['texto_link1_menu2'] = get_field('texto_link1_menu2', $id);
-  $arr['link1_menu2'] = get_field('link1_menu2', $id);
-
-  $arr['texto_link3'] = get_field('texto_link3', $id);
-  $arr['texto_link1_menu3'] = get_field('texto_link1_menu3', $id);
-  $arr['link1_menu3'] = get_field('link1_menu3', $id);
-
-  $arr['texto_link4'] = get_field('texto_link4', $id);
-  $arr['texto_link1_menu4'] = get_field('texto_link1_menu4', $id);
-  $arr['link1_menu4'] = get_field('link1_menu4', $id);
-
-  $arr['texto_link5'] = get_field('texto_link5', $id);
-  $arr['texto_link1_menu5'] = get_field('texto_link1_menu5', $id);
-  $arr['link1_menu5'] = get_field('link1_menu5', $id);
+function get_submenu_superior($id){
+  $arr['texto_submenu'] = get_field('texto_submenu', $id);
+	$arr['link_submenu'] = get_field('link_submenu', $id);
 
   return $arr;
 }

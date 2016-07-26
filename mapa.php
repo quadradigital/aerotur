@@ -8,7 +8,6 @@
  */
     $mapa = get_ativar();
  ?>
- <footer class="footer">
  <section style="<?php if($mapa['ativar_mapa'] == false){echo 'display:none;';} ?>" id="mapa">
    <div class="container-fluid">
      <div class="row">
