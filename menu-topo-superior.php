@@ -6,29 +6,6 @@
  * @subpackage aerotur
  * @since Aerotur 1.0
  */
-    $menu_superior = get_menu_superior();
- ?>
- <?php
-     $defaults = array(
-         'theme_location'  => '',
-         'menu'            => '',
-         'container'       => false,
-         'container_class' => 'nav',
-         'container_id'    => '',
-         'menu_class'      => 'nav_ul',
-         'menu_id'         => '',
-         'echo'            => true,
-         'fallback_cb'     => 'wp_page_menu',
-         'before'          => '',
-         'after'           => '',
-         'link_before'     => '',
-         'link_after'      => '',
-         'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-         'depth'           => 0,
-         'walker'          => ''
-     );
-
-     wp_nav_menu( $defaults );
  ?>
  <body>
 <!-- Fixed navbar -->
@@ -46,84 +23,103 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-styles">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><?= $menu_superior['texto_link1']?> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar">VIAGENS<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?= $menu_superior['link1_menu1']?>" target="_blank"><?= $menu_superior['texto_link1_menu1']?></a></li>
+            <li><a href="#">LINK1</a></li>
+            <li><a href="#">LINK2</a></li>
+            <li><a href="#">LINK3</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">LINK4</a></li>
+            <li><a href="#">LINK5</a></li>
           </ul>
        </li>
        <li class="dropdown">
-         <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><?= $menu_superior['texto_link2']?> <span class="caret"></span></a>
+         <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar">CORPORATIVO<span class="caret"></span></a>
          <ul class="dropdown-menu">
-           <li><a href="<?= $menu_superior['link1_menu2']?>" target="_blank"><?= $menu_superior['texto_link1_menu2']?></a></li>
+           <li><a href="#">LINK1</a></li>
+           <li><a href="#">LINK2</a></li>
+           <li><a href="#">LINK3</a></li>
+           <li role="separator" class="divider"></li>
+           <li><a href="#">LINK4</a></li>
+           <li><a href="#">LINK5</a></li>
          </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><?= $menu_superior['texto_link3']?> <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar">TEEN<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="<?= $menu_superior['link1_menu3']?>" target="_blank"><?= $menu_superior['texto_link1_menu3']?></a></li>
+          <li><a href="#">LINK1</a></li>
+          <li><a href="#">LINK2</a></li>
+          <li><a href="#">LINK3</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">LINK4</a></li>
+          <li><a href="#">LINK5</a></li>
         </ul>
      </li>
      <li class="dropdown">
-       <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><?= $menu_superior['texto_link4']?> <span class="caret"></span></a>
+       <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar">VIAJE FÁCIL<span class="caret"></span></a>
        <ul class="dropdown-menu">
-         <li><a href="<?= $menu_superior['link1_menu4']?>" target="_blank"><?= $menu_superior['texto_link1_menu4']?></a></li>
+         <li><a href="#">LINK1</a></li>
+         <li><a href="#">LINK2</a></li>
+         <li><a href="#">LINK3</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a href="#">LINK4</a></li>
+         <li><a href="#">LINK5</a></li>
        </ul>
     </li>
        <li class="dropdown">
-          <a href="#" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><?= $menu_superior['texto_link5']?> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar">SALINAS<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?= $menu_superior['link1_menu5']?>" target="_blank"><?= $menu_superior['texto_link1_menu5']?></a></li>
+            <li><a href="#">LINK1</a></li>
+            <li><a href="#">LINK2</a></li>
+            <li><a href="#">LINK3</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">LINK4</a></li>
+            <li><a href="#">LINK5</a></li>
           </ul>
         </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
-<!-- NAVBAR mobile -->
-<nav class="navbar navbar-default navbar-fixed-top line-fixed-top hidden-md hidden-sm hidden-lg">
-  <div class="container">
-    <div class="navbar-header menu-mobile">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand pull-left" href="#"><img src="<?php bloginfo('template_url') ?>/imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
-    </div>
-    <div id="navbar1" class="collapse navbar-collapse navpersonal">
-      <ul class="nav navbar-nav navbar-styles">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><?= $menu_superior['texto_link1']?> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<?= $menu_superior['link1_menu1']?>" target="_blank"><?= $menu_superior['texto_link1_menu1']?></a></li>
+<!-- Fixed navbar - EXIBE NO MOBILE -->
+    <nav class="navbar navbar-default navbar-fixed-top line-fixed-top hidden-md hidden-sm hidden-lg">
+      <div class="container">
+        <div class="navbar-header menu-mobile">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand pull-left" href="#"><img src="imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
+        </div>
+        <div id="navbar1" class="collapse navbar-collapse navpersonal">
+          <ul class="nav navbar-nav navbar-styles">
+            <li><a href="#" class="viagens-navbar">VIAGENS</a></li>
+            <li><a href="#" class="corp-navbar">CORPORATIVO</a></li>
+            <li><a href="#" class="teen-navbar">TEEN</a></li>
+            <li><a href="#" class="viaje-navbar">VIAJE FÁCIL</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALINAS <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <ul class="nav navbar-bar navbar-links-inside">
+              <li role="presentation"><a href="#">EMPRESA</a></li>
+              <li role="presentation"><a href="#">PACOTES</a></li>
+              <li role="presentation"><a href="#">BLOG</a></li>
+              <li role="presentation"><a href="#">LOJAS</a></li>
+              <li role="presentation"><a href="#">CONTATO</a></li>
+            </ul>
           </ul>
-       </li>
-       <li class="dropdown">
-         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><?= $menu_superior['texto_link2']?> <span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a href="<?= $menu_superior['link1_menu2']?>" target="_blank"><?= $menu_superior['texto_link1_menu2']?></a></li>
-         </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><?= $menu_superior['texto_link3']?> <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="<?= $menu_superior['link1_menu3']?>" target="_blank"><?= $menu_superior['texto_link1_menu3']?></a></li>
-        </ul>
-     </li>
-     <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><?= $menu_superior['texto_link4']?> <span class="caret"></span></a>
-       <ul class="dropdown-menu">
-         <li><a href="<?= $menu_superior['link1_menu4']?>" target="_blank"><?= $menu_superior['texto_link1_menu4']?></a></li>
-       </ul>
-    </li>
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><?= $menu_superior['texto_link5']?> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<?= $menu_superior['link1_menu5']?>" target="_blank"><?= $menu_superior['texto_link1_menu5']?></a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- /Fixed navbar - EXIBE NO MOBILE -->

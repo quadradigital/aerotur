@@ -1,10 +1,15 @@
 <?php
-add_theme_support('menus');
-
 function customLoginLogo() {
+	$args_post = array('post_type' => 'logo_painel_admin', 'posts_per_page'=>1);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+	  $arr['logo_painel_admin'] = get_field('logo_painel_admin', $id);
 	echo '<style type="text/css">
-		h1 a { background-image: url("http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/imgs/logo-aerotur.png") !important; background-size:auto !important; width:300px !important; height:100px !important; padding-bottom:20px !important; }
+		h1 a { background-image: url("'.$arr['logo_painel_admin']['url'].'") !important; background-size:auto !important; width:300px !important; height:100px !important; padding-bottom:20px !important; }
 	</style>';
+	}
 }
 add_action('login_head', 'customLoginLogo');
 
@@ -143,24 +148,5 @@ function get_banner_topo($id){
 	  $arr['banner'] = get_field('banner', $id);
 
   	return $arr;
-}
-
-function get_menu($id){
-  $arr['texto_menu'] = get_field('texto_menu', $id);
-
-  return $arr;
-}
-
-function get_menu_superior($id){
-  $arr['texto_menu'] = get_field('texto_menu', $id);
-
-  return $arr;
-}
-
-function get_submenu_superior($id){
-  $arr['texto_submenu'] = get_field('texto_submenu', $id);
-	$arr['link_submenu'] = get_field('link_submenu', $id);
-
-  return $arr;
 }
 ?>
