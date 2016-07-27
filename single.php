@@ -1,12 +1,13 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all single posts
  *
- * @package aerotur
- * @subpackage aerotur
- * @since Aerotur 1.0
+ * @package aeroteen
+ * @subpackage aeroteen
+ * @since Aeroteen 1.0
  */
 ?>
+
 <!--start  HEADER  -->
 <?php get_header(); ?>
 <!--end  HEADER  -->
@@ -27,31 +28,15 @@
       <?php include('monte-sua-viagem.php') ?>
       <!--end MONTE SUA VIAGEM -->
 
-      <!--start OFERTA DE PASSAGENS -->
-      <?php include('ofertas-passagens.php') ?>
-      <!--end OFERTA DE PASSAGENS -->
+			<!--start TEMPLATE CONTENDO O POST ÚNICO -->
+			<?php
+        while ( have_posts() ) : the_post();
+          get_template_part( 'content' );
+        endwhile;
+      ?>
+      <!--end TEMPLATE CONTENDO O POST ÚNICO -->
 
-      <!--start PASSAGENS AÉREAS PROMOCIONAIS -->
-      <?php include('passagens-aereas-promocionais.php') ?>
-      <!--end PASSAGENS AÉREAS PROMOCIONAIS -->
-
-      <!--start BLOG -->
-      <?php include('secao-blog.php') ?>
-      <!--end BLOG -->
-
-      <!--start RECOMENDAÇÕES -->
-      <?php include('recomendacoes.php') ?>
-      <!--end RECOMENDAÇÕES -->
-
-      <!--start NEWSLETTER -->
-      <?php include('newsletter.php') ?>
-      <!--end NEWSLETTER -->
-
-      <!--start RAZÕES -->
-      <?php include('razoes.php') ?>
-      <!--end RAZÕES -->
-
-      <!--start CONTATO -->
+			<!--start CONTATO -->
       <?php include('form-contato.php') ?>
       <!--end CONTATO -->
 
