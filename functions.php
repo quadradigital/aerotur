@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails' );
+
 function customLoginLogo() {
 	$args_post = array('post_type' => 'logo_painel_admin', 'posts_per_page'=>1);
 	$myposts_post = get_posts( $args_post );

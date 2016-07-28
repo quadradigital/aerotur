@@ -29,306 +29,6 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
- /*
-  * Configurações do blog
-  *
-  */
-
-  .blog-box-img {
-    position: relative;
-  }
-
-  .blog-box-bg-l {
-    position: absolute;
-    background-color: #FFFFFF;
-    height: 125px;
-    margin-top: -125px;
-    padding-top: 20px;
-    font-size: 2em;
-    color: #F64450;
-    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .blog-box-bg-r {
-    position: absolute;
-    background-color: #EDBD7B;
-    height: 45px;
-    margin-top: -45px;
-    margin-left: 665px;
-    width: 445px;
-    padding-top: 9px;
-  }
-
-  .box-social-twitter {
-    padding-right: 0px;
-  }
-
-  .box-social-facebook img {
-    margin-left: -20px;
-  }
-
-  .box-r-comentarios {
-    padding-top: 3px;
-    color: #f64450;
-    font-family: AileronSemiBold, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .subtitulo-blog {
-    margin-bottom: 55px;
-  }
-
-  .content-blog {
-    margin-top: 40px;
-  }
-
-  .content-blog-sidebar {
-    margin-top: 40px;
-  }
-
-  .blog-circulo {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 60px;
-    height: 60px;
-    border: 3px solid #EDBD7B;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    font: normal 100%/normal Arial, Helvetica, sans-serif;
-    color: rgba(0,0,0,1);
-    -o-text-overflow: clip;
-    text-overflow: clip;
-  }
-
-  .blog-data-circulo {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 15px;
-  }
-
-  .blog-data-dia {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    font-size: 0.8em;
-    color: #EDBD7B;
-    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .blog-data-mes {
-    margin-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 0.6em;
-    color: #EDBD7B;
-    font-family: AileronLight, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .content-blog-comentario h4 {
-    color: #F64450;
-    font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .content-blog-comentario button {
-    margin-top: 48px;
-    margin-left: -10px;
-  }
-
-  .content-blog-sidebar h4 {
-    color: #F64450;
-    font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .titulo-sidebar {
-    margin-right: 25px;
-  }
-
-  .sidebar-img {
-    margin-bottom: 20px;
-    position: relative;
-  }
-
-  .sidebar-img-dados {
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    width: 100px;
-    width: 280px;
-    padding-bottom: 64px;
-    margin-top: -65px;
-  }
-
-  .sidebar-circulo {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 40px;
-    height: 40px;
-    border: 3px solid #EDBD7B;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    font: normal 100%/normal Arial, Helvetica, sans-serif;
-    color: rgba(0,0,0,1);
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    position: absolute;
-    margin-top: 10px;
-  }
-
-  .sidebar-data-dia {
-    margin-top: 7px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    font-size: 0.8em;
-    color: #EDBD7B;
-    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  }
-
-  .sidebar-img-text {
-    color: #EDBD7B;
-    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-    position: absolute;
-    font-size: 0.8em;
-    margin-top: 15px;
-    margin-left: 55px;
-  }
-
-  .size-img-blog {
-    width: 100%;
-    height: 431px;
-    background-size: cover;
-  }
-
-  .img-blog-responsive {
-    margin: 0 auto !important;
-    margin-top: 30px !important;
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .sidebar-img-dados-blog-posts {
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    width: 100px;
-    width: 350px;
-    padding-bottom: 64px;
-    margin-top: -65px;
-  }
-  .sidebar-img-blog {
-    width: 100%;
-    height: 431px;
-    background-size: cover;
-  /*
-    width: 350px;
-    margin-left: -40px;
-    height: 258px;
-    */
-  }
-
-  @media(max-width:593px){
-
-    .comentarios-botao button {
-      margin-left: 0px;
-      margin-top: 15px;
-    }
-
-    .blog-titulo-img {
-      font-size: 0.7em !important;
-      margin: 0px !important;
-      padding: 0px !important;
-    }
-
-    .content-blog-sidebar {
-      padding: 0px;
-    }
-
-    .content-blog {
-      margin-top: 80px;
-    }
-
-    .sidebar-img {
-      margin-left: -30px;
-      width: 97%;
-    }
-
-    .col {
-      padding-right: 15px;
-      padding-top: 15px;
-    }
-
-    .blog-box-bg-l {
-      padding-left: 0px;
-    }
-
-    .div-blog-titulo-img {
-      padding-top: 20px;
-    }
-
-    .titulo-sidebar {
-      margin-right: 40px;
-    }
-
-    .size-img-blog img {
-      height: 122px;
-      width: 330px;
-      margin-bottom: 130px;
-      margin-left: -15px;
-    }
-
-    .blog-box-bg-l {
-      position: absolute;
-      background-color: transparent;
-      height: 125px;
-      margin-top: -125px;
-      padding-top: 20px;
-      font-size: 2em;
-      color: #F64450;
-      font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-    }
-
-    .blog-box-bg-r {
-      margin-left: -15px;
-      background-color: #EDBD7B;
-      height: 28px;
-      margin-top: -130px;
-      width: 330px;
-      padding-top: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-
-    .img-blog-responsive {
-      margin: 0 auto !important;
-      margin-top: 10px !important;
-      display: block;
-      max-width: 100%;
-      height: 100%;
-    }
-
-    .sidebar-img-blog {
-      width: 100%;
-      height: 431px;
-      background-size: cover;
-    /*
-      width: 350px;
-      margin-left: -40px;
-      height: 258px;
-      */
-    }
-
-    .blog-mobile-titulo {
-      padding: 0px;
-    }
-
-  }
-
- /*
-  * FIM das configurações do blog
-  *
-  */
-
 .infoBox { background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 10px }
 .infoBox p { padding: 0 15px }
 .infoBox:before { border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
@@ -354,7 +54,6 @@ code {
   margin:0 auto;
   padding-top: 25px;
 }
-
 
 .slippry-arrow-right {
   -webkit-box-sizing: content-box;
@@ -618,7 +317,6 @@ code {
 #promocoes-subtitulo {
   color: #777777;
   margin-bottom: 25px;
-  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
 }
 
 .bg-blogs {
@@ -844,8 +542,8 @@ code {
 }
 
 #maps {
-  width: 100%;
-  height: 412px;
+  height: 410px;
+  width: auto;
 }
 
 
@@ -1047,64 +745,13 @@ code {
   padding-left: 0px !important;
 }
 
-.promo-img {
-  background-size: contain;
-  height: auto;
-  width: auto;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
-}
+  .promo-1 {
+    margin-bottom: 10px;
+  }
 
-.promo-dados {
-  background-color: rgba(0,0,0,0.5);
-  margin-left: 0px;
-  margin-right: 0px;
-  position: absolute;
-  bottom: 0px;
-  width: 365px;
-}
-
-.promo-title {
-  color: #FFFFFF;
-  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.promo-subtitle {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-.promo-parcelas {
-  color: #FFFFFF;
-  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  font-size: 0.7em;
-}
-
-.promo-valor {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  margin-top: 0px;
-  padding-top: 0px;
-  font-size: 1.7em;
-}
-
-.promo-centavos {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  font-size: 0.7em;
-  position: fixed;
-  margin-left: 290px;
-  margin-top: 22px;
-}
+  .promo-2 {
+    margin-bottom: 10px;
+  }
 
 @media(max-width:790px){
   .social-icon-mobile {
@@ -1128,6 +775,14 @@ code {
 }
 
 @media(max-width:593px){
+
+  .promo-1 {
+    margin-bottom: 10px;
+  }
+
+  .promo-2 {
+    margin-bottom: 10px;
+  }
 
   .coluna-social-footer-titulo {
     width: 220px !important;
@@ -1425,34 +1080,5 @@ code {
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     margin-top: -30px;
   }
-
-  .promo-parcelas {
-  color: #FFFFFF;
-  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-size: 0.7em;
-}
-
-.promo-valor {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  margin-top: 0px;
-  margin-left: -20px;
-  padding-top: 0px;
-  font-size: 1.7em;
-}
-
-.promo-centavos {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  font-size: 0.7em;
-  position: fixed;
-  margin-left: 290px;
-  margin-top: 22px;
-  margin-left: 270px;
-}
 
 }

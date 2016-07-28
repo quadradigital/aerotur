@@ -8,7 +8,8 @@
  */
  ?>
 
- <!DOCTYPE html>
+
+  <!DOCTYPE html>
  <html lang="en">
    <head>
      <meta charset="utf-8">
@@ -18,40 +19,14 @@
      <meta name="description" content="">
      <meta name="author" content="">
      <link rel="icon" href="#">
+
+     <!-- CONFIGURAÇÃO DA COR DA BARRA DO CHROME NO ANDROID -->
      <meta name="theme-color" content="#B7986D">
+     <!-- /CONFIGURAÇÃO DA COR DA BARRA DO CHROME NO ANDROID -->
 
      <title><?php wp_title( '-', true, 'right'); bloginfo() ?></title>
 
-     <!-- CONFIGURAÇÃO DO MAPS -->
-
-      <script async defer
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF88DKo2KBtZe2VK30w1b9GEefAxuYa2Q&signed_in=true&callback=initMap"></script>
-
-      <script>
-
-     function initMap() {
-       var myLatLng = {lat: -5.873102, lng: -35.1800203};
-
-       var map = new google.maps.Map(document.getElementById('maps'), {
-         zoom: 17,
-         scrollwheel: false,
-         draggable: false,
-         center: myLatLng
-       });
-
-       var marker = new google.maps.Marker({
-         position: myLatLng,
-         map: map,
-         title: 'Av. Engenheiro Roberto Freire,2920 - Ponta Negra'
-       });
-     }
-
-   </script>
-
-     <!-- EOF~ CONFIGURAÇÃO DO MAPS -->
-
      <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/css/slippry.css">
-
      <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/css/jquery.bxslider.css">
 
      <!-- Bootstrap core CSS -->
@@ -61,8 +36,8 @@
      <link href="<?php bloginfo('template_url') ?>/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
      <!-- Custom styles for this template -->
-     <link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
-     <link href="<?php bloginfo('template_url') ?>/assets/css/fonts.css" rel="stylesheet">
+     <link href="<?php bloginfo('template_url') ?>/salinas/css/style-salinas.css" rel="stylesheet">
+     <link href="<?php bloginfo('template_url') ?>/salinas/css/fonts.css" rel="stylesheet">
 
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -75,5 +50,4 @@
      <![endif]-->
 
      <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
    </head>

@@ -40,9 +40,8 @@
           <div class="row">
             <div class="col-xs-1 col-sm-12 col-md-12">
               <?
-              $args_post = array('post_type' => 'post', 'posts_per_page'=>9);
+              $args_post = array('post_type' => 'post', 'posts_per_page'=>12, 'order'=>'DESC');
               $myposts_post = get_posts( $args_post );
-              //print_r($myposts_post);
               foreach ( $myposts_post as $post_post ){
                 setup_postdata( $post_post );
                 $id_post = $post_post->ID;
@@ -52,8 +51,8 @@
                 $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
               ?>
               <div class="col-xs-1 col-sm-6 col-md-4">
-                  <div class="sidebar-img-blog">
-                    <img src="<?= $img_post?>" class="center-block img-blog-responsive">
+                  <div style="background-image:url(<?= $img_post[0]?>)" class="sidebar-img-blog">
+
                       <div class="sidebar-img-dados-blog-posts">
                         <div class="col-xs-2 col-sm-2 col-md-2">
                           <div class="sidebar-circulo center-block">

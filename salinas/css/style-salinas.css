@@ -14,23 +14,113 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 0px;
-  margin-top: 51px; /* MARGEM ENTRE A BARRA DE NAVEGAÇÃO E O CONTEÚDO DO SITE - *EDITED* */
+  margin-top: 51px; /* MARGEM ENTRE A BARRA DE NAVEGAÃ‡ÃƒO E O CONTEÃšDO DO SITE - *EDITED* */
 }
 .footer {
   position: 0;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 112px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
-  background-color: #FFFFFF; /* COR DO RODAPÉ - *EDITED* */
+  height: 112px; /* TAMANHO RODAPÃ‰ ASSINATURA QUADRADIGITAL - *EDITED* */
+  background-color: #FFFFFF; /* COR DO RODAPÃ‰ - *EDITED* */
 }
 
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+  /*
+    SALINAS
+  */
+
+  .linha-under-navbars {
+    width: auto;
+    height: 10px;
+    background-color: #3abfba;
+  }
+
+  .salinas-online {
+    margin-top: 30px;
+  }
+
+  .salinas-online h3 {
+    color: #3abfba;
+    font-size: 2.0em;
+    font-family: BebasNeue, Helvetica, Verdana, Sans-Serif;
+  }
+
+  .salinas-online p {
+    color: #777777;
+    font-size: 0.95em;
+    font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
+  }
+
+  .borda-inferior {
+    border-bottom: 2px solid #b7986d;
+    position: absolute;
+    right: 3%;
+    left: 3%;
+  }
+
+  #inv-titulo-color {
+    margin-bottom: 0px;
+    color: #B7986D;
+    font-size: 2.0em;
+    font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
+  }
+
+  #inv-subtitulo-color {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #3abfba;
+    font-size: 3.5em;
+    font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
+  }
+
+  .acesso-titulo {
+    padding-right: 0px;
+  }
+
+  .acesso-titulo  h2 {
+    display: table-cell;
+    margin: 0px;
+    font-family: BebasNeue, Helvetica, Verdana, Sans-Serif;
+    color: #3abfba;
+    font-size: 3.8em;
+    padding-top: 5px;
+  }
+
+  .acesso-img {
+    margin-right: -25px;
+  }
+
+  #acesso-box {
+    padding-top: 40px;
+  }
+
+  .acesso-texto {
+    margin-right: -50px;
+    padding-left: 0px;
+    margin-top: 10px;
+    color: #777777;
+    font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
+  }
+
+  .senha-alinhamento {
+    padding-top: 35px;
+  }
+
+  .help-block a {
+    color: #3abfba;
+  }
+
+  .btn-danger {
+    background-color: #3abfba !important;
+    border-color: #3abfba !important;
+  }
+
  /*
-  * Configurações do blog
+  * ConfiguraÃ§Ãµes do blog
   *
   */
 
@@ -194,10 +284,9 @@ body {
     margin-left: 55px;
   }
 
-  .size-img-blog {
-    width: 100%;
-    height: 431px;
-    background-size: cover;
+  .size-img-blog img {
+    height: 410px;
+    width: 1110px;
   }
 
   .img-blog-responsive {
@@ -215,16 +304,6 @@ body {
     width: 350px;
     padding-bottom: 64px;
     margin-top: -65px;
-  }
-  .sidebar-img-blog {
-    width: 100%;
-    height: 431px;
-    background-size: cover;
-  /*
-    width: 350px;
-    margin-left: -40px;
-    height: 258px;
-    */
   }
 
   @media(max-width:593px){
@@ -308,24 +387,18 @@ body {
     }
 
     .sidebar-img-blog {
-      width: 100%;
-      height: 431px;
-      background-size: cover;
-    /*
       width: 350px;
       margin-left: -40px;
       height: 258px;
-      */
     }
 
     .blog-mobile-titulo {
       padding: 0px;
     }
-
   }
 
  /*
-  * FIM das configurações do blog
+  * FIM das configuraÃ§Ãµes do blog
   *
   */
 
@@ -379,7 +452,7 @@ code {
 }
 
 #navbar-logo {
-  background-image: url("imgs/navlogo-bg-f.png");
+  background-image: url("../../imgs/navlogo-bg-f.png");
   width: 351px;
   height: 101px;
   bottom: 0;
@@ -387,7 +460,7 @@ code {
 
 .viagens-navbar {
   color: #BA232D !important;
-  background-image: url("imgs/navviagens-f.png");
+  background-image: url("../../imgs/navviagens-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -396,7 +469,7 @@ code {
 
 .corp-navbar {
   color: #185E85 !important;
-  background-image: url("imgs/navcorp-f.png");
+  background-image: url("../../imgs/navcorp-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -405,7 +478,7 @@ code {
 
 .teen-navbar {
   color: #2DB672 !important;
-  background-image: url("imgs/navteen-f.png");
+  background-image: url("../../imgs/navteen-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -414,7 +487,7 @@ code {
 
 .viaje-navbar {
   color: #F7921E !important;
-  background-image: url("imgs/navviaje-f.png");
+  background-image: url("../../imgs/navviaje-f.png");
   background-size: cover;
   height: 53px;
   width: 153px;
@@ -424,7 +497,7 @@ code {
 
 .salinas-navbar {
   color: #3ABFBA !important;
-  background-image: url("imgs/navsalinas-f.png");
+  background-image: url("../../imgs/navsalinas-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -432,12 +505,17 @@ code {
 }
 
 .line-fixed-top {
-  background-image: url('imgs/linepills.png');
-  background-color: #B7986D;
+  background-image: url('../img/linepills.png');
+  background-color: #3abfba;
   background-repeat: no-repeat;
   background-position: bottom;
   border-bottom: hidden;
   height: 58px;
+}
+
+.style-pills-top {
+  margin-top: -15px;
+  margin-left: -30px;
 }
 
 .style-pills-top a {
@@ -712,14 +790,14 @@ code {
 }
 
 .box-newsletter {
-  background-image: url("imgs/newsletter.png");
+  background-image: url("../../imgs/newsletter.png");
   background-repeat: no-repeat;
   height: 146px;
   width: 85%;
 }
 
 .newsletter-form-position {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .border-newsletter {
@@ -813,7 +891,7 @@ code {
 #titulo-color {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #9B0D1A;
+  color: #3abfba;
   font-size: 2.0em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
 }
@@ -821,24 +899,6 @@ code {
 #subtitulo-color {
   margin-top: 0px;
   color: #B7986D;
-  font-size: 3.5em;
-  font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
-}
-
-#titulo-color-inverted {
-  margin-top: 25px;
-  margin-left: 20px;
-  margin-bottom: 0px;
-  color: #B7986D;
-  font-size: 2.0em;
-  font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
-}
-
-#subtitulo-color-inverted {
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-bottom: 0px;
-  color: #9B0D1A;
   font-size: 3.5em;
   font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
 }
@@ -885,11 +945,11 @@ code {
 /* FORMATANDO O FOOTER 1 - *EDITED* */
 
 #bg-footer-one {
-  background-color: #B7986D;
+  background-color: #3abfba;
 }
 
 .footer-one {
-  height: 213px;
+  height: 150px;
 }
 
 #footer-one p {
@@ -900,11 +960,15 @@ code {
 }
 
 #footer-one-local {
-  margin-top: 54px;
+  margin-top: 33px;
   height: 35px;
-  background-color: #474747;
   font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  font-size: 1.1em;
+  font-size: 1.4em;
+}
+
+#footer-one-local p {
+  margin-left: 0px;
+  margin-bottom: 0px;
 }
 
 #footer-one-tel {
@@ -913,11 +977,12 @@ code {
 }
 
 #footer-one-tel p {
-  color: #9B0D1A;
+  color: #f6c075;
   margin-left: 0px;
   font-weight: bold;
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  font-size: 1.2em;
+  font-size: 2.0em;
+  padding-top: 0px;
 }
 
 #ddd-tel {
@@ -1023,14 +1088,14 @@ code {
 /* FORMATANDO O FOOTER 5 - *EDITED* */
 
 .footer-five {
-  background-color: #B7986D; /* COR DO RODAPÉ - *EDITED* */
-  height: 112px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
+  background-color: #B7986D; /* COR DO RODAPÃ‰ - *EDITED* */
+  height: 112px; /* TAMANHO RODAPÃ‰ ASSINATURA QUADRADIGITAL - *EDITED* */
 }
 
 /* FORMATANDO PARA QUE OS CAMPOS QUE POSSUAM CINCO COLUNAS FIQUEM DIVIDIDOS IGUALITARIAMENTE - *EDITED* */
 
 .col-half-offset{
-  margin-left:4.166666667%; /* *MOBILE* necessario remover para corrigir o aspecto da página no mobile  */
+  margin-left:4.166666667%; /* *MOBILE* necessario remover para corrigir o aspecto da pÃ¡gina no mobile  */
 }
 
 .rodape-recomendacoes {
@@ -1427,32 +1492,32 @@ code {
   }
 
   .promo-parcelas {
-  color: #FFFFFF;
-  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-size: 0.7em;
-}
+    color: #FFFFFF;
+    font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: -20px;
+    padding-left: 20px;
+    font-size: 0.7em;
+  }
 
-.promo-valor {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  margin-top: 0px;
-  margin-left: -20px;
-  padding-top: 0px;
-  font-size: 1.7em;
-}
+  .promo-valor {
+    color: #FFFFFF;
+    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
+    margin-top: 0px;
+    margin-left: -20px;
+    padding-top: 0px;
+    font-size: 1.7em;
+  }
 
-.promo-centavos {
-  color: #FFFFFF;
-  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-  font-size: 0.7em;
-  position: fixed;
-  margin-left: 290px;
-  margin-top: 22px;
-  margin-left: 270px;
-}
+  .promo-centavos {
+    color: #FFFFFF;
+    font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
+    font-size: 0.7em;
+    position: fixed;
+    margin-left: 290px;
+    margin-top: 22px;
+    margin-left: 270px;
+  }
 
 }
