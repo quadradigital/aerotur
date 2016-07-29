@@ -49,6 +49,7 @@
                 $conteudo_post = wp_strip_all_tags(get_the_content(), false);
                 $link_post = get_post_permalink($id_post);
                 $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
+                //$img_post_thumb = set_post_thumbnail_size( $width, $height, $crop );
               ?>
               <div class="col-xs-1 col-sm-6 col-md-4">
                   <div style="background-image:url(<?= $img_post[0]?>)" class="sidebar-img-blog">

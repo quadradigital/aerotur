@@ -47,12 +47,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar">TEEN<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">LINK1</a></li>
-          <li><a href="#">LINK2</a></li>
-          <li><a href="#">LINK3</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">LINK4</a></li>
-          <li><a href="#">LINK5</a></li>
+          <li><a href="http://www.aeroturteen.com.br/">AEROTUR TEEN</a></li>
         </ul>
      </li>
      <li class="dropdown">

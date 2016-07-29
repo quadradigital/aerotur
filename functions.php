@@ -16,7 +16,7 @@ function customLoginLogo() {
 add_action('login_head', 'customLoginLogo');
 
 function get_ativar(){
-	$args_post = array('post_type' => 'secoes', 'posts_per_page'=>400);
+	$args_post = array('post_type' => 'secoes', 'posts_per_page'=>1);
 	$myposts_post = get_posts( $args_post );
 	foreach ( $myposts_post as $post_post ){
 		setup_postdata( $post_post );
@@ -36,6 +36,16 @@ function get_ativar(){
 		$arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
 		$arr['ativar_monte'] = get_field('ativar_monte', $id);
 		$arr['ativar_menu'] = get_field('ativar_menu', $id);
+		$arr['ativar_restrito'] = get_field('ativar_restrito', $id);
+		$arr['ativar_mapa_salinas'] = get_field('ativar_mapa_salinas', $id);
+		$arr['ativar_fones'] = get_field('ativar_fones', $id);
+
+		/*
+			PÁGINA SALINAS
+		*/
+
+		$arr['ativar_salinas_tour'] = get_field('ativar_salinas_tour', $id);
+		$arr['ativar_salinas_online'] = get_field('ativar_salinas_online', $id);
 
 		return $arr;
 	}
@@ -150,5 +160,41 @@ function get_banner_topo($id){
 	  $arr['banner'] = get_field('banner', $id);
 
   	return $arr;
+}
+
+/*
+				PÁGINA SALINAS
+*/
+
+function get_salinas_tour($id){
+	$arr['texto_superior'] = get_field('texto_superior', $id);
+	$arr['texto_inferior'] = get_field('texto_inferior', $id);
+	$arr['descricao_secao'] = get_field('descricao_secao', $id);
+	$arr['logo_salinas_tour'] = get_field('logo_salinas_tour', $id);
+
+	return $arr;
+}
+
+function get_texto_salinas_online($id){
+	$arr['texto_superior'] = get_field('texto_superior', $id);
+	$arr['texto_inferior'] = get_field('texto_inferior', $id);
+
+	return $arr;
+}
+
+function get_salinas_online($id){
+	$arr['categoria'] = get_field('categoria', $id);
+	$arr['descricao'] = get_field('descricao', $id);
+
+	return $arr;
+}
+
+function get_fones($id){
+	$arr['telefone'] = get_field('telefone', $id);
+	$arr['telefone2'] = get_field('telefone2', $id);
+	$arr['telefone3'] = get_field('telefone3', $id);
+	$arr['telefone4'] = get_field('telefone4', $id);
+
+	return $arr;
 }
 ?>
