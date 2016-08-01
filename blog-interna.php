@@ -5,27 +5,8 @@
  * @package aerotur
  * @subpackage aerotur
  * @since Aerotur 1.0
+ * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
-/*
-  $secoes = get_secoes();
-  $cores = get_cores();
-  $tags = $_GET['tag'];
-  $cats = $_GET['categoria'];
-  $page_atual = get_query_var('paged');
-  $total_posts_por_pagina = 3;
-
-  if($page_atual == 0){
-    $page_atual = 1;
-  }
-
-  if($tags != ""){
-        $params = $params."?tag=".$tags;
-  }
-
-  if($cats != ""){
-        $params = $params."?categoria=".$cats;
-  }
-*/
  ?>
       <div class="container-fluid">
         <div class="container">

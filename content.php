@@ -7,6 +7,7 @@
  * @package aeroteen
  * @subpackage aeroteen
  * @since Aeroteen 1.0
+ * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
 $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(2000,2000));
 ?>

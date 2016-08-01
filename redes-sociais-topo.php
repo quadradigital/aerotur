@@ -5,6 +5,7 @@
  * @package aerotur
  * @subpackage aerotur
  * @since Aerotur 1.0
+ * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
  ?>
 <div class="col-xs-12 col-sm-3 col-md-3 pull-right social-top-icons hidden-xs">
