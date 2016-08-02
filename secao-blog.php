@@ -15,7 +15,8 @@
       setup_postdata( $post_post );
       $id_post = $post_post->ID;
       $titulo_post = get_the_title($id_post);
-      $conteudo_post = wp_strip_all_tags(get_the_content(), false);
+      $conteudo = get_the_excerpt($id);
+      //$conteudo_post = wp_strip_all_tags(get_the_content(), false);
       $link_post = get_post_permalink($id_post);
     }
   ?>
@@ -27,23 +28,24 @@
                  <div class="col-xs-12 col-sm-4 col-md-4 bg-textbox-left side-l-correction">
                    <h4>BLOG</h4>
                    <h2>O MELHOR DESTINO</h2>
-                   <h5><?= get_the_date(' j F Y',$id_post); ?></h5>
+                   <h5><?= get_the_date(' j \d\e F \d\e Y',$id_post); ?></h5>
                    <h3><?= $titulo_post ?></h3>
-                   <p><?= $conteudo_post ?>
-                   <button type="button" class="btn btn-danger pull-left"><a href="<?= $link_post?>" style="color: #fff; !important;">LEIA +</button>
+                   <p><?= $conteudo ?>
+                   <button type="button" class="btn btn-danger pull-left"><a href="<?= $link_post?>" style="color: #fff; !important;">LEIA +</a></button>
                    </p>
                  </div>
                  <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 bg-textbox-right side-r-correction">
                    <h4 class="text-right">BLOG</h4>
                    <h2 class="text-right">AEROTUR DISNEY</h2>
-                   <h5>15 de abril de 2016</h5>
-                   <h3>Morbi malesuada eu urna non lacinia mauris id magna sit amet</h3>
-                   <p>
-                   Quisque pulvinar maximus odio eu faucibus. Maecenas laoreet ipsum eros, et blandit dolor aliquet et. Aenean ut mollis tortor, eu elementum massa. Nunc laoreet, nisl sit amet accumsan euismod, urna sapien dictum enim, sit amet posuere ante ipsum quis velit. Mauris at nisl posuere, condimentum lorem eu, molestie arcu. Donec arcu diam, suscipit id congue non, laoreet in ante. Praesent at viverra felis. Phasellus imperdiet at ligula in pretium. Aenean tincidunt ut tortor quis semper.</p>
-
-                   <p>Nulla facilisis enim dolor. Phasellus facilisis elementum sodales. Phasellus scelerisque lorem quis libero euismod, non interdum odio tincidunt. Morbi maximus magna vel tortor consequat euismod. Morbi dictum, dolor at euismod malesuada, sem libero commodo velit, vel commodo risus ex id libero. Aenean semper bibendum lacus in maximus.
-                   </p>
-                   <!--<button type="button" class="btn btn-success pull-right">+ POSTS</button>-->
+                   <?php
+                   $xml = simplexml_load_file('http://www.aeroturteen.com.br/category/blog-blog/feed/');
+                   setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                   date_default_timezone_set('America/Recife');
+                    ?>
+                   <h5><?= strftime('%d de %B de %Y', strtotime($xml->channel->item->pubDate))?></h5>
+                   <h3><?= $xml->channel->item->title?></h3>
+                   <p><?= $xml->channel->item->description?></p>
+                   <button type="button" class="btn btn-success pull-right"><a href="<?= $xml->channel->item->link?>" style="color: #fff; !important;">LEIA +</a></button>
                  </div>
                </div>
              </div>
