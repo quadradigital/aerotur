@@ -32,9 +32,9 @@
       <?php include('ofertas-passagens.php') ?>
       <!--end OFERTA DE PASSAGENS -->
 
-      <!--start PASSAGENS AÉREAS PROMOCIONAIS -->
-      <?php include('passagens-aereas-promocionais.php') ?>
-      <!--end PASSAGENS AÉREAS PROMOCIONAIS -->
+      <!--start PASSAGENS AÉREAS PROMOCIONAIS/PACOTES -->
+      <?php include('pacotes.php') ?>
+      <!--end PASSAGENS AÉREAS PROMOCIONAIS/PACOTES -->
 
       <!--start BLOG -->
       <?php include('secao-blog.php') ?>

@@ -7,7 +7,7 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
- 
+
 add_theme_support( 'post-thumbnails' );
 
 function customLoginLogo() {
@@ -41,7 +41,7 @@ function get_ativar(){
 		$arr['ativar_news'] = get_field('ativar_news', $id);
 		$arr['ativar_recomendacoes'] = get_field('ativar_recomendacoes', $id);
 		$arr['ativar_blog'] = get_field('ativar_blog', $id);
-		$arr['ativar_promocao'] = get_field('ativar_promocao', $id);
+		$arr['ativar_pacotes'] = get_field('ativar_pacotes', $id);
 		$arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
 		$arr['ativar_monte'] = get_field('ativar_monte', $id);
 		$arr['ativar_menu'] = get_field('ativar_menu', $id);
@@ -119,8 +119,13 @@ function get_texto_promocao($id){
   return $arr;
 }
 
-function get_banner_promocao($id){
+function get_pacotes($id){
   $arr['banner'] = get_field('banner', $id);
+  $arr['texto_superior_pacote'] = get_field('texto_superior_pacote', $id);
+  $arr['texto_inferior_pacote'] = get_field('texto_inferior_pacote', $id);
+  $arr['parcelas'] = get_field('parcelas', $id);
+  $arr['valor'] = get_field('valor', $id);
+  $arr['centavos'] = get_field('centavos', $id);
 
   return $arr;
 }

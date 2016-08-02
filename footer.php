@@ -72,6 +72,7 @@
 <script src="<?php bloginfo('template_url') ?>/assets/js/slippry.js"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/scripts.js"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/r.js"></script>
+<script src="<?php bloginfo('template_url') ?>/assets/js/jquery.bxslider.min.js"></script>
 
 <script>
  $(document).ready(function(){
@@ -79,6 +80,41 @@
  });
 </script>
 
+<script>
+  $(document).ready(function(){
+    $('.slider4').bxSlider({
+      slideWidth: 365,
+      minSlides: 1,
+      maxSlides: 3,
+      moveSlides: 1,
+      pager: false,
+      slideMargin: 10
+    });
+  });
+  </script>
+
+  <script>
+        $('#form_contato').submit(function() {
+          var dados = $('#form_contato').serialize();
+          $.ajax({
+          type: 'POST',
+          dataType: 'html',
+          url: 'http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/envia_pagina_contato.php',
+          async: true,
+          data: dados,
+/*
+    error: function(enviado) {
+        alert(dados);
+        },
+*/
+    success: function(enviado) {
+        alert("enviado para contas@quadradigital.com.br");
+        }
+
+        });
+          return false;
+        });
+   </script>
 </body>
 
 </html>

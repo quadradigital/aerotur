@@ -8,6 +8,8 @@
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
  ?>
+ <!-- AQUI INICIA O CONTEÚDO DO BLOG -->
+
       <div class="container-fluid">
         <div class="container">
           <div class="col-xs-12 col-sm-12 col-md-12 blog-mobile-titulo">
@@ -16,6 +18,7 @@
           </div>
         </div>
       </div>
+
       <div class="container-fluid space-down">
         <div class="container">
           <div class="row">
@@ -29,12 +32,11 @@
                 $titulo_post = get_the_title($id_post);
                 $conteudo_post = wp_strip_all_tags(get_the_content(), false);
                 $link_post = get_post_permalink($id_post);
-                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
-                //$img_post_thumb = set_post_thumbnail_size( $width, $height, $crop );
+                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285));
               ?>
               <div class="col-xs-1 col-sm-6 col-md-4">
-                  <div style="background-image:url(<?= $img_post[0]?>)" class="sidebar-img-blog">
-
+                  <div class="sidebar-img-blog">
+                    <img src="<?= $img_post[0]?>" class="center-block img-blog-responsive">
                       <div class="sidebar-img-dados-blog-posts">
                         <div class="col-xs-2 col-sm-2 col-md-2">
                           <div class="sidebar-circulo center-block">
@@ -43,14 +45,15 @@
                           </div>
                         </div>
                         <div class="col-xs-10 col-sm-10 col-md-10 sidebar-img-text">
-                          <a href="<?= $link_post ?>"><?= $titulo_post ?></a>
+                          <a style="color: #EDBD7B; !important;" href="<?= $link_post ?>"><?= $titulo_post ?></a>
                         </div>
                       </div>
                   </div>
               </div>
               <?php }?>
-              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- /AQUI FINALIZA O CONTEÚDO DO BLOG -->

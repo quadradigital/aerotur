@@ -30,8 +30,8 @@
                    <h2>O MELHOR DESTINO</h2>
                    <h5><?= get_the_date(' j \d\e F \d\e Y',$id_post); ?></h5>
                    <h3><?= $titulo_post ?></h3>
-                   <p><?= $conteudo ?>
-                   <button type="button" class="btn btn-danger pull-left"><a href="<?= $link_post?>" style="color: #fff; !important;">LEIA +</a></button>
+                   <p><a href="<?= $link_post?>" style="color: #fff; !important;"><?= $conteudo ?></a>
+                   <button type="button" class="btn btn-danger pull-left"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
                    </p>
                  </div>
                  <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 bg-textbox-right side-r-correction">
@@ -44,8 +44,8 @@
                     ?>
                    <h5><?= strftime('%d de %B de %Y', strtotime($xml->channel->item->pubDate))?></h5>
                    <h3><?= $xml->channel->item->title?></h3>
-                   <p><?= $xml->channel->item->description?></p>
-                   <button type="button" class="btn btn-success pull-right"><a href="<?= $xml->channel->item->link?>" style="color: #fff; !important;">LEIA +</a></button>
+                   <p><a href="<?= $xml->channel->item->link?>" style="color: #fff; !important;"><?= $xml->channel->item->description?></a></p>
+                   <button type="button" class="btn btn-success pull-right"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
                  </div>
                </div>
              </div>

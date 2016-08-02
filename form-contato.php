@@ -24,8 +24,7 @@
      </div> <!-- FIM row -->
    </div> <!-- FIM container-fluid -->
 
-   <form class="form-horizontal" role="form" method="post" action="#">
-
+   <form class="form-horizontal" role="form" method="post" id="form_contato">
    <div class="container-fluid">
      <div class="row" id="contato-form">
        <div class="container">
@@ -59,7 +58,7 @@
              </div>
            </div>
          </div>
-
+         <!--<p  style="display:none;color: #000;font-size: 10px;margin-left: 100px;" class="msg_contato texto_area_online" >Dados recebidos!</p>-->
          <div class="col-xs-12 col-sm-4 col-md-4">
              <div class="row">
                <div class="col-xs-6 col-sm-6 col-md-6" id="img-phone">
