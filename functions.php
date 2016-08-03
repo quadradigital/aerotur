@@ -111,14 +111,6 @@ function get_razoes($id){
   return $arr;
 }
 
-function get_texto_promocao($id){
-  $arr['texto_superior'] = get_field('texto_superior', $id);
-  $arr['texto_inferior'] = get_field('texto_inferior', $id);
-  $arr['descricao'] = get_field('descricao', $id);
-
-  return $arr;
-}
-
 function get_pacotes($id){
   $arr['banner'] = get_field('banner', $id);
   $arr['texto_superior_pacote'] = get_field('texto_superior_pacote', $id);
@@ -172,6 +164,7 @@ function get_monte_sua_viagem($id){
 
 function get_banner_topo($id){
 	  $arr['banner'] = get_field('banner', $id);
+		$arr['local'] = get_field('local', $id);
 
   	return $arr;
 }
@@ -185,13 +178,6 @@ function get_salinas_tour($id){
 	$arr['texto_inferior'] = get_field('texto_inferior', $id);
 	$arr['descricao_secao'] = get_field('descricao_secao', $id);
 	$arr['logo_salinas_tour'] = get_field('logo_salinas_tour', $id);
-
-	return $arr;
-}
-
-function get_texto_salinas_online($id){
-	$arr['texto_superior'] = get_field('texto_superior', $id);
-	$arr['texto_inferior'] = get_field('texto_inferior', $id);
 
 	return $arr;
 }

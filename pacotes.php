@@ -13,20 +13,11 @@
    <div class="container-fluid">
         <div class="row">
           <div class="container">
-            <?php
-            $args_post = array('post_type' => 'texto_promocao', 'posts_per_page'=>1);
-            $myposts_post = get_posts( $args_post );
-            foreach ( $myposts_post as $post_post ){
-               setup_postdata( $post_post );
-                $id2 = $post_post->ID;
-                $promocao = get_texto_promocao($id2);
-            ?>
             <div class="col-xs-12 col-sm-12 col-md-12" id="titulo-recomendacoes">
-              <p id="titulo-color"><?= $promocao['texto_superior']?></p>
-              <h2 id="subtitulo-color"><?= $promocao['texto_inferior']?></h2>
-              <p id="promocoes-subtitulo"><?= $promocao['descricao']?>:</p>
+              <p id="titulo-color">PASSAGENS AÉREAS</p>
+              <h2 id="subtitulo-color">PROMOCIONAIS</h2>
+              <p id="promocoes-subtitulo">Confira as melhores promoções do mercado de viagens:</p>
             </div>
-            <?php }?>
           </div>
         </div> <!-- FIM row -->
       </div> <!-- FIM container-fluid -->

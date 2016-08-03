@@ -14,7 +14,7 @@
       <ul class="nav nav-pills style-pills-top">
         <li role="presentation"><a href="#">EMPRESA</a></li>
         <li role="presentation"><a href="#">PACOTES</a></li>
-        <li role="presentation"><a href="#">BLOG</a></li>
+        <li role="presentation"><a href="/blog/">BLOG</a></li>
         <li role="presentation"><a href="#">LOJAS</a></li>
         <li role="presentation"><a href="#">CONTATO</a></li>
       </ul>

@@ -7,6 +7,7 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
+ require('libs/wideimage/lib/WideImage.php');
  ?>
  <!-- AQUI INICIA O CONTEÚDO DO BLOG -->
 
@@ -32,7 +33,7 @@
                 $titulo_post = get_the_title($id_post);
                 $conteudo_post = wp_strip_all_tags(get_the_content(), false);
                 $link_post = get_post_permalink($id_post);
-                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285));
+                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(1024,768)) ;
               ?>
               <div class="col-xs-1 col-sm-6 col-md-4">
                   <div class="sidebar-img-blog">

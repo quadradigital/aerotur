@@ -12,21 +12,12 @@
    <div class="container-fluid space-down">
      <div class="row">
        <div class="container">
-   <?php
-   $args_post = array('post_type' => 'texto_salinas_online', 'posts_per_page'=>1);
-   $myposts_post = get_posts( $args_post );
-   foreach ( $myposts_post as $post_post ){
-       setup_postdata( $post_post );
-       $id2 = $post_post->ID;
-       $texto_salinas_online = get_texto_salinas_online($id2);
-     }
-    ?>
       <div class="col-xs-12 col-sm-12col-md-12" id="titulo-recomendacoes">
-        <p id="inv-titulo-color"><?= $texto_salinas_online['texto_superior'] ?></p>
-        <h2 id="inv-subtitulo-color"><?= $texto_salinas_online['texto_inferior'] ?></h2>
+        <p id="inv-titulo-color">CONHEÇA OS SERVIÇOS DA</p>
+        <h2 id="inv-subtitulo-color">SALINAS ONLINE</h2>
         <div class="row">
         <?php
-        $args_post = array('post_type' => 'secao_salinas_online', 'posts_per_page'=>300, 'order' => 'ASC');
+        $args_post = array('post_type' => 'secao_salinas_online', 'order' => 'ASC');
         $myposts_post = get_posts( $args_post );
         foreach ( $myposts_post as $post_post ){
             setup_postdata( $post_post );
