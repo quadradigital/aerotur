@@ -20,7 +20,7 @@
            setup_postdata( $post_post );
            $id2 = $post_post->ID;
            $banner_topo = get_banner_topo($id2);
-           if(!empty($banner_topo['banner']['url']&&$banner_topo['local']=='Global')){
+           if(!empty($banner_topo['banner']['url']&&$banner_topo['local']=='Corporativo')){
          ?>
             <li>
               <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>">
