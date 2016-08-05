@@ -7,7 +7,6 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
- require('libs/wideimage/lib/WideImage.php');
  ?>
  <!-- AQUI INICIA O CONTEÚDO DO BLOG -->
 

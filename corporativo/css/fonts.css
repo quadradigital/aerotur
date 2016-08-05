@@ -47,3 +47,8 @@ src: url("../../assets/fonts/aileron-thin.otf") format("opentype");
 font-family: AileronBlack;
 src: url("../../assets/fonts/aileron-black.otf") format("opentype");
 }
+
+@font-face {
+font-family: AileronLight;
+src: url("../../assets/fonts/aileron-light.otf") format("opentype");
+}

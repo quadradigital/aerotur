@@ -25,80 +25,33 @@
 <div class="container-fluid space-down">
   <div class="row">
     <div class="container recomendacoes-space-right">
+      <?php
+      $args_post = array('post_type' => 'recomendacao', 'order' => 'ASC', 'posts_per_page'=>1);
+      $myposts_post = get_posts( $args_post );
+      foreach ( $myposts_post as $post_post ){
+          setup_postdata( $post_post );
+          $id2 = $post_post->ID;
+          $recomendacoes = get_recomendacoes($id2);
+       ?>
       <div class="col-xs-12 col-sm-3 col-md-3 align-left-img">
-        <div class="col-md-3 recomendacao-1 center-block">
+        <div class="col-md-3 recomendacao-1 center-block" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
           <div class="recomendacao-dados">
             <div class="media-left no-padding-margin">
                 <div class="col-xs-2 col-sm-2 col-md-2 no-padding-margin">
-                  <img class="media-object img-bordas" src="<?php bloginfo('template_url') ?>/imgs/perfil.png" width="52" height="52">
+                  <img class="media-object img-bordas" src="<?= $recomendacoes['imagem_autor']['url']?>" width="52" height="52">
                 </div>
                 <div class="col-xs-10 col-sm-10 col-md-10 no-padding-margin">
-                  <h5 class="media-heading media-nome">JOÃO DA SILVA RECOMENDA:</h5>
-                  <h4 class="media-heading media-local">Las Vegas</h4>
+                  <h5 class="media-heading media-nome"><?= $recomendacoes['autor']?></h5>
+                  <h4 class="media-heading media-local"><?= $recomendacoes['cidade']?></h4>
                 </div>
             </div> <!-- -->
           </div>
         </div>
           <div class="rodape-recomendacoes text-center">
-            "Morbi malesuada eu urna non lacinia. Mauris id magna sit amet nunc egestas vehicula ut vitae."
+            "<?= $recomendacoes['recomendacao']?>"
           </div>
       </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 align-left-img">
-        <div class="col-md-3 recomendacao-2 center-block">
-          <div class="recomendacao-dados">
-            <div class="media-left no-padding-margin">
-                <div class="col-xs-2 col-sm-2 col-md-2 no-padding-margin">
-                  <img class="media-object img-bordas" src="<?php bloginfo('template_url') ?>/imgs/perfil.png" width="52" height="52">
-                </div>
-                <div class="col-xs-10 col-sm-10 col-md-10 no-padding-margin">
-                  <h5 class="media-heading media-nome">ANA MARIA RECOMENDA:</h5>
-                  <h4 class="media-heading media-local">Foz do Iguaçu</h4>
-                </div>
-            </div> <!-- -->
-          </div>
-        </div>
-        <div class="rodape-recomendacoes text-center">
-          "Morbi malesuada eu urna non lacinia. Mauris id magna sit amet nunc egestas vehicula ut vitae."
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 align-left-img">
-      <div class="col-md-3 recomendacao-3">
-        <div class="recomendacao-dados">
-            <div class="media-left no-padding-margin">
-              <div class="">
-                <div class="col-xs-2 col-sm-2 col-md-2 no-padding-margin">
-                  <img class="media-object img-bordas" src="<?php bloginfo('template_url') ?>/imgs/perfil.png" width="52" height="52">
-                </div>
-                <div class="col-xs-10 col-sm-10 col-md-10 no-padding-margin">
-                  <h5 class="media-heading media-nome">PAULO FREITAS RECOMENDA:</h5>
-                  <h4 class="media-heading media-local">Miami</h4>
-                </div>
-              </div>
-            </div> <!-- -->
-          </div>
-        </div>
-        <div class="rodape-recomendacoes text-center">
-          "Morbi malesuada eu urna non lacinia. Mauris id magna sit amet nunc egestas vehicula ut vitae."
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 align-left-img">
-      <div class="col-md-3 recomendacao-4">
-        <div class="recomendacao-dados">
-          <div class="media-left no-padding-margin">
-            <div class="col-xs-2 col-sm-2 col-md-2 no-padding-margin">
-              <img class="media-object img-bordas" src="<?php bloginfo('template_url') ?>/imgs/perfil.png" width="52" height="52">
-            </div>
-            <div class="col-xs-10 col-sm-10 col-md-10 no-padding-margin">
-              <h5 class="media-heading media-nome">CLÁUDIA SANTOS RECOMENDA:</h5>
-              <h4 class="media-heading media-local">Roma</h4>
-            </div>
-          </div> <!-- -->
-        </div>
-      </div>
-        <div class="rodape-recomendacoes text-center">
-          "Morbi malesuada eu urna non lacinia. Mauris id magna sit amet nunc egestas vehicula ut vitae."
-        </div>
-      </div>
+      <?php }?>
     </div>
   </div>
 </div>

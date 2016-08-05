@@ -45,9 +45,6 @@ function get_ativar(){
 		$arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
 		$arr['ativar_monte'] = get_field('ativar_monte', $id);
 		$arr['ativar_menu'] = get_field('ativar_menu', $id);
-		$arr['ativar_restrito'] = get_field('ativar_restrito', $id);
-		$arr['ativar_mapa_salinas'] = get_field('ativar_mapa_salinas', $id);
-		$arr['ativar_fones'] = get_field('ativar_fones', $id);
 
 		/*
 			PÁGINA SALINAS
@@ -55,6 +52,8 @@ function get_ativar(){
 
 		$arr['ativar_salinas_tour'] = get_field('ativar_salinas_tour', $id);
 		$arr['ativar_salinas_online'] = get_field('ativar_salinas_online', $id);
+		$arr['ativar_restrito'] = get_field('ativar_restrito', $id);
+		$arr['ativar_fones'] = get_field('ativar_fones', $id);
 
 		return $arr;
 	}
@@ -105,6 +104,16 @@ function get_redes_sociais($id){
   return $arr;
 }
 
+function get_recomendacoes($id){
+  $arr['imagem'] = get_field('imagem', $id);
+	$arr['imagem_autor'] = get_field('imagem_autor', $id);
+	$arr['autor'] = get_field('autor', $id);
+	$arr['cidade'] = get_field('cidade', $id);
+	$arr['recomendacao'] = get_field('recomendacao', $id);
+
+  return $arr;
+}
+
 function get_razoes($id){
   $arr['banner'] = get_field('banner', $id);
 
@@ -120,15 +129,6 @@ function get_pacotes($id){
   $arr['centavos'] = get_field('centavos', $id);
 
   return $arr;
-}
-
-function get_texto_ofertas($id){
-  $arr['texto_superior'] = get_field('texto_superior', $id);
-  $arr['texto_inferior'] = get_field('texto_inferior', $id);
-  $arr['observacoes'] = get_field('observacoes', $id);
-  $arr['descricao'] = get_field('descricao', $id);
-
-	return $arr;
 }
 
 function get_ofertas($id){
@@ -194,6 +194,42 @@ function get_fones($id){
 	$arr['telefone2'] = get_field('telefone2', $id);
 	$arr['telefone3'] = get_field('telefone3', $id);
 	$arr['telefone4'] = get_field('telefone4', $id);
+
+	return $arr;
+}
+
+/*
+				PÁGINA CORPORATIVO
+*/
+
+function get_empresa($id){
+	$arr['texto_superior'] = get_field('texto_superior', $id);
+	$arr['texto_inferior'] = get_field('texto_inferior', $id);
+
+	return $arr;
+}
+
+function get_aerotur50($id){
+	$arr['historia'] = get_field('historia', $id);
+	$arr['missao'] = get_field('missao', $id);
+	$arr['visao'] = get_field('visao', $id);
+	$arr['valores'] = get_field('valores', $id);
+
+	return $arr;
+}
+
+function get_equipe($id){
+	$arr['foto'] = get_field('foto', $id);
+	$arr['nome'] = get_field('nome', $id);
+	$arr['cargo'] = get_field('cargo', $id);
+
+	return $arr;
+}
+
+function get_razoes_corp($id){
+	$arr['imagem'] = get_field('imagem', $id);
+	$arr['texto_superior'] = get_field('texto_superior', $id);
+	$arr['texto_inferior'] = get_field('texto_inferior', $id);
 
 	return $arr;
 }

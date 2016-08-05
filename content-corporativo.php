@@ -10,23 +10,3 @@
        <!--start HEADER -->
        <?php include('corporativo/header.php') ?>
        <!--end HEADER -->
-
-       <!--start MENU TOPO SUPERIOR -->
-       <?php include('corporativo/menu-topo-superior.php') ?>
-       <!--end MENU TOPO SUPERIOR -->
-
-       <!-- Begin MENU TOPO -->
-       <?php include('menu-topo.php') ?>
-       <!-- end MENU TOPO -->
-
-       <!--start BANNER TOPO -->
-       <?php include('corporativo/banner-topo.php') ?>
-       <!--end BANNER TOPO -->
-
-       <!--start MAPA -->
-       <?php include('mapa.php') ?>
-       <!--end MAPA -->
-
-       <!--start FOOTER -->
-       <?php include('footer.php') ?>
-       <!--end FOOTER -->

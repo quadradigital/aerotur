@@ -652,7 +652,6 @@ code {
 }
 
 .recomendacao-1 {
-  background-image: url("imgs/vegas.png");
   background-size: contain;
   height: 200px;
   width: 270px;
@@ -1273,7 +1272,6 @@ code {
   }
 
   .recomendacao-1 {
-    background-image: url("imgs/vegas.png");
     background-size: contain;
     height: 200px;
     width: 270px;

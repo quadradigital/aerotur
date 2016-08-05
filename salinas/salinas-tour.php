@@ -18,9 +18,15 @@
        $salinas_tour = get_salinas_tour($id2);
      }
     ?>
+    <div class="container-fluid space-down">
+      <div class='row'>
+      </div>
+    </div>
+
+
  <div class="container-fluid space-down">
    <div class="row">
-     <div class="container">
+      <div class="container">
        <div class="col-xs-12 col-sm-6 col-md-8" id="titulo-recomendacoes">
          <p id="titulo-color"><?= $salinas_tour['texto_superior'] ?></p>
          <h2 id="subtitulo-color"><?= $salinas_tour['texto_inferior'] ?></h2>

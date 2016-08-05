@@ -13,21 +13,12 @@
    <div class="container-fluid">
      <div class="row">
        <div class="container">
-         <?php
-         $args_post = array('post_type' => 'texto_ofertas', 'posts_per_page'=>1);
-         $myposts_post = get_posts( $args_post );
-         foreach ( $myposts_post as $post_post ){
-             setup_postdata( $post_post );
-             $id2 = $post_post->ID;
-             $ofertas = get_texto_ofertas($id2);
-         ?>
          <div class="col-xs-12 col-sm-12 col-md-12" id="titulo-recomendacoes">
-           <p id="titulo-color"><?= $ofertas['texto_superior']?></p>
-           <h2 id="subtitulo-color"><?= $ofertas['texto_inferior']?></h2>
-           <p id="subtitulo-table-passagens"><?= $ofertas['observacoes']?></p>
-           <p id="promocoes-subtitulo"><?= $ofertas['descricao']?></p>
+           <p id="titulo-color">ENCONTRE O SEU LUGAR NO MUNDO COM ESTAS</p>
+           <h2 id="subtitulo-color">OFERTAS DE PASSAGENS</h2>
+           <p id="subtitulo-table-passagens">Preços a incluir taxas e encargos</p>
+           <p id="promocoes-subtitulo">O menor preço em Passagens Aéreas e as melhores datas para voos pelo Brasil e o Mundo marcando sua origem abaixo:</p>
          </div>
-         <?php }?>
        </div>
      </div> <!-- FIM row -->
    </div> <!-- FIM container-fluid -->
