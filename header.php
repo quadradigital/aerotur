@@ -63,6 +63,8 @@
 
      <!-- Custom styles for this template -->
      <link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
+     <link href="<?php bloginfo('template_url') ?>/pacote-interna.css" rel="stylesheet">
+
      <link href="<?php bloginfo('template_url') ?>/assets/css/fonts.css" rel="stylesheet">
 
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->

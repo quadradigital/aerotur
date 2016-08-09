@@ -879,13 +879,21 @@ code {
  #titulo-recomendacoes {
     margin: 20px 0px;
 }
-
+/*
  .texto_empresa{
     font-family: AileronRegular,Helvetica,Verdana,sans-serif;
     max-width: 874px;
     margin: 29px auto;
     color: rgb(255, 255, 255);
     font-size: 15px;
+ }
+*/
+ html > body > div.empresa_bg.continer-fluid.space-down > div.container.list-side-left > div {
+   font-family: AileronRegular,Helvetica,Verdana,sans-serif;
+   max-width: 874px;
+   margin: 29px auto;
+   color: rgb(255, 255, 255);
+   font-size: 15px;
  }
 
 .texto_50anos{

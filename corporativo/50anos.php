@@ -68,6 +68,17 @@
                      </div>
 
                </li>
+               <li>
+                     <div style="background-image:url('<?php bloginfo('template_url') ?>/corporativo/imgs/img_missao.png')" class="div_50anos div_50anosimg">
+                     </div>
+
+                     <div class="div_50anos">
+                       <span>Nossa</span>
+                       <p class="tit_50anos">Motivação</p>
+                       <p class="desc_50anos"><?= $aerotur50['motivacao']?></p>
+                     </div>
+
+               </li>
              </ul>
            </div>
          </div>

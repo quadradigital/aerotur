@@ -132,6 +132,12 @@ function get_pacotes($id){
   $arr['parcelas'] = get_field('parcelas', $id);
   $arr['valor'] = get_field('valor', $id);
   $arr['centavos'] = get_field('centavos', $id);
+	$arr['destino'] = get_field('destino', $id);
+	$arr['saidas'] = get_field('saidas', $id);
+	$arr['deadline'] = get_field('deadline', $id);
+	$arr['observacoes'] = get_field('observacoes', $id);
+	$arr['imagem'] = get_field('imagem', $id);
+
 
   return $arr;
 }
@@ -219,6 +225,7 @@ function get_aerotur50($id){
 	$arr['missao'] = get_field('missao', $id);
 	$arr['visao'] = get_field('visao', $id);
 	$arr['valores'] = get_field('valores', $id);
+	$arr['motivacao'] = get_field('motivacao', $id);
 
 	return $arr;
 }

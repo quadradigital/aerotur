@@ -505,7 +505,7 @@ code {
 }
 
 .line-fixed-top {
-  background-image: url('../img/linepills.png');
+  background-image: url('../../imgs/linepills.png');
   background-color: #3abfba;
   background-repeat: no-repeat;
   background-position: bottom;

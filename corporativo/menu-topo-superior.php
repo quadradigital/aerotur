@@ -33,7 +33,7 @@
            <li class="dropdown">
              <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS<span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="#">VIAGENS</a></li>
+               <li><a href="/pacotes/">VIAGENS</a></li>
              </ul>
            </li>
            <li class="dropdown">

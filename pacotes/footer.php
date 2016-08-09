@@ -35,7 +35,7 @@
      </div> <!-- FIM footer-four -->
    </div> <!-- FIM row -->
  </div> <!-- FIM container-fluid -->
- 
+
  <div class="container-fluid">
    <div class="row">
      <div class="footer-five">
@@ -53,9 +53,7 @@
 <script src="<?php bloginfo('template_url') ?>/assets/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
-<script src="<?php bloginfo('template_url') ?>/assets/js/infobox.js"></script>
 <script src="<?php bloginfo('template_url') ?>/assets/js/markerclusterer.js"></script>
-<script src="<?php bloginfo('template_url') ?>/assets/js/mapa.js"></script>
 
 <script src="<?php bloginfo('template_url') ?>/assets/js/ie10-viewport-bug-workaround.js"></script>
 

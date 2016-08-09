@@ -24,10 +24,6 @@
        <!-- end MENU TOPO -->
 
        <!--start MONTE SUA VIAGEM -->
-       <?php include('monte-sua-viagem.php') ?>
-       <!--end MONTE SUA VIAGEM -->
-
-       <!--start MONTE SUA VIAGEM -->
        <?php include('corporativo/empresa.php') ?>
        <!--end MONTE SUA VIAGEM -->
 
