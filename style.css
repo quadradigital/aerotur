@@ -335,6 +335,26 @@ code {
   font-size: 80%;
 }
 
+
+#menu-text-viagens {
+  padding-left: 6px;
+}
+
+#menu-text-corp {
+  margin-left: -12px;
+}
+
+#menu-text-teen {
+  padding-left: 18px;
+}
+
+#menu-text-viaje {
+  margin-left: -5px;
+}
+
+
+
+
 /* CENTRALIZANDO VERTICALMENTE A IMAGEM DO LOGO DA QUADRADIGITAL - *EDITED* */
 .img-responsive {
   margin:0 auto;
@@ -424,6 +444,7 @@ code {
   background-position: bottom;
   border-bottom: hidden;
   height: 58px;
+  background-size: contain;
 }
 
 .style-pills-top a {
@@ -614,6 +635,24 @@ code {
   height: 752px;
 }
 
+.recomendacao-clientes {
+  background-size: contain;
+  height: 200px;
+  width: 270px;
+  margin-bottom: 10px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px auto;
+}
+
+.recomenda-cliente {
+  background-color: rgba(0,0,0,0.7);
+  margin-left: 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
 .recomendacao-dados {
   background-color: rgba(0,0,0,0.5);
   margin-left: 0px;
@@ -624,18 +663,18 @@ code {
 }
 
 .media-nome {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 12px;
+  margin-left: -10px;
   margin-bottom: 0px;
   color: #F64450;
   opacity: 1 !important;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .media-local {
   margin-top: 0px;
   padding-top: 0px;
-  margin-left: 10px;
+  margin-left: -10px;
   color: #FFFFFF;
 }
 
@@ -651,38 +690,7 @@ code {
   opacity: 1 !important;
 }
 
-.recomendacao-1 {
-  background-size: contain;
-  height: 200px;
-  width: 270px;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
-}
-
-.recomendacao-2 {
-  background-image: url("imgs/foz.png");
-  background-size: contain;
-  height: 200px;
-  width: 270px;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
-}
-.recomendacao-3 {
-  background-image: url("imgs/miami.png");
-  background-size: contain;
-  height: 200px;
-  width: 270px;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
-}
-.recomendacao-4 {
-  background-image: url("imgs/roma.png");
+.recomendacao-clientes {
   background-size: contain;
   height: 200px;
   width: 270px;
@@ -1009,7 +1017,7 @@ code {
 
 .footer-five {
   background-color: #B7986D; /* COR DO RODAPÉ - *EDITED* */
-  height: 112px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
+  height: 70px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
 }
 
 /* FORMATANDO PARA QUE OS CAMPOS QUE POSSUAM CINCO COLUNAS FIQUEM DIVIDIDOS IGUALITARIAMENTE - *EDITED* */
@@ -1019,6 +1027,9 @@ code {
 }
 
 .rodape-recomendacoes {
+  margin-top: 230px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: transparent !important;
   font-size: 0.8em !important;
   color: #8F8F8F;
@@ -1032,23 +1043,37 @@ code {
   padding-left: 0px !important;
 }
 
+.promocionais-img {
+  background-color: #3333ff;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 294px;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
+}
+
+.slide {
+  margin-right: 1px !important;
+  margin-left: 1px !important;
+}
+
 .promo-img {
-  background-size: contain;
-  height: auto;
-  width: auto;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
+  background-color: #3333ff;
+  background-size: cover;
+  background-position: center;
+  width: 24.90%;
+  height: 220px;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
 }
 
 .promo-dados {
-  background-color: rgba(0,0,0,0.5);
-  margin-left: 0px;
-  margin-right: 0px;
+  background-color: rgba(0,0,0,0.7);
+  margin-left: -15px;
   position: absolute;
-  bottom: 0px;
-  width: 365px;
+  bottom: 10px;
+  width: 100%;
 }
 
 .promo-title {
@@ -1087,7 +1112,7 @@ code {
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
   font-size: 0.7em;
   position: fixed;
-  margin-left: 290px;
+  margin-left: 306px;
   margin-top: 22px;
 }
 
@@ -1269,47 +1294,6 @@ code {
     border-top: 1px solid #E5E5E5;
     width: auto;
     margin-right: 0px !important;
-  }
-
-  .recomendacao-1 {
-    background-size: contain;
-    height: 200px;
-    width: 270px;
-    margin-bottom: 10px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px auto;
-  }
-
-  .recomendacao-2 {
-    background-image: url("imgs/foz.png");
-    background-size: contain;
-    height: 200px;
-    width: 270px;
-    margin-bottom: 10px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px auto;
-  }
-  .recomendacao-3 {
-    background-image: url("imgs/miami.png");
-    background-size: contain;
-    height: 200px;
-    width: 270px;
-    margin-bottom: 10px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px auto;
-  }
-  .recomendacao-4 {
-    background-image: url("imgs/roma.png");
-    background-size: contain;
-    height: 200px;
-    width: 270px;
-    margin-bottom: 10px !important;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px auto;
   }
 
   .recomendacoes-space-right {

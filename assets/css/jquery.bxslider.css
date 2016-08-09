@@ -18,7 +18,9 @@
 	position: relative;
 	margin: 0 auto 60px;
 	padding: 0;
+	width: 1110px !important;
 	*zoom: 1;
+	max-width: 1110px !important;
 }
 
 .bx-wrapper img {

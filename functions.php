@@ -45,6 +45,7 @@ function get_ativar(){
 		$arr['ativar_ofertas'] = get_field('ativar_ofertas', $id);
 		$arr['ativar_monte'] = get_field('ativar_monte', $id);
 		$arr['ativar_menu'] = get_field('ativar_menu', $id);
+		$arr['ativar_acesso_exclusivo'] = get_field('ativar_acesso_exclusivo', $id);
 
 		/*
 			PÁGINA SALINAS
@@ -54,6 +55,10 @@ function get_ativar(){
 		$arr['ativar_salinas_online'] = get_field('ativar_salinas_online', $id);
 		$arr['ativar_restrito'] = get_field('ativar_restrito', $id);
 		$arr['ativar_fones'] = get_field('ativar_fones', $id);
+
+		/*
+			PÁGINA CORPORATIVO
+		*/
 
 		return $arr;
 	}

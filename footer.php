@@ -21,7 +21,7 @@
            $id2 = $post_post->ID;
            $rodape = get_rodape($id2);
           ?>
-          <div class="col-xs-12 col-sm-2 col-md-2">
+          <div class="col-xs-12 col-sm-3 col-md-3">
             <h4><?= $rodape['texto_topico_rodape_horizontal']?></h4>
             <ul class="list-unstyled">
               <a href="#"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
@@ -32,14 +32,6 @@
             </ul>
           </div>
          <? } ?>
-         <div class="col-xs-12 col-sm-3 col-md-3">
-           <ul class="list-unstyled" id="quinta-coluna-footer-four">
-             <a href="#"><li>HOME</li></a>
-             <a href="#"><li>NEWSLETTER</li></a>
-             <a href="#"><li>3 MOTIVOS PARA ESCOLHER A AEROTUR</li></a>
-             <a href="#"><li>CONTATO</li></a>
-          </ul>
-         </div>
        </div> <!-- FIM container -->
      </div> <!-- FIM footer-four -->
    </div> <!-- FIM row -->

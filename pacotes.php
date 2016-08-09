@@ -27,7 +27,7 @@
           <div class="container">
             <div class="slider4">
                 <?php
-                $args_post = array('post_type' => 'pacotes', 'posts_per_page'=>400);
+                $args_post = array('post_type' => 'pacotes_pacote', 'posts_per_page'=>400);
                 $myposts_post = get_posts( $args_post );
                 foreach ( $myposts_post as $post_post ){
                    setup_postdata( $post_post );
@@ -36,25 +36,23 @@
                 if(!empty($pacotes['banner']['url'])){
                 ?>
                 <div class="slide">
-                  <div class="col-md-3 promo-img center-block">
-                    <img src="<?= $pacotes['banner']['url']?>">
+                  <div class="col-xs-12 col-md-3 promocionais-img" style="background-image:url(<?= $pacotes['banner']['url']?>)">
                     <div class="promo-dados">
-                      <div>
-                          <div class="col-xs-8 col-sm-8 col-md-8">
-                            <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>
-                            <h4 class="promo-subtitle"><?= $pacotes['texto_inferior_pacote']?></h4>
-                          </div>
-                          <div class="col-xs-3 col-sm-3 col-md-3">
-                            <h5 class="promo-parcelas"><?= $pacotes['parcelas']?></h5>
-                            <h4 class="promo-valor"><?= $pacotes['valor']?></h4>
-                          </div>
-                          <div class="col-xs-1 col-sm-1 col-md-1 promo-centavos">
-                            <span class="">,<?= $pacotes['centavos']?></span>
-                          </div>
+                      <div class="col-xs-6 col-sm-8 col-md-7">
+                        <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>
+                        <h4 class="promo-subtitle"><?= $pacotes['texto_inferior_pacote']?></h4>
+                      </div>
+                      <div class="col-xs-5 col-sm-3 col-md-4">
+                        <h5 class="promo-parcelas text-right"><?= $pacotes['parcelas']?> de</h5>
+                        <h4 class="promo-valor text-right"><?= $pacotes['valor']?></h4>
+                      </div>
+                      <div class="col-xs-1 col-sm-1 col-md-1 promo-centavos">
+                        <span class="text-left">,<?= $pacotes['centavos']?></span>
                       </div>
                     </div>
                   </div>
                 </div>
+
                 <?php }
                 }
                 ?>

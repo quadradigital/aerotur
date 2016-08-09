@@ -1363,7 +1363,7 @@ code {
 
 .footer-five {
   background-color: #06517B; /* COR DO RODAPÉ - *EDITED* */
-  height: 112px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
+  height: 70px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
 }
 
 /* FORMATANDO PARA QUE OS CAMPOS QUE POSSUAM CINCO COLUNAS FIQUEM DIVIDIDOS IGUALITARIAMENTE - *EDITED* */
@@ -1845,4 +1845,9 @@ code {
   .collapse.in{
       display:block !important;
   }
+}
+
+
+#slippry-demo li {
+    min-height: 345px;
 }

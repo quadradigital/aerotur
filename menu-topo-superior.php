@@ -24,30 +24,25 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-styles">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar">VIAGENS<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">LINK1</a></li>
-            <li><a href="#">LINK2</a></li>
-            <li><a href="#">LINK3</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">LINK4</a></li>
-            <li><a href="#">LINK5</a></li>
+            <li><a href="/pacotes/">VIAGENS</a></li>
           </ul>
        </li>
        <li class="dropdown">
-         <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar">CORPORATIVO<span class="caret"></span></a>
+         <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span><span class="caret"></span></a>
          <ul class="dropdown-menu">
            <li><a href="/corporativo/">CORPORATIVO</a></li>
          </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar">TEEN<span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span><span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="http://www.aeroturteen.com.br/">AEROTUR TEEN</a></li>
         </ul>
      </li>
      <li class="dropdown">
-       <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar">VIAJE FÁCIL<span class="caret"></span></a>
+       <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span><span class="caret"></span></a>
        <ul class="dropdown-menu">
          <li><a href="#">LINK1</a></li>
          <li><a href="#">LINK2</a></li>
@@ -77,7 +72,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand pull-left" href="#"><img src="imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
+          <a class="navbar-brand pull-left" href="#"><img src="<?php bloginfo('template_url') ?>/imgs/navlogo-bg-mb-f.png" class="navbar-logo"></a>
         </div>
         <div id="navbar1" class="collapse navbar-collapse navpersonal">
           <ul class="nav navbar-nav navbar-styles">
