@@ -24,68 +24,64 @@
     <div class="container">
       <div class="col-md-12">
         <div class="col-xs-12 col-md-6 detalhes-pacote-a">
-
+          <?php
+          $img_post = get_field('banner', get_the_ID());
+          $img_post2 = get_field('banner2', get_the_ID());
+          $img_post3 = get_field('banner3', get_the_ID());
+          $img_post4 = get_field('banner4', get_the_ID());
+          $img_post5 = get_field('banner5', get_the_ID());
+           ?>
           <ul id="thumbnails">
            <li>
               <a href="#slide1">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png">
+                <img src="<?= $img_post['url']?>">
               </a>
             </li>
             <li>
               <a href="#slide2">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png">
+                <img src="<?= $img_post2['url']?>">
               </a>
             </li>
             <li>
               <a href="#slide3">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png">
+                <img src="<?= $img_post3['url']?>">
               </a>
             </li>
             <li>
               <a href="#slide4">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png">
+                <img src="<?= $img_post4['url']?>">
               </a>
             </li>
             <li>
               <a href="#slide5">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png">
+                <img src="<?= $img_post5['url']?>">
               </a>
             </li>
           </ul>
           <div class="thumb-box">
             <ul class="thumbs">
-              <li><a href="#1" data-slide="1"><img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png" alt="This is caption 1 <a href='#link'>Even with links!</a>"></a></li>
-              <li><a href="#2" data-slide="2"><img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png" alt="This is caption 2"></a></li>
-              <li><a href="#3" data-slide="3"><img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png" alt="And this is some very long caption for slide 3. Yes, really long."></a></li>
-              <li><a href="#4" data-slide="4"><img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png" alt="And this is some very long caption for slide 4."></a></li>
-              <li><a href="#5" data-slide="5"><img src="<?php bloginfo('template_url') ?>/assets/img/img-1.png" alt="And this is some very long caption for slide 4."></a></li>
+              <li><a href="#1" data-slide="1"><img src="<?= $img_post['url']?>"></a></li>
+              <li><a href="#2" data-slide="2"><img src="<?= $img_post2['url']?>"></a></li>
+              <li><a href="#3" data-slide="3"><img src="<?= $img_post3['url']?>"></a></li>
+              <li><a href="#4" data-slide="4"><img src="<?= $img_post4['url']?>"></a></li>
+              <li><a href="#5" data-slide="5"><img src="<?= $img_post5['url']?>"></a></li>
             </ul>
           </div>
 
         </div>
-        <?php
-        $args_post = array('post_type' => 'pacotes', 'posts_per_page'=>400);
-        $myposts_post = get_posts( $args_post );
-        foreach ( $myposts_post as $post_post ){
-           setup_postdata( $post_post );
-            $id2 = $post_post->ID;
-            $pacotes = get_pacotes($id2);
-            $link_post = get_post_permalink($id2);
-          }
-        ?>
         <div class="col-xs-12 col-md-6 detalhes-pacote-b">
           <div id="titulo-recomendacoes">
-            <h2 id="pacote-titulo"><?= $pacotes['texto_superior_pacote'];?></h2>
-            <p id="pacote-subtitulo">De Londres a Dublin</p>
+            <h2 id="pacote-titulo"><?= get_the_title(get_the_ID());?></h2>
+            <p id="pacote-subtitulo">De <?= get_field('origem', get_the_ID());?> a <?= get_field('destino', get_the_ID())?></p>
               <div class="col-md-5 pct-pddg-l pct-pddg-r">
                 <div class="maps-pacote">
                 </div>
               </div>
               <div class="col-md-7 pct-pddg-l div-top-dth-pct">
-                <p id="pct-ttl">Duração: <span id="pct-ctud">10 dias / 9 noites</p>
-                <p id="pct-ttl">Saindo de: <span id="pct-ctud">Natal/RN</span></p>
-                <p id="pct-ttl">Visitando: <span id="pct-ctud">Londres, Cork, Blarney Castle, Killarney, Ring of Kerry, Cliffs of Moher, Galway, Dublin</span></p>
-                <p id="pct-ttl">Saídas: <span id="pct-ctud">2016: Set. 09; Out. 07</span></p>
+                <p id="pct-ttl">Duração: <span id="pct-ctud"><?= get_field('dias', get_the_ID());?> dia(s) / <?= get_field('noites', get_the_ID());?> noite(s)</p>
+                <p id="pct-ttl">Saindo de: <span id="pct-ctud"><?= get_field('saida', get_the_ID());?></span></p>
+                <p id="pct-ttl">Visitando: <span id="pct-ctud"><?= get_field('itinerario', get_the_ID());?></span></p>
+                <p id="pct-ttl">Saídas: <span id="pct-ctud"><?= get_field('data_saida', get_the_ID());?></span></p>
               </div>
             <div class="col-md-12 pacotes-no-padding-l">
               <div class="footerbar-pacote">
@@ -95,9 +91,9 @@
                 <div class="col-xs-1 col-md-4">
                   <span class="valor-pacote-box">
                     <span class="footbar-pacote-moeda">R$
-                      <span class="footbar-pacote-valor">1.393
-                        <span class="footbar-pacote-parcelas">9x de</span>
-                        <span class="footbar-pacote-centavos">,00</span>
+                      <span class="footbar-pacote-valor"><?= get_field('valor', get_the_ID());?>
+                        <span class="footbar-pacote-parcelas"><?= get_field('parcelas', get_the_ID());?> de</span>
+                        <span class="footbar-pacote-centavos">,<?= get_field('centavos', get_the_ID());?></span>
                       </span>
                     </span>
                   </span>
