@@ -9,9 +9,12 @@
  */
 ?>
 
-<!--start  HEADER  -->
+<!--start  FOOTER  -->
 <?php get_header(); ?>
-<!--end  HEADER  -->
+<!--end  FOOTER  -->
+<!--start HEADER -->
+<?php //include('pacotes/header.php') ?>
+<!--end HEADER -->
 
       <!--start MENU TOPO -->
       <?php include('menu-topo-superior.php') ?>

@@ -126,6 +126,7 @@ function get_razoes($id){
 }
 
 function get_pacotes($id){
+	$arr['promocional'] = get_field('promocional', $id);
   $arr['banner'] = get_field('banner', $id);
   $arr['texto_superior_pacote'] = get_field('texto_superior_pacote', $id);
   $arr['texto_inferior_pacote'] = get_field('texto_inferior_pacote', $id);
@@ -137,7 +138,8 @@ function get_pacotes($id){
 	$arr['deadline'] = get_field('deadline', $id);
 	$arr['observacoes'] = get_field('observacoes', $id);
 	$arr['imagem'] = get_field('imagem', $id);
-
+	$arr['local_saida'] = get_field('local_saida', $id);
+	$arr['condicoes'] = get_field('condicoes', $id);
 
   return $arr;
 }

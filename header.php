@@ -62,11 +62,12 @@
      <link href="<?php bloginfo('template_url') ?>/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
      <!-- Custom styles for this template -->
-     <link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
-     <link href="<?php bloginfo('template_url') ?>/pacote-interna.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+
+    <link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url') ?>/pacote-interna.css" rel="stylesheet">
 
      <link href="<?php bloginfo('template_url') ?>/assets/css/fonts.css" rel="stylesheet">
-
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
      <script src="<?php bloginfo('template_url') ?>/assets/js/ie-emulation-modes-warning.js"></script>

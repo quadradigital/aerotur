@@ -24,7 +24,7 @@
           <div class="container">
             <div class="col-xs-12 col-md-12 no-padding-left">
               <?php
-              $args_post = array('post_type' => 'pacotes_promocoes', 'posts_per_page'=>500);
+              $args_post = array('post_type' => 'pacotes', 'posts_per_page'=>500);
               $myposts_post = get_posts( $args_post );
               foreach ( $myposts_post as $post_post ){
                  setup_postdata( $post_post );
@@ -32,25 +32,30 @@
                   $pacotes = get_pacotes($id2);
                   $link_post = get_post_permalink($id2);
               ?>
+              <!-- SÓ EXIBE A PROMOÇÃO SE ELA FOI DEFINIDA COMO PROMOÇÃO NA SEÇÃO PACOTES -->
+              <section style="<?php if(!$pacotes['promocional']){echo 'display:none;';} ?>">
               <a href="<?= $link_post ?>">
-              <div class="col-md-6">
-                <div class="col-xs-12 col-md-6 promo-imperdivel center-block" style="background-image:url(<?= $pacotes['imagem']['url']?>)">
-                  <div class="col-xs-12 col-md-8 box-v-valor-imperdivel">
-                    <h5>A PARTIR DE</h5>
-                    <span id="imperdivel-moeda"></span>
-                    <span id="imperdivel-valor"><?= $pacotes['valor']?></span>
-                    <span id="imperdivel-centavos">,<?= $pacotes['centavos']?></span>
-                    <span id="imperdivel-astesrisco">*</span>
-                  </div>
-                  <div class="col-xs-12 col-md-4 box-l-promo-imperdivel">
-                    <h2><?= $pacotes['destino']?></h2>
-                    <h4>Emissões até <?= $pacotes['deadline']?></h4>
-                    <h5>Saídas de <?= $pacotes['saidas']?></h5>
-                    <p>*<?= $pacotes['observacoes']?></p>
-                  </div>
-                </div>
-              </div>
+               <div class="col-md-6">
+                 <div class="col-xs-12 col-md-6 promo-imperdivel center-block" style="background-image:url(<?= $pacotes['banner']['url']?>)">
+                 <div class="caixa-cinza">
+                   <div class="col-xs-12 col-md-8 box-v-valor-imperdivel">
+                     <h5>A PARTIR DE</h5>
+                     <span id="imperdivel-moeda"></span>
+                     <span id="imperdivel-valor"><?= $pacotes['valor']?></span>
+                     <span id="imperdivel-centavos">,<?= $pacotes['centavos']?></span>
+                     <span id="imperdivel-astesrisco">*</span>
+                   </div>
+                   <div class="col-xs-12 col-md-4 box-l-promo-imperdivel">
+                     <h2><?= $pacotes['destino']?></h2>
+                     <h4>Emissões até <?= $pacotes['deadline']?></h4>
+                     <h5>Saídas de <?= $pacotes['local_saida']?></h5>
+                     <p>*<?= $pacotes['condicoes']?></p>
+                   </div>
+                 </div>
+                 </div>
+               </div>
               </a>
+            </section>
               <?}?>
             </div>
           </div>
