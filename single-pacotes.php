@@ -41,11 +41,16 @@
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->
-      <?php include('promocoes-imperdiveis.php') ?>
+      <!-- alterei para o arquivo de promoções imperdíveis dentro da pasta pacotes -->
+      <?php include('pacotes/promocoes-imperdiveis.php') ?>
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->
       <?php include('recomendacoes.php') ?>
+      <!--end REDES SOCIAIS -->
+
+      <!--start REDES SOCIAIS -->
+      <?php include('facebook.php') ?>
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->

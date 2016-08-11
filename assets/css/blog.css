@@ -34,6 +34,34 @@ body {
   * 
   */
 
+.meta-tags {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+.img-lista-posts {
+  padding-left: 0px;
+}
+
+.meta-data {
+  margin-left: 40px;
+  margin-top: -20px;
+  padding: 10px;
+  background-color: #e5e5e5;
+  position: absolute;
+  border-bottom-style: solid;
+}
+
+span.meta-data p {
+  margin: 0px !important;
+}
+
+.meta-post {
+  position: relative;
+  padding-left: 0px;
+}
+
   .blog-box-img {
     position: relative;
   }

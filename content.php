@@ -84,7 +84,8 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                 </div>
                 <?php }?>
               </div>
-              <!-- INÍCIO COMENTÁRIOS -->
+
+              <!-- INÍCIO COMENTÁRIOS
               <div class="col-xs-12 col-sm-7 col-md-7 col-md-offset-1 content-blog-comentario">
                 <h4>Deixe seu comentário</h4>
 
@@ -114,8 +115,9 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                     </div>
                   </form>
                 </div>
-              </div> <!-- /FIM COMENTÁRIOS -->
+              </div> /FIM COMENTÁRIOS -->
             </div>
           </div> <!-- /FIM container -->
         </div> <!-- /FIM row -->
       </div>  <!-- /FIM container-fluid -->
+<?php include('facebook.php') ?>

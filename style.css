@@ -679,6 +679,11 @@ code {
   font-size: 0.85em;
 }
 
+.media-info {
+  font-size: 0.9em;
+  color: #FFF;
+}
+
 .media-local {
   margin-top: 0px;
   padding-top: 0px;

@@ -116,152 +116,35 @@
       <div class="col-md-12">
 
          <ul class="nav nav-pills navpills-pacote">
-          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#atracoes" class="pills-buttons-a">Atrações</a></li>
+          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#observacoes" class="pills-buttons-a">Observações</a></li>
           <li id="li-pills" class="text-center active"><a data-toggle="pill" href="#roteiro" class="pills-buttons-a">Roteiro</a></li>
-          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#precos" class="pills-buttons-a">Preços e Condições</a></li>
+          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#condicoes" class="pills-buttons-a">Condições</a></li>
           <li id="li-pills" class="text-center"><a data-toggle="pill" href="" class="pills-buttons-a">Cadastre-se</a></li>
         </ul>
 
         <div class="tab-content">
-          <div id="atracoes" class="tab-pane fade">
+          <div id="observacoes" class="tab-pane fade">
             <div class="col-md-4">
-              <span id="dia-pills">1º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao1', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">2º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao2', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">3º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao3', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">4º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao4', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">5º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao5', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">6º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao6', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">7º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao7', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">8º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao8', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">9º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao9', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">10º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao10', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">11º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao11', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">12º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao12', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">13º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao13', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">14º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao14', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">15º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao15', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">16º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao16', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">17º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao17', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">18º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao18', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">19º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao19', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">20º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao20', get_the_ID());?></span>
+              <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('observacoes', get_the_ID());?></span>
             </div>
           </div>
+
           <div id="roteiro" class="tab-pane fade in active">
+            <?php for ($i=1; $i <= get_field('numero_de_dias', get_the_ID()); $i++) {
+             ?>
             <div class="col-md-4">
-              <span id="dia-pills">1º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro1', get_the_ID());?></span>
+              <span id="dia-pills"><?=$i?>º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro'.$i.'', get_the_ID());?></span>
             </div>
-            <div class="col-md-4">
-              <span id="dia-pills">2º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro2', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">3º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro3', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">4º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro4', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">5º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro5', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">6º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro6', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">7º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro7', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">8º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro8', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">9º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro9', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">10º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro10', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">11º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro11', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">12º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro12', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">13º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro13', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">14º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro14', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">15º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro15', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">16º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro16', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">17º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro17', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">18º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro18', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">19º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro19', get_the_ID());?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">20º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro20', get_the_ID());?></span>
-            </div>
+            <? } ?>
           </div>
-          <div id="precos" class="tab-pane fade">
+
+          <div id="condicoes" class="tab-pane fade">
             <div class="col-md-4">
-              <span id="dia-pills">Preço:</span><span> </span><span id="detalhamento-pills">R$ <?= get_field('valor', get_the_ID()).",".get_field('centavos', get_the_ID())?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">Condições:</span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
+              <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
             </div>
           </div>
           <div id="cadastrese" class="tab-pane fade">
-            <div class="col-md-4">
-              <span id="dia-pills">Preço:</span><span> </span><span id="detalhamento-pills">R$ <?= get_field('valor', get_the_ID()).",".get_field('centavos', get_the_ID())?></span>
-            </div>
-            <div class="col-md-4">
-              <span id="dia-pills">Condições:</span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
-            </div>
+
           </div>
         </div>
       </div>

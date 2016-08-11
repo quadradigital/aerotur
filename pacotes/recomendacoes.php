@@ -31,9 +31,10 @@
         $myposts_post = get_posts( $args_post );
         foreach ( $myposts_post as $post_post ){
             setup_postdata( $post_post );
-            $id2 = $post_post->ID;
-            $recomendacoes = get_recomendacoes($id2);
+            $id = $post_post->ID;
+            $recomendacoes = get_recomendacoes($id);
          ?>
+         <div class="outer-box"> <!-- caixa criada para que ao mudar o promo-img para position:relative as demais caixas laterais não ficarem sobre a primeira caixa -->
          <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
             <div class="recomenda-cliente">
               <div class="col-xs-3 col-sm-3 col-md-3">
@@ -41,14 +42,18 @@
               </div>
               <div class="col-xs-9 col-sm-9 col-md-9">
                 <h5 class="media-nome"><?= $recomendacoes['autor']?>:</h5>
-              <h4 class="media-local"><?= $recomendacoes['cidade']?></h4>
+              <h4 class="media-local"><?= strtoupper($recomendacoes['palavra_chave'])?></h4>
+              </div>
+              <div class="col-xs-12">
+                <p class="media-info"><?= $recomendacoes['recomendacao']?></p>
               </div>
             </div>
               <div class="rodape-recomendacoes text-center">
-                "<?= $recomendacoes['recomendacao']?>"
+
               </div>
           </div>
-      <?php }?>
+          </div>
+          <?php } ?>
     </div>
     </div>
   </div>

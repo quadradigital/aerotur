@@ -77,6 +77,9 @@
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
      <![endif]-->
 
+     <link href="<?php bloginfo('template_url') ?>/assets/css/fonteawesome.css" rel="stylesheet">
+     <script type="text/javascript" src="https://use.fontawesome.com/570e7354cf.js"></script>
+
      <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
    </head>

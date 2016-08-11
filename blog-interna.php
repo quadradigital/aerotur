@@ -34,21 +34,16 @@
                 $link_post = get_post_permalink($id_post);
                 $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(1024,768)) ;
               ?>
-              <div class="col-xs-1 col-sm-6 col-md-4">
-                  <div class="sidebar-img-blog">
-                    <img src="<?= $img_post[0]?>" class="center-block img-blog-responsive">
-                      <div class="sidebar-img-dados-blog-posts">
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div class="sidebar-circulo center-block">
-                            <p class="text-center sidebar-data-dia"><?= get_the_date('j',$id_post); ?></p>
-                            <p class="text-center blog-data-mes"><?= get_the_date('F',$id_post); ?></p>
-                          </div>
-                        </div>
-                        <div class="col-xs-10 col-sm-10 col-md-10 sidebar-img-text">
-                          <a style="color: #EDBD7B; !important;" href="<?= $link_post ?>"><?= $titulo_post ?></a>
-                        </div>
-                      </div>
-                  </div>
+              <div class="col-xs-12">
+                <h2><a style="color: #EDBD7B; !important;" href="<?= $link_post ?>"><?= $titulo_post ?></a></h2>
+                <div class="col-xs-12 img-lista-posts">
+                  <img src="<?= $img_post[0]?>" class="pull-left img-blog-responsive">
+                </div>
+                <div class="col-xs-12 meta-post">
+                    <span class="meta-data"><p><?= get_the_date('j F, Y',$id_post); ?></p></span>
+                    <p class="meta-tags"><span>Autor: <span><?= get_the_author(); ?></span></span> <span>Categorias: <span><?= get_categories(string); ?></span></span></p>
+                    <a href="#" class="btn btn-danger pull-right">LEIA MAIS</a>
+                </div>                
               </div>
               <?php }?>
             </div>

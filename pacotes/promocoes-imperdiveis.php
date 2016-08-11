@@ -37,14 +37,14 @@
               <a href="<?= $link_post ?>">
                <div class="col-md-6">
                  <div class="col-xs-12 col-md-6 promo-imperdivel center-block" style="background-image:url(<?= $pacotes['banner']['url']?>)">
+                 <div class="col-xs-12 col-md-8 box-v-valor-imperdivel">
+                   <h5>A PARTIR DE</h5>
+                   <span id="imperdivel-moeda"></span>
+                   <span id="imperdivel-valor"><?= $pacotes['valor']?></span>
+                   <span id="imperdivel-centavos">,<?= $pacotes['centavos']?></span>
+                   <span id="imperdivel-astesrisco">*</span>
+                 </div>
                  <div class="caixa-cinza">
-                   <div class="col-xs-12 col-md-8 box-v-valor-imperdivel">
-                     <h5>A PARTIR DE</h5>
-                     <span id="imperdivel-moeda"></span>
-                     <span id="imperdivel-valor"><?= $pacotes['valor']?></span>
-                     <span id="imperdivel-centavos">,<?= $pacotes['centavos']?></span>
-                     <span id="imperdivel-astesrisco">*</span>
-                   </div>
                    <div class="col-xs-12 col-md-4 box-l-promo-imperdivel">
                      <h2><?= $pacotes['destino']?></h2>
                      <h4>Emissões até <?= $pacotes['deadline']?></h4>

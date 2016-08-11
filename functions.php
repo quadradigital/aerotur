@@ -113,7 +113,7 @@ function get_recomendacoes($id){
   $arr['imagem'] = get_field('imagem', $id);
 	$arr['imagem_autor'] = get_field('imagem_autor', $id);
 	$arr['autor'] = get_field('autor', $id);
-	$arr['cidade'] = get_field('cidade', $id);
+	$arr['palavra_chave_recomendacao'] = get_field('palavra_chave_recomendacao', $id);
 	$arr['recomendacao'] = get_field('recomendacao', $id);
 
   return $arr;
