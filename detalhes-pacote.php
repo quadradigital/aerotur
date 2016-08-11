@@ -181,6 +181,9 @@
             <div class="col-md-4">
               <span id="dia-pills">19º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao19', get_the_ID());?></span>
             </div>
+            <div class="col-md-4">
+              <span id="dia-pills">20º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('atracao20', get_the_ID());?></span>
+            </div>
           </div>
           <div id="roteiro" class="tab-pane fade in active">
             <div class="col-md-4">
@@ -240,6 +243,9 @@
             <div class="col-md-4">
               <span id="dia-pills">19º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro19', get_the_ID());?></span>
             </div>
+            <div class="col-md-4">
+              <span id="dia-pills">20º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro20', get_the_ID());?></span>
+            </div>
           </div>
           <div id="precos" class="tab-pane fade">
             <div class="col-md-4">
@@ -250,6 +256,12 @@
             </div>
           </div>
           <div id="cadastrese" class="tab-pane fade">
+            <div class="col-md-4">
+              <span id="dia-pills">Preço:</span><span> </span><span id="detalhamento-pills">R$ <?= get_field('valor', get_the_ID()).",".get_field('centavos', get_the_ID())?></span>
+            </div>
+            <div class="col-md-4">
+              <span id="dia-pills">Condições:</span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
+            </div>
           </div>
         </div>
       </div>

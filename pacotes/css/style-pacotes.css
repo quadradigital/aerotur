@@ -29,9 +29,81 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+
 /*
  * CONFIGURAÇÃO DA PÁGINA DE PACOTES
  */
+
+ .caixa-cinza{
+  width: 545px;
+  height: 265px;
+  background: #E5E5E5;
+  -webkit-clip-path: polygon(100% 0, 71% 0, 50% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 76% 0, 50% 100%, 100% 100%);
+ }
+
+.style-pills-top > li > a {   
+  color: #ba232d !important;    
+}
+
+#dia-pills {   
+  font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;    
+  color: #ba242d;   
+}   
+#detalhamento-pills {   
+  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;    
+  color: #8f8f8f;   
+}   
+#li-pills {   
+  width: 276px;   
+}   
+.navpills-pacote {    
+  margin-bottom: 30px;    
+}   
+#li-pills{    
+  padding-left: 10px;   
+  padding-right: 10px;    
+}   
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {    
+  color: #fff;    
+  font-size: 1.5em;   
+  background-color: #f64450;    
+  font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;    
+  border-style: solid;    
+  border-bottom-style: solid;   
+  border-bottom-color: #f64450;   
+}   
+.pills-buttons-a {    
+  border-radius: 0px !important;    
+  color: #b1b1b1;   
+  font-size: 1.5em;   
+  font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;    
+  border-style: solid !important;   
+  border-top-style: none !important;    
+  border-left-style: none !important;   
+  border-right-style: none !important;    
+}
+
+
+
+
+ #footer {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+ }
+
+ #topo {
+  margin-bottom: 0px;
+ }
+
+ section {
+  margin-bottom: 0px;
+  margin-top: 0px;
+ }
+
+ .pacotes-no-padding-l {
+  padding-left: 0px;
+ }
 
 .img-responsive-center,
 .thumbnail > img,
@@ -51,8 +123,14 @@ TESTES
 */
 
 
-
-
+.retangulo-promo-imp {
+  width: 545px;
+  height: 265px;
+  background: #e5e5e5;
+  -webkit-clip-path: polygon(77% 0, 0 0, 0 100%, 50% 100%);
+  clip-path: polygon(77% 0, 0 0, 0 100%, 50% 100%);
+  z-index: 1;
+}
 
 
 
@@ -74,7 +152,9 @@ Slippry
 
 
 
-
+.no-padding-left {
+  padding-left: 0px;
+}
 
 
 .thumb-box {
@@ -174,7 +254,7 @@ PACOTES
   position: absolute;
   margin-top: -60px;
   font-size: 0.6em;
-  margin-left: 120px;
+  margin-left: 82px;
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
 }
 
@@ -245,7 +325,7 @@ PACOTES
 
 .box-l-promo-imperdivel {
   margin-top: 15px;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-right: 0px;
 }
 
@@ -359,13 +439,14 @@ PACOTES
 
 /* ~eof / caixa da direita */
 
-.promo-imperdivel-1 {
+.promo-imperdivel {
   background-color: #E5E5E5;
   background-image: url(../assets/img/boston-corte.png);
   background-position: left;
   background-repeat: no-repeat;
   height: 265px;
   width: 545px;
+  margin-bottom: 20px;
 }
 
 .promo-imperdivel-2 {
@@ -379,7 +460,7 @@ PACOTES
 
 .recomenda-cliente {
   background-color: rgba(0,0,0,0.7);
-  margin-left: 0px;
+  margin-left: -15px;
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -755,7 +836,7 @@ code {
 
 #navbar-logo {
   background-image: url("../../imgs/navlogo-bg-f.png");
-  width: 351px;
+  width: 350px;
   height: 101px;
   bottom: 0;
 }
@@ -1852,7 +1933,7 @@ code {
     margin-bottom: 20px;
   }
 
-  .promo-imperdivel-1 {
+  .promo-imperdivel {
     background-color: #FFF !important;
     background-image: none !important;
     background-position: unset;

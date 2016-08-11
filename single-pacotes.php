@@ -10,10 +10,10 @@
 ?>
 
 <!--start  FOOTER  -->
-<?php get_header(); ?>
+<?php //get_header(); ?>
 <!--end  FOOTER  -->
 <!--start HEADER -->
-<?php //include('pacotes/header.php') ?>
+<?php include('pacotes/header.php') ?>
 <!--end HEADER -->
 
       <!--start MENU TOPO -->

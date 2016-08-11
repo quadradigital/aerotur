@@ -16,11 +16,11 @@
        <!--end MENU TOPO SUPERIOR -->
 
        <!-- Begin MENU TOPO -->
-       <?php include('menu-topo.php') ?>
+       <?php include('salinas/menu-topo-s.php') ?>
        <!-- end MENU TOPO -->
 
        <!--start BANNER TOPO -->
-       <?php include('salinas/banner-topo.php') ?>
+       <?php //include('salinas/banner-topo.php') ?>
        <!--end BANNER TOPO -->
 
        <!-- Begin SALINAS TOUR -->
@@ -36,7 +36,7 @@
        <!-- end RESTRITO -->
 
        <!--start MAPA -->
-       <?php include('mapa.php') ?>
+       <?php include('salinas/mapa-s.php') ?>
        <!--end MAPA -->
 
        <!--start FONES -->
@@ -44,5 +44,5 @@
        <!--end FONES -->
 
        <!--start FOOTER -->
-       <?php include('footer.php') ?>
+       <?php include('salinas/footer-s.php') ?>
        <!--end FOOTER -->

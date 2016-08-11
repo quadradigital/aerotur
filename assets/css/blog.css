@@ -1,8 +1,8 @@
-/*
-  Theme Name: Aerotur
-  Description: Aerotur
-  Author: Pedro Schneider [ Web Design ], Ramon Carvalho [ Front-end], Ed Moura [ Back-end ]
-  Version: 1.0
+/*    
+  Theme Name: Aerotur   
+  Description: Aerotur    
+  Author: Pedro Schneider [ Web Design ], Ramon Carvalho [ Front-end], Ed Moura [ Back-end ]    
+  Version: 1.0    
 */
 
 /* Sticky footer styles
@@ -15,7 +15,6 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 0px;
   margin-top: 51px; /* MARGEM ENTRE A BARRA DE NAVEGAÇÃO E O CONTEÚDO DO SITE - *EDITED* */
-  overflow-x: hidden;
 }
 .footer {
   position: 0;
@@ -32,7 +31,7 @@ body {
 
  /*
   * Configurações do blog
-  *
+  * 
   */
 
   .blog-box-img {
@@ -128,7 +127,7 @@ body {
   .content-blog-comentario h4 {
     color: #F64450;
     font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif; 
   }
 
   .content-blog-comentario button {
@@ -139,7 +138,7 @@ body {
   .content-blog-sidebar h4 {
     color: #F64450;
     font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif; 
   }
 
   .titulo-sidebar {
@@ -154,10 +153,9 @@ body {
   .sidebar-img-dados {
     position: absolute;
     background-color: rgba(0,0,0,0.5);
-    width: 100px;
-    width: 280px;
+    width: 100%;
     padding-bottom: 64px;
-    margin-top: -65px;
+    margin-top: 143px;
   }
 
   .sidebar-circulo {
@@ -195,13 +193,12 @@ body {
     margin-left: 55px;
   }
 
-  .size-img-blog {
-    width: 100%;
-    height: 431px;
-    background-size: cover;
+  .size-img-blog img {
+    height: 410px;
+    width: 1110px;
   }
 
-  .img-blog-responsive {
+  .img-blog-responsive { 
     margin: 0 auto !important;
     margin-top: 30px !important;
     display: block;
@@ -290,7 +287,7 @@ body {
       padding-right: 0px;
     }
 
-    .img-blog-responsive {
+    .img-blog-responsive { 
       margin: 0 auto !important;
       margin-top: 10px !important;
       display: block;
@@ -299,21 +296,29 @@ body {
     }
 
     .sidebar-img-blog {
-      width: 100%;
-      height: auto;
-      background-size: cover;
+      width: 350px;
+      margin-left: -40px;
+      height: 258px;
     }
 
     .blog-mobile-titulo {
       padding: 0px;
     }
 
+    .sidebar-posts-extra {
+      background-size: cover;
+      background-position: center;
+      width: 280px;
+      height: 208px;
+      margin-bottom: 20px;
+    }
+
   }
 
  /*
   * FIM das configurações do blog
-  *
-  */
+  * 
+  */  
 
 .infoBox { background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 10px }
 .infoBox p { padding: 0 15px }
@@ -335,28 +340,8 @@ code {
   font-size: 80%;
 }
 
-
-#menu-text-viagens {
-  padding-left: 6px;
-}
-
-#menu-text-corp {
-  margin-left: -12px;
-}
-
-#menu-text-teen {
-  padding-left: 18px;
-}
-
-#menu-text-viaje {
-  margin-left: -5px;
-}
-
-
-
-
 /* CENTRALIZANDO VERTICALMENTE A IMAGEM DO LOGO DA QUADRADIGITAL - *EDITED* */
-.img-responsive {
+.img-responsive { 
   margin:0 auto;
   padding-top: 25px;
 }
@@ -385,7 +370,7 @@ code {
 }
 
 #navbar-logo {
-  background-image: url("imgs/navlogo-bg-f.png");
+  background-image: url("../../imgs/navlogo-bg-f.png");
   width: 351px;
   height: 101px;
   bottom: 0;
@@ -393,7 +378,7 @@ code {
 
 .viagens-navbar {
   color: #BA232D !important;
-  background-image: url("imgs/navviagens-f.png");
+  background-image: url("../../imgs/navviagens-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -402,7 +387,7 @@ code {
 
 .corp-navbar {
   color: #185E85 !important;
-  background-image: url("imgs/navcorp-f.png");
+  background-image: url("../../imgs/navcorp-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -411,7 +396,7 @@ code {
 
 .teen-navbar {
   color: #2DB672 !important;
-  background-image: url("imgs/navteen-f.png");
+  background-image: url("../../imgs/navteen-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -420,7 +405,7 @@ code {
 
 .viaje-navbar {
   color: #F7921E !important;
-  background-image: url("imgs/navviaje-f.png");
+  background-image: url("../../imgs/navviaje-f.png");  
   background-size: cover;
   height: 53px;
   width: 153px;
@@ -430,7 +415,7 @@ code {
 
 .salinas-navbar {
   color: #3ABFBA !important;
-  background-image: url("imgs/navsalinas-f.png");
+  background-image: url("../../imgs/navsalinas-f.png");
   height: 53px;
   width: 153px;
   padding-top: 20px !important;
@@ -438,13 +423,12 @@ code {
 }
 
 .line-fixed-top {
-  background-image: url('imgs/linepills.png');
+  background-image: url('../../imgs/linepills.png');
   background-color: #B7986D;
   background-repeat: no-repeat;
   background-position: bottom;
   border-bottom: hidden;
   height: 58px;
-  background-size: contain;
 }
 
 .style-pills-top a {
@@ -550,7 +534,7 @@ code {
 }
 
 .side-l-correction {
-  padding-left: 15px !important;
+  padding-left: 15px !important;  
 }
 
 .side-r-correction {
@@ -567,7 +551,7 @@ code {
 
 .no-padding-right {
   padding-right: 0px !important;
-  background-image: url('imgs/rounded-retangle.png');
+  background-image: url('../../imgs/rounded-retangle.png');
   background-repeat: no-repeat;
   background-position: right;
   height: 62px;
@@ -635,32 +619,6 @@ code {
   height: 752px;
 }
 
-.recomendacao-clientes {
-  background-size: contain;
-  height: 200px;
-  width: 270px;
-  margin-bottom: 10px !important;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0px auto;
-}
-
-.recomenda-cliente {
-  background-color: rgba(0,0,0,0.7);
-  margin-left: 0px;
-  position: absolute;
-  /*bottom: 0px;*/
-  width: 276px;
-  margin-top: 168px !important;
-  height: 220px;
-  transition: 600ms;
-}
-
-.recomenda-cliente:hover {
-  transition: 600ms;
-  margin-top: 0px !important;
-}
-
 .recomendacao-dados {
   background-color: rgba(0,0,0,0.5);
   margin-left: 0px;
@@ -671,18 +629,18 @@ code {
 }
 
 .media-nome {
-  margin-top: 12px;
-  margin-left: -10px;
+  margin-top: 10px;
+  margin-left: 10px;
   margin-bottom: 0px;
   color: #F64450;
   opacity: 1 !important;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .media-local {
   margin-top: 0px;
   padding-top: 0px;
-  margin-left: -10px;
+  margin-left: 10px;
   color: #FFFFFF;
 }
 
@@ -698,7 +656,39 @@ code {
   opacity: 1 !important;
 }
 
-.recomendacao-clientes {
+.recomendacao-1 {
+  background-image: url("imgs/vegas.png");
+  background-size: contain;
+  height: 200px;
+  width: 270px;
+  margin-bottom: 10px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px auto;
+}
+
+.recomendacao-2 {
+  background-image: url("imgs/foz.png");
+  background-size: contain;
+  height: 200px;
+  width: 270px;
+  margin-bottom: 10px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px auto;
+}
+.recomendacao-3 {
+  background-image: url("imgs/miami.png");
+  background-size: contain;
+  height: 200px;
+  width: 270px;
+  margin-bottom: 10px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px auto;
+}
+.recomendacao-4 {
+  background-image: url("imgs/roma.png");
   background-size: contain;
   height: 200px;
   width: 270px;
@@ -715,7 +705,7 @@ code {
 .box-newsletter {
   background-image: url("imgs/newsletter.png");
   background-repeat: no-repeat;
-  height: 146px;
+  height: 146px;  
   width: 85%;
 }
 
@@ -1035,9 +1025,6 @@ code {
 }
 
 .rodape-recomendacoes {
-  margin-top: 230px;
-  margin-left: 5px;
-  margin-right: 5px;
   background-color: transparent !important;
   font-size: 0.8em !important;
   color: #8F8F8F;
@@ -1051,39 +1038,23 @@ code {
   padding-left: 0px !important;
 }
 
-.promocionais-img {
-  background-color: #3333ff;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 294px;
-  margin-left: 0.5px;
-  margin-right: 0.5px;
-}
-
-.slide {
-  margin-right: 1px !important;
-  margin-left: 1px !important;
-}
-
-.promo-img {
-  background-color: #3333ff;
-  background-size: cover;
-  background-position: center;
-  width: 24.90%;
-  height: 220px;
-  margin-left: 0.5px;
-  margin-right: 0.5px;
-  position: relative;
-  overflow: hidden;
+.promo-img {  
+  background-size: contain;
+  height: auto;
+  width: auto;
+  margin-bottom: 10px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px auto;
 }
 
 .promo-dados {
-  background-color: rgba(0,0,0,0.7);
-  margin-left: -15px;
+  background-color: rgba(0,0,0,0.5);
+  margin-left: 0px;
+  margin-right: 0px;
   position: absolute;
-  bottom: 10px;
-  width: 100%;
+  bottom: 0px;
+  width: 365px;
 }
 
 .promo-title {
@@ -1122,7 +1093,7 @@ code {
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
   font-size: 0.7em;
   position: fixed;
-  margin-left: 306px;
+  margin-left: 290px;
   margin-top: 22px;
 }
 
@@ -1160,12 +1131,12 @@ code {
     padding-bottom: 30px;
   }
 
-  .no-padding-right {
+  .no-padding-right {    
     background-image: url('imgs/rounded-retangle.png');
     background-size: cover;
     height: 41px;
     width: 250px;
-    float: right !important;
+    float: right !important;  
   }
 
   .monte-sua-viagem {
@@ -1178,7 +1149,7 @@ code {
 
   .box-newsletter {
     background-image: none;
-    height: 146px;
+    height: 146px;  
     width: 85%;
   }
 
@@ -1306,6 +1277,48 @@ code {
     margin-right: 0px !important;
   }
 
+  .recomendacao-1 {
+    background-image: url("imgs/vegas.png");
+    background-size: contain;
+    height: 200px;
+    width: 270px;
+    margin-bottom: 10px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+  }
+
+  .recomendacao-2 {
+    background-image: url("imgs/foz.png");
+    background-size: contain;
+    height: 200px;
+    width: 270px;
+    margin-bottom: 10px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+  }
+  .recomendacao-3 {
+    background-image: url("imgs/miami.png");
+    background-size: contain;
+    height: 200px;
+    width: 270px;
+    margin-bottom: 10px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+  }
+  .recomendacao-4 {
+    background-image: url("imgs/roma.png");
+    background-size: contain;
+    height: 200px;
+    width: 270px;
+    margin-bottom: 10px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+  }
+
   .recomendacoes-space-right {
     padding-right: 0px !important;
   }
@@ -1371,7 +1384,7 @@ code {
     font-family: AileronSemiBold, Helvetica, Verdana, Sans-Serif;
     font-size: 1.3em;
   }
-
+  
   .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
     border-top-right-radius: 0;
@@ -1396,7 +1409,7 @@ code {
     margin-top: 25px;
   }
 
-  body {
+  body { 
     padding-top: 38px !important;
   }
 

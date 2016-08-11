@@ -1,8 +1,8 @@
-/*
-  Theme Name: Aerotur
-  Description: Aerotur
-  Author: Pedro Schneider [ Web Design ], Ramon Carvalho [ Front-end], Ed Moura [ Back-end ]
-  Version: 1.0
+/*    
+  Theme Name: Aerotur   
+  Description: Aerotur    
+  Author: Pedro Schneider [ Web Design ], Ramon Carvalho [ Front-end], Ed Moura [ Back-end ]    
+  Version: 1.0    
 */
 
 /* Sticky footer styles
@@ -14,15 +14,15 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 0px;
-  margin-top: 51px; /* MARGEM ENTRE A BARRA DE NAVEGAÃ‡ÃƒO E O CONTEÃšDO DO SITE - *EDITED* */
+  margin-top: 51px; /* MARGEM ENTRE A BARRA DE NAVEGAÇÃO E O CONTEÚDO DO SITE - *EDITED* */
 }
 .footer {
   position: 0;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 112px; /* TAMANHO RODAPÃ‰ ASSINATURA QUADRADIGITAL - *EDITED* */
-  background-color: #FFFFFF; /* COR DO RODAPÃ‰ - *EDITED* */
+  height: 112px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
+  background-color: #FFFFFF; /* COR DO RODAPÉ - *EDITED* */
 }
 
 /* Custom page CSS
@@ -120,8 +120,8 @@ body {
   }
 
  /*
-  * ConfiguraÃ§Ãµes do blog
-  *
+  * Configurações do blog
+  * 
   */
 
   .blog-box-img {
@@ -217,7 +217,7 @@ body {
   .content-blog-comentario h4 {
     color: #F64450;
     font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif; 
   }
 
   .content-blog-comentario button {
@@ -228,7 +228,7 @@ body {
   .content-blog-sidebar h4 {
     color: #F64450;
     font-size: 1.2em;
-    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+    font-family: AileronBlack, Helvetica, Verdana, Sans-Serif; 
   }
 
   .titulo-sidebar {
@@ -289,7 +289,7 @@ body {
     width: 1110px;
   }
 
-  .img-blog-responsive {
+  .img-blog-responsive { 
     margin: 0 auto !important;
     margin-top: 30px !important;
     display: block;
@@ -378,7 +378,7 @@ body {
       padding-right: 0px;
     }
 
-    .img-blog-responsive {
+    .img-blog-responsive { 
       margin: 0 auto !important;
       margin-top: 10px !important;
       display: block;
@@ -398,9 +398,9 @@ body {
   }
 
  /*
-  * FIM das configuraÃ§Ãµes do blog
-  *
-  */
+  * FIM das configurações do blog
+  * 
+  */  
 
 .infoBox { background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 10px }
 .infoBox p { padding: 0 15px }
@@ -423,7 +423,7 @@ code {
 }
 
 /* CENTRALIZANDO VERTICALMENTE A IMAGEM DO LOGO DA QUADRADIGITAL - *EDITED* */
-.img-responsive {
+.img-responsive { 
   margin:0 auto;
   padding-top: 25px;
 }
@@ -487,7 +487,7 @@ code {
 
 .viaje-navbar {
   color: #F7921E !important;
-  background-image: url("../../imgs/navviaje-f.png");
+  background-image: url("../../imgs/navviaje-f.png");  
   background-size: cover;
   height: 53px;
   width: 153px;
@@ -505,7 +505,7 @@ code {
 }
 
 .line-fixed-top {
-  background-image: url('../../imgs/linepills.png');
+  background-image: url('../assets/img/linepills.png');
   background-color: #3abfba;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -621,7 +621,7 @@ code {
 }
 
 .side-l-correction {
-  padding-left: 15px !important;
+  padding-left: 15px !important;  
 }
 
 .side-r-correction {
@@ -792,7 +792,7 @@ code {
 .box-newsletter {
   background-image: url("../../imgs/newsletter.png");
   background-repeat: no-repeat;
-  height: 146px;
+  height: 146px;  
   width: 85%;
 }
 
@@ -1088,14 +1088,14 @@ code {
 /* FORMATANDO O FOOTER 5 - *EDITED* */
 
 .footer-five {
-  background-color: #B7986D; /* COR DO RODAPÃ‰ - *EDITED* */
-  height: 112px; /* TAMANHO RODAPÃ‰ ASSINATURA QUADRADIGITAL - *EDITED* */
+  background-color: #B7986D; /* COR DO RODAPÉ - *EDITED* */
+  height: 70px; /* TAMANHO RODAPÉ ASSINATURA QUADRADIGITAL - *EDITED* */
 }
 
 /* FORMATANDO PARA QUE OS CAMPOS QUE POSSUAM CINCO COLUNAS FIQUEM DIVIDIDOS IGUALITARIAMENTE - *EDITED* */
 
 .col-half-offset{
-  margin-left:4.166666667%; /* *MOBILE* necessario remover para corrigir o aspecto da pÃ¡gina no mobile  */
+  margin-left:4.166666667%; /* *MOBILE* necessario remover para corrigir o aspecto da página no mobile  */
 }
 
 .rodape-recomendacoes {
@@ -1112,7 +1112,7 @@ code {
   padding-left: 0px !important;
 }
 
-.promo-img {
+.promo-img {  
   background-size: contain;
   height: auto;
   width: auto;
@@ -1205,12 +1205,12 @@ code {
     padding-bottom: 30px;
   }
 
-  .no-padding-right {
+  .no-padding-right {    
     background-image: url('imgs/rounded-retangle.png');
     background-size: cover;
     height: 41px;
     width: 250px;
-    float: right !important;
+    float: right !important;  
   }
 
   .monte-sua-viagem {
@@ -1223,7 +1223,7 @@ code {
 
   .box-newsletter {
     background-image: none;
-    height: 146px;
+    height: 146px;  
     width: 85%;
   }
 
@@ -1458,7 +1458,7 @@ code {
     font-family: AileronSemiBold, Helvetica, Verdana, Sans-Serif;
     font-size: 1.3em;
   }
-
+  
   .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
     border-top-right-radius: 0;
@@ -1483,7 +1483,7 @@ code {
     margin-top: 25px;
   }
 
-  body {
+  body { 
     padding-top: 38px !important;
   }
 

@@ -34,6 +34,7 @@
             $id2 = $post_post->ID;
             $recomendacoes = get_recomendacoes($id2);
          ?>
+         <div class="outer-box"> <!-- caixa criada para que ao mudar o promo-img para position:relative as demais caixas laterais não ficarem sobre a primeira caixa -->
          <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
             <div class="recomenda-cliente">
               <div class="col-xs-3 col-sm-3 col-md-3">
@@ -47,6 +48,7 @@
               <div class="rodape-recomendacoes text-center">
                 "<?= $recomendacoes['recomendacao']?>"
               </div>
+          </div>
           </div>
       <?php }?>
     </div>

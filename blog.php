@@ -9,7 +9,9 @@
  */
  ?>
  <!--start  HEADER  -->
- <?php get_header(); ?>
+ <?php //get_header(); ?>
+ <!-- Apontando para o header personalizado da página com listagem de posts  -->
+ <?php include('blog-header.php') ?>
  <!--end  HEADER  -->
 
        <!--start MENU TOPO -->
