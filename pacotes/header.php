@@ -34,6 +34,7 @@
      <link href="<?php bloginfo('template_url') ?>/pacotes/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
      <!-- Custom styles for this template -->
+
      <link href="<?php bloginfo('template_url') ?>/pacotes/css/style-pacotes.css" rel="stylesheet">
      <link href="<?php bloginfo('template_url') ?>/pacotes/css/fonts.css" rel="stylesheet">
 
@@ -50,8 +51,12 @@
      <![endif]-->
 
      <!-- FontAwesome -->
-     <link href="<?php bloginfo('template_url') ?>/assets/css/fonteawesome.css" rel="stylesheet">
+     <link href="<?php bloginfo('template_url') ?>/assets/js/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
      <script type="text/javascript" src="https://use.fontawesome.com/570e7354cf.js"></script>
+
+         <!-- <script type="text/javascript" src="<?php bloginfo('template_url') ?>/assets/js/isotope.js"></script>-->
+
+
 
      <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

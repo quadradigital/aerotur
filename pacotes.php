@@ -44,11 +44,13 @@
                       </div>
                       <div class="col-xs-5 col-sm-3 col-md-4">
                         <h5 class="promo-parcelas text-right"><?= $pacotes['parcelas']?> de</h5>
-                        <h4 class="promo-valor text-right"><?= $pacotes['valor']?></h4>
+                        <h4 class="promo-valor text-right"><?= $pacotes['valor']?><span class="promo-centavos">,<?= $pacotes['centavos']?></span></h4>
                       </div>
-                      <div class="col-xs-1 col-sm-1 col-md-1 promo-centavos">
-                        <span class="text-left">,<?= $pacotes['centavos']?></span>
-                      </div>
+                        <p class="desc_pacote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <!--   <div class="col-xs-1 col-sm-1 col-md-1 promo-centavos">
+                        
+                      </div> -->
                     </div>
                   </div>
                 </div>

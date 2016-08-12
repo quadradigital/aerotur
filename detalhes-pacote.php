@@ -79,18 +79,18 @@
               </div>
               <div class="col-md-7 pct-pddg-l div-top-dth-pct">
                 <p id="pct-ttl">Duração: <span id="pct-ctud"><?= get_field('dias', get_the_ID());?> dia(s) / <?= get_field('noites', get_the_ID());?> noite(s)</p>
-                <p id="pct-ttl">Saindo de: <span id="pct-ctud"><?= get_field('saida', get_the_ID());?></span></p>
+                <p id="pct-ttl">Saindo de: <span id="pct-ctud"><?= get_field('local_saida', get_the_ID());?></span></p>
                 <p id="pct-ttl">Visitando: <span id="pct-ctud"><?= get_field('itinerario', get_the_ID());?></span></p>
-                <p id="pct-ttl">Saídas: <span id="pct-ctud"><?= get_field('data_saida', get_the_ID());?></span></p>
+                <p id="pct-ttl">Data das Saídas: <span id="pct-ctud"><?= get_field('data_de_saida', get_the_ID());?></span></p>
               </div>
             <div class="col-md-12 pacotes-no-padding-l">
               <div class="footerbar-pacote">
                 <div class="col-xs-1 col-md-4">
-                  <span class="footbar-pacote-text">PREÇO DO PACOTE POR PESSOA:</span>
+                  <span class="footbar-pacote-text">PREÇO DO PACOTE POR PESSOA, A PARTIR DE:</span>
                 </div>
                 <div class="col-xs-1 col-md-4">
                   <span class="valor-pacote-box">
-                    <span class="footbar-pacote-moeda">R$
+                    <span class="footbar-pacote-moeda"><?= get_field('moeda_de_pagamento', get_the_ID());?>
                       <span class="footbar-pacote-valor"><?= get_field('valor', get_the_ID());?>
                         <span class="footbar-pacote-parcelas"><?= get_field('parcelas', get_the_ID());?> de</span>
                         <span class="footbar-pacote-centavos">,<?= get_field('centavos', get_the_ID());?></span>
@@ -114,39 +114,72 @@
   <div class="row">
     <div class="container">
       <div class="col-md-12">
-
-         <ul class="nav nav-pills navpills-pacote">
-          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#observacoes" class="pills-buttons-a">Observações</a></li>
-          <li id="li-pills" class="text-center active"><a data-toggle="pill" href="#roteiro" class="pills-buttons-a">Roteiro</a></li>
-          <li id="li-pills" class="text-center"><a data-toggle="pill" href="#condicoes" class="pills-buttons-a">Condições</a></li>
-          <li id="li-pills" class="text-center"><a data-toggle="pill" href="" class="pills-buttons-a">Cadastre-se</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div id="observacoes" class="tab-pane fade">
-            <div class="col-md-4">
-              <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('observacoes', get_the_ID());?></span>
+        <?php
+            if(get_field('estadia', get_the_ID())){
+        ?>
+            <ul class="nav nav-pills navpills-pacote">
+             <li id="li-pills" class="text-center"><a data-toggle="pill" href="#observacoes" class="pills-buttons-a">Observações</a></li>
+             <li id="li-pills" class="text-center active"><a data-toggle="pill" href="#pacote_inclui" class="pills-buttons-a">Pacote Inclui</a></li>
+             <li id="li-pills" class="text-center"><a data-toggle="pill" href="#condicoes" class="pills-buttons-a">Condições</a></li>
+             <li id="li-pills" class="text-center"><a data-toggle="pill" href="#valores" class="pills-buttons-a">Valores</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="observacoes" class="tab-pane fade">
+                <div class="col-md-12">
+                  <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('observacoes', get_the_ID());?></span>
+                </div>
+              </div>
+              <div id="pacote_inclui" class="tab-pane fade in active">
+                <div class="col-md-4">
+                  <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('pacote_inclui', get_the_ID());?></span>
+                </div>
+              </div>
+              <div id="condicoes" class="tab-pane fade">
+                <div class="col-md-4">
+                  <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
+                </div>
+              </div>
+              <div id="valores" class="tab-pane fade">
+                <div class="col-md-4">
+                  <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condições_especiais_de_pagamento', get_the_ID());?></span>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div id="roteiro" class="tab-pane fade in active">
-            <?php for ($i=1; $i <= get_field('numero_de_dias', get_the_ID()); $i++) {
-             ?>
-            <div class="col-md-4">
-              <span id="dia-pills"><?=$i?>º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro'.$i.'', get_the_ID());?></span>
-            </div>
-            <? } ?>
-          </div>
-
-          <div id="condicoes" class="tab-pane fade">
-            <div class="col-md-4">
-              <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
-            </div>
-          </div>
-          <div id="cadastrese" class="tab-pane fade">
-
-          </div>
-        </div>
+            <?
+          }else{
+        ?>
+        <ul class="nav nav-pills navpills-pacote">
+         <li id="li-pills" class="text-center"><a data-toggle="pill" href="#observacoes" class="pills-buttons-a">Observações</a></li>
+         <li id="li-pills" class="text-center active"><a data-toggle="pill" href="#roteiro" class="pills-buttons-a">Roteiro</a></li>
+         <li id="li-pills" class="text-center"><a data-toggle="pill" href="#condicoes" class="pills-buttons-a">Condições</a></li>
+         <li id="li-pills" class="text-center"><a data-toggle="pill" href="#valores" class="pills-buttons-a">Valores</a></li>
+       </ul>
+       <div class="tab-content">
+         <div id="observacoes" class="tab-pane fade">
+           <div class="col-md-12">
+             <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('observacoes', get_the_ID());?></span>
+           </div>
+         </div>
+         <div id="roteiro" class="tab-pane fade in active">
+           <?php for ($i=1; $i <= get_field('numero_de_dias', get_the_ID()); $i++) {
+            ?>
+           <div class="col-md-4">
+             <span id="dia-pills"><?=$i?>º Dia:</span><span> </span><span id="detalhamento-pills"><?= get_field('roteiro'.$i.'', get_the_ID());?></span>
+           </div>
+           <? } ?>
+         </div>
+         <div id="condicoes" class="tab-pane fade">
+           <div class="col-md-4">
+             <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condicoes', get_the_ID());?></span>
+           </div>
+         </div>
+         <div id="valores" class="tab-pane fade">
+           <div class="col-md-4">
+             <span id="dia-pills"></span><span> </span><span id="detalhamento-pills"><?= get_field('condições_especiais_de_pagamento', get_the_ID());?></span>
+           </div>
+         </div>
+       </div>
+       <? } ?>
       </div>
     </div>
   </div>

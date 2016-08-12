@@ -67,6 +67,8 @@
     <link href="<?php bloginfo('template_url') ?>/style.css" rel="stylesheet">
 
      <link href="<?php bloginfo('template_url') ?>/assets/css/fonts.css" rel="stylesheet">
+
+
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
      <script src="<?php bloginfo('template_url') ?>/assets/js/ie-emulation-modes-warning.js"></script>
@@ -78,8 +80,20 @@
      <![endif]-->
 
      <!-- FontAwesome -->
-     <link href="<?php bloginfo('template_url') ?>/assets/css/fonteawesome.css" rel="stylesheet">
+     <link href="<?php bloginfo('template_url') ?>/assets/js/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
      <script type="text/javascript" src="https://use.fontawesome.com/570e7354cf.js"></script>
+
+
+     <!-- Busca de passagens ViajeFácil -->
+
+    <link rel="stylesheet" type="text/css" href="https://www.wtsportal.com.br/javascript/jquery.autocomplete.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.wtsportal.com.br/javascript/lib/thickbox.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.wtsportal.com.br/javascript/lib/jquery.click-calendario-1.0.css" />
+    <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.0r4/build/utilities/utilities.js&amp;2.8.0r4/build/container/container-min.js"></script>
+    <script type='text/javascript' src='https://www.wtsportal.com.br/javascript/lib/jquery.bgiframe.min.js'></script>
+    <script type='text/javascript' src='https://www.wtsportal.com.br/javascript/lib/jquery.ajaxQueue.js'></script>
+    <script type='text/javascript' src='https://www.wtsportal.com.br/javascript/jquery.autocomplete.js'></script>
+    <script type='text/javascript' src='https://www.wtsportal.com.br/javascript/localdata.js'></script>
 
      <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 

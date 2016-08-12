@@ -110,6 +110,7 @@ function get_redes_sociais($id){
 }
 
 function get_recomendacoes($id){
+	$arr['banner'] = get_field('banner', $id);
 	$arr['imagem_autor'] = get_field('imagem_autor', $id);
 	$arr['autor'] = get_field('autor', $id);
 	$arr['palavra_chave_recomendacao'] = get_field('palavra_chave_recomendacao', $id);
@@ -139,6 +140,13 @@ function get_pacotes($id){
 	$arr['imagem'] = get_field('imagem', $id);
 	$arr['local_saida'] = get_field('local_saida', $id);
 	$arr['condicoes'] = get_field('condicoes', $id);
+	$arr['palavra_chave_pacote'] = get_field('palavra_chave_pacote', $id);
+	$arr['moeda_de_pagamento'] = get_field('moeda_de_pagamento', $id);
+	$arr['condições_especiais_de_pagamento'] = get_field('condições_especiais_de_pagamento', $id);
+	$arr['estadia'] = get_field('estadia', $id);
+	$arr['pacote_inclui'] = get_field('pacote_inclui', $id);
+	$arr['resumo'] = get_field('resumo', $id);
+
 
   return $arr;
 }

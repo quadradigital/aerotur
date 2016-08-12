@@ -20,23 +20,35 @@
                $id2 = $post_post->ID;
                $pacotes = get_pacotes($id2);
                $link_post = get_post_permalink($id2);
+               // manter _div_pacote
+               // parcela_pacote
+
            ?>
-                   <a href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
+                   <a class="carnaval_div_pacote 50_parcela_pacote allitem_div_pacote" href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
                      <div class="promo-dados">
                        <div class="col-xs-6 col-sm-8 col-md-6">
                          <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>
                          <h4 class="promo-subtitle"><?= $pacotes['texto_inferior_pacote']?></h4>
                        </div>
                        <div class="col-xs-5 col-sm-3 col-md-5">
-                         <h5 class="promo-parcelas text-right"><?= $pacotes['parcelas']?> de</h5>
-                         <h4 class="promo-valor text-right"><?= $pacotes['valor']?></h4>
+                         <h5 class="promo-parcelas text-right">A partir de <?= $pacotes['parcelas']?> de</h5>
+                         <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento'].$pacotes['valor']?>  <span class="promo-centavos">,<?= $pacotes['centavos']?></span> </h4>
                        </div>
-                       <div class="col-xs-1 col-sm-1 col-md-1 promo-centavos">
-                         <span class="text-left">,<?= $pacotes['centavos']?></span>
-                       </div>
+                       <p class="desc_pacote"><?php
+                       if (strlen($pacotes['resumo']) > 100){
+                         $pacotes['resumo'] = substr($pacotes['resumo'], 0, 300);
+                         $pacotes['resumo'] = trim($pacotes['resumo']) . "...";
+                       }
+                       echo $pacotes['resumo'];
+                       ?></p>
                      </div>
                    </div></a>
                    <?php }?>
+
+
+
+
+
          </div>
        </div>
         </div>

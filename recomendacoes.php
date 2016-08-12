@@ -10,7 +10,16 @@
     $recomendacoes = get_ativar();
  ?>
  <section style="<?php if($recomendacoes['ativar_recomendacoes'] == false){echo 'display:none;';} ?>" id="recomendacoes">
-   <div id="recomendacoes"></div>
+
+<?php
+$args_post = array('post_type' => 'recomendacao', 'order' => 'ASC', 'posts_per_page'=>500);
+$myposts_post = get_posts( $args_post );
+foreach ( $myposts_post as $post_post ){
+    setup_postdata( $post_post );
+    $id = $post_post->ID;
+    $recomendacoes = get_recomendacoes($id);
+    if(get_field('palavra_chave_pacote', get_the_ID())==$recomendacoes['palavra_chave_recomendacao']){
+ ?>
 <div class="container-fluid">
   <div class="row">
     <div class="container">
@@ -21,7 +30,11 @@
     </div>
   </div> <!-- FIM row -->
 </div> <!-- FIM container-fluid -->
-
+<?php
+  break;
+  }
+}
+?>
 <div class="container-fluid space-down">
   <div class="row">
     <div class="container">

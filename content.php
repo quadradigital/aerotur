@@ -58,6 +58,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
 
               <div class="col-xs-12 col-sm-4 col-md-4 content-blog-sidebar">
                 <h4 class="text-right titulo-sidebar">Você também vai gostar de ler:</h4>
+                
                 <?
                 $args_post = array('post_type' => 'post', 'posts_per_page'=>500, 'order'=>'ASC');
                 $myposts_post = get_posts( $args_post );
@@ -69,7 +70,8 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                   $link_post = get_post_permalink($id_post);
                   $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
                 ?>
-                <div class="pull-right sidebar-posts-extra" style="background-image:url(<?= $img_post[0]?>)">
+
+                <div class="sidebar-posts-extra" style="background-image:url(<?= $img_post[0]?>)">
                     <div class="sidebar-img-dados">
                       <div class="col-xs-2 col-sm-2 col-md-2">
                         <div class="sidebar-circulo center-block">
@@ -82,6 +84,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                       </div>
                     </div>
                 </div>
+
                 <?php }?>
               </div>
 

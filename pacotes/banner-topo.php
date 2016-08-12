@@ -11,6 +11,23 @@
    <div class="container-fluid">
      <div class="row">
        <ul id="slider-topo">
+
+        <div class="busca-passagens">
+          <iframe width="280"
+
+          height="360"
+
+          scrolling="yes"
+
+          frameborder="0"
+
+          src="http://compra.portaldaagencia.com.br/viajefacilaerotur"
+
+          noresize="">
+
+          </iframe>
+        </div>
+
          <?php
          $args_post = array('post_type' => 'banner_topo', 'posts_per_page'=>400);
          $myposts_post = get_posts( $args_post );

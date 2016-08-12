@@ -10,18 +10,30 @@
     $recomendacoes = get_ativar();
  ?>
  <section style="<?php if($recomendacoes['ativar_recomendacoes'] == false){echo 'display:none;';} ?>" id="recomendacoes">
-   <div id="recomendacoes"></div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="container">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <p id="titulo-color">CONHEÇA AS</p>
-        <h2 id="subtitulo-color">RECOMENDAÇÕES DOS NOSSOS CLIENTES</h2>
-      </div>
-    </div>
-  </div> <!-- FIM row -->
-</div> <!-- FIM container-fluid -->
-
+   <?php
+   $args_post = array('post_type' => 'recomendacao', 'order' => 'ASC', 'posts_per_page'=>500);
+   $myposts_post = get_posts( $args_post );
+   foreach ( $myposts_post as $post_post ){
+       setup_postdata( $post_post );
+       $id = $post_post->ID;
+       $recomendacoes = get_recomendacoes($id);
+       if($recomendacoes['palavra_chave_recomendacao']!=''){
+    ?>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="container">
+         <div class="col-xs-12 col-sm-12 col-md-12">
+           <p id="titulo-color">CONHEÇA AS</p>
+           <h2 id="subtitulo-color">RECOMENDAÇÕES DOS NOSSOS CLIENTES</h2>
+         </div>
+       </div>
+     </div> <!-- FIM row -->
+   </div> <!-- FIM container-fluid -->
+   <?php
+     break;
+     }
+   }
+   ?>
 <div class="container-fluid space-down">
   <div class="row">
     <div class="container">
@@ -33,12 +45,9 @@
                 setup_postdata( $post_post );
                 $id2 = $post_post->ID;
                 $recomendacoes = get_recomendacoes($id2);
-                //echo get_field('palavra_chave_pacote', get_the_ID())."\n";
-                //echo $recomendacoes['palavra_chave_recomendacao'];
-                if($recomendacoes['palavra_chave_recomendacao']){
          ?>
          <div class="outer-box"> <!-- caixa criada para que ao mudar o promo-img para position:relative as demais caixas laterais não ficarem sobre a primeira caixa -->
-         <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
+         <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['banner']['url'] ?>)">
             <div class="recomenda-cliente">
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <img class="img-bordas" src="<?= $recomendacoes['imagem_autor']['url']?>" width="52" height="52">
@@ -62,7 +71,7 @@
           </div>
           </div>
       <?php
-        }
+
       }?>
     </div>
     </div>
