@@ -38,12 +38,15 @@
                 <h2><a style="color: #EDBD7B; !important;" href="<?= $link_post ?>"><?= $titulo_post ?></a></h2>
                 <div class="col-xs-12 img-lista-posts">
                   <img src="<?= $img_post[0]?>" class="pull-left img-blog-responsive">
+                  <div class="col-xs-12 meta-post">
+                      <span class="meta-data"><p><?= get_the_date('j \d\e F \d\e Y',$id_post); ?></p></span>
+                  </div>
                 </div>
-                <div class="col-xs-12 meta-post">
-                    <span class="meta-data"><p><?= get_the_date('j F, Y',$id_post); ?></p></span>
-                    <p class="meta-tags"><span>Autor: <span><?= get_the_author(); ?></span></span> <span>Categorias: <span><?= get_categories(string); ?></span></span></p>
-                    <a href="#" class="btn btn-danger pull-right">LEIA MAIS</a>
-                </div>                
+                <div class="col-xs-12">
+                  <p class="meta-tags"><i class="fa fa-user" aria-hidden="true"></i><span class="meta-titles">Autor: <span class="meta-info-text"><?= get_the_author(); ?></span></span> <i class="fa fa-tag" aria-hidden="true"></i><span class="meta-titles">Categorias: <span class="meta-info-text"></span></span> <i class="fa fa-tags" aria-hidden="true"></i><span class="meta-titles">Tags: <span class="meta-info-text"></span></span></p>
+                      <p class="resumo-post">Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  <a href="#" class="btn btn-danger pull-right">LEIA MAIS</a>
+                </div>
               </div>
               <?php }?>
             </div>

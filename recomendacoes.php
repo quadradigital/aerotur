@@ -33,11 +33,13 @@
                 setup_postdata( $post_post );
                 $id2 = $post_post->ID;
                 $recomendacoes = get_recomendacoes($id2);
-                echo get_field('palavra_chave_pacote', get_the_ID());
-                if($recomendacoes['palavra_chave_recomendacao']==get_field('palavra_chave_pacote', get_the_ID())){
+                //echo get_field('palavra_chave_pacote', get_the_ID())."\n";
+                //echo $recomendacoes['palavra_chave_recomendacao'];
+                if(get_field('palavra_chave_pacote', get_the_ID())==$recomendacoes['palavra_chave_recomendacao']){
+                  $banner = get_field('banner', get_the_ID());
          ?>
          <div class="outer-box"> <!-- caixa criada para que ao mudar o promo-img para position:relative as demais caixas laterais não ficarem sobre a primeira caixa -->
-         <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
+         <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $banner['url'] ?>)">
             <div class="recomenda-cliente">
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <img class="img-bordas" src="<?= $recomendacoes['imagem_autor']['url']?>" width="52" height="52">
@@ -47,11 +49,16 @@
               <h4 class="media-local"><?= strtoupper($recomendacoes['palavra_chave_recomendacao'])?></h4>
               </div>
               <div class="col-xs-12">
-                <p class="media-info"><?= $recomendacoes['recomendacao']?></p>
+                <p class="media-info"><?php
+                if (strlen($recomendacoes['recomendacao']) > 100){
+                  $recomendacoes['recomendacao'] = substr($recomendacoes['recomendacao'], 0, 300);
+                  $recomendacoes['recomendacao'] = trim($recomendacoes['recomendacao']) . "...";
+                }
+                echo $recomendacoes['recomendacao'];
+                ?></p>
               </div>
             </div>
               <div class="rodape-recomendacoes text-center">
-
               </div>
           </div>
           </div>

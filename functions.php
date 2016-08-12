@@ -110,7 +110,6 @@ function get_redes_sociais($id){
 }
 
 function get_recomendacoes($id){
-  $arr['imagem'] = get_field('imagem', $id);
 	$arr['imagem_autor'] = get_field('imagem_autor', $id);
 	$arr['autor'] = get_field('autor', $id);
 	$arr['palavra_chave_recomendacao'] = get_field('palavra_chave_recomendacao', $id);

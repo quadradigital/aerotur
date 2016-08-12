@@ -31,6 +31,27 @@ body {
 
 
 /*
+ * MENU SUPERIOR
+ */
+
+#menu-text-teen {
+  margin-left: 18px;
+}
+
+#menu-text-corp {
+  margin-left: -10px;
+}
+
+#menu-text-viagens {
+  margin-left: 10px;
+}
+
+#menu-text-salinas {
+  margin-left: 10px;
+}
+
+
+/*
  * CONFIGURAÇÃO DA PÁGINA DE PACOTES
  */
 

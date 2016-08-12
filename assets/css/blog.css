@@ -29,14 +29,46 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+
+/*
+ * MENU SUPERIOR
+ */
+
+#menu-text-teen {
+  margin-left: 18px;
+}
+
+#menu-text-corp {
+  margin-left: -10px;
+}
+
+#menu-text-viagens {
+  margin-left: 10px;
+}
+
+#menu-text-salinas {
+  margin-left: 10px;
+}
+
+
  /*
   * Configurações do blog
   * 
   */
 
+.btn-leia-mais {
+  margin-top: 160px;
+}
+
+.resumo-post {
+  margin-left: 45px;
+  margin-top: 75px;
+  font-size: 1.3em;
+  }
+
 .meta-tags {
   position: absolute;
-  margin-top: 25px;
+  margin-top: 42px;
   margin-left: 40px;
 }
 
@@ -44,13 +76,25 @@ body {
   padding-left: 0px;
 }
 
+.meta-titles {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.meta-info-text {
+  font-weight: 200 !important;
+  color: #6b6b6b;
+}
+
 .meta-data {
-  margin-left: 40px;
+  margin-left: 60px;
   margin-top: -20px;
   padding: 10px;
-  background-color: #e5e5e5;
+  background-color: #B7986D;
   position: absolute;
   border-bottom-style: solid;
+  border-bottom-color: #000;
+  color: #FFF;
 }
 
 span.meta-data p {
@@ -228,7 +272,7 @@ span.meta-data p {
 
   .img-blog-responsive { 
     margin: 0 auto !important;
-    margin-top: 30px !important;
+    margin-top: 0px !important;
     display: block;
     max-width: 100%;
     height: auto;

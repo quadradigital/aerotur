@@ -19,44 +19,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" id="navbar-logo"></a>
+      <a class="navbar-brand" href="/" id="navbar-logo"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-styles">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/pacotes/">VIAGENS</a></li>
-          </ul>
-       </li>
-       <li class="dropdown">
-         <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span><span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a href="/corporativo/">CORPORATIVO</a></li>
-         </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span><span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="http://www.aeroturteen.com.br/">AEROTUR TEEN</a></li>
-        </ul>
-     </li>
-     <li class="dropdown">
-       <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span><span class="caret"></span></a>
-       <ul class="dropdown-menu">
-         <li><a href="#">LINK1</a></li>
-         <li><a href="#">LINK2</a></li>
-         <li><a href="#">LINK3</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a href="#">LINK4</a></li>
-         <li><a href="#">LINK5</a></li>
-       </ul>
-    </li>
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar">SALINAS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/salinas/">SALINAS</a></li>
-          </ul>
+          <a href="/pacotes/" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="/corporativo/" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="http://www.aeroturteen.com.br/" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="/salinas/" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>
         </li>
       </ul>
     </div><!--/.nav-collapse -->

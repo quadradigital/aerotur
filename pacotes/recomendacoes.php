@@ -27,12 +27,15 @@
     <div class="container">
       <div class="col-xs-12 col-sm-6 col-md-12">
         <?php
-        $args_post = array('post_type' => 'recomendacao', 'order' => 'ASC', 'posts_per_page'=>500);
-        $myposts_post = get_posts( $args_post );
-        foreach ( $myposts_post as $post_post ){
-            setup_postdata( $post_post );
-            $id = $post_post->ID;
-            $recomendacoes = get_recomendacoes($id);
+            $args_post = array('post_type' => 'recomendacao', 'order' => 'ASC', 'posts_per_page'=>500);
+            $myposts_post = get_posts( $args_post );
+            foreach ( $myposts_post as $post_post ){
+                setup_postdata( $post_post );
+                $id2 = $post_post->ID;
+                $recomendacoes = get_recomendacoes($id2);
+                //echo get_field('palavra_chave_pacote', get_the_ID())."\n";
+                //echo $recomendacoes['palavra_chave_recomendacao'];
+                if($recomendacoes['palavra_chave_recomendacao']){
          ?>
          <div class="outer-box"> <!-- caixa criada para que ao mudar o promo-img para position:relative as demais caixas laterais não ficarem sobre a primeira caixa -->
          <div class="col-xs-12 col-md-3 promo-img recomendacao-clientes" style="background-image:url(<?= $recomendacoes['imagem']['url']?>)">
@@ -42,18 +45,25 @@
               </div>
               <div class="col-xs-9 col-sm-9 col-md-9">
                 <h5 class="media-nome"><?= $recomendacoes['autor']?>:</h5>
-              <h4 class="media-local"><?= strtoupper($recomendacoes['palavra_chave'])?></h4>
+              <h4 class="media-local"><?= strtoupper($recomendacoes['palavra_chave_recomendacao'])?></h4>
               </div>
               <div class="col-xs-12">
-                <p class="media-info"><?= $recomendacoes['recomendacao']?></p>
+                <p class="media-info"><?php
+                if (strlen($recomendacoes['recomendacao']) > 100){
+                  $recomendacoes['recomendacao'] = substr($recomendacoes['recomendacao'], 0, 300);
+                  $recomendacoes['recomendacao'] = trim($recomendacoes['recomendacao']) . "...";
+                }
+                echo $recomendacoes['recomendacao'];
+                ?></p>
               </div>
             </div>
               <div class="rodape-recomendacoes text-center">
-
               </div>
           </div>
           </div>
-          <?php } ?>
+      <?php
+        }
+      }?>
     </div>
     </div>
   </div>

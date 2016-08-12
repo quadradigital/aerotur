@@ -25,34 +25,19 @@
        <div id="navbar" class="collapse navbar-collapse navpersonal">
          <ul class="nav navbar-nav navbar-styles">
            <li class="dropdown">
-             <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GRUPO<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="#">GRUPO</a></li>
-             </ul>
+             <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GRUPO</a>
+           </li>
+           <li>
+             <a href="/pacotes/" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS</a>
            </li>
            <li class="dropdown">
-             <a href="#" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="/pacotes/">VIAGENS</a></li>
-             </ul>
+             <a href="http://www.aeroturteen.com.br/" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEEN</a>
            </li>
            <li class="dropdown">
-             <a href="#" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEEN<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="http://www.aeroturteen.com.br">TEEN</a></li>
-             </ul>
+             <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL</a>
            </li>
            <li class="dropdown">
-             <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="#">VIAJE FÁCIL</a></li>
-             </ul>
-           </li>
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALINAS<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="/salinas/">SALINAS</a></li>
-             </ul>
+             <a href="/salinas/" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALINAS</a>
            </li>
          </ul>
        </div><!--/.nav-collapse -->

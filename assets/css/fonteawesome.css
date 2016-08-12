@@ -66,6 +66,7 @@
   transition: all 0.5s cubic-bezier(0.6, -0.6, 0.2, 1.5);
 }
 
+/*
 .box p:before {
   content: '';
   width: 0;
@@ -77,6 +78,7 @@
   bottom: -5px;
   left: 40px;
 }
+*/
 
 .fa-small {
   font-size: 1.6em !important;
@@ -137,6 +139,7 @@
   transition: all 0.5s cubic-bezier(0.6, -0.6, 0.2, 1.5) !important;
 }
 
+/*
 .box-small p:before {
   content: '' !important;
   width: 0 !important;
@@ -147,4 +150,20 @@
   position: absolute !important;
   bottom: -5px !important;
   left: 40px !important;
+}
+*/
+
+.fa-user {
+  color: #B7986D;
+  font-size: 1.2em !important;
+}
+
+.fa-tag {
+  color: #B7986D;
+  font-size: 1.2em !important;
+}
+
+.fa-tags {
+  color: #B7986D;
+  font-size: 1.2em !important;
 }
