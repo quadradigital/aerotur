@@ -16,15 +16,17 @@
            $args_post = array('post_type' => 'pacotes', 'posts_per_page'=>400);
            $myposts_post = get_posts( $args_post );
            foreach ( $myposts_post as $post_post ){
-              setup_postdata( $post_post );
-               $id2 = $post_post->ID;
-               $pacotes = get_pacotes($id2);
-               $link_post = get_post_permalink($id2);
+               setup_postdata( $post_post );
+               $id = $post_post->ID;
+               $pacotes = get_pacotes($id);
+               $link_post = get_post_permalink($id);
+               $filtro_evento = get_field('filtro_evento', get_the_ID());
+               $filtro_preco = get_field('filtro_preco', get_the_ID());
+               
                // manter _div_pacote
                // parcela_pacote
-
            ?>
-                   <a class="carnaval_div_pacote 50_parcela_pacote allitem_div_pacote" href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
+                   <a class="<?= $filtro_evento?>_div_pacote <?= $filtro_preco?>_pacote allitem_div_pacote" href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
                      <div class="promo-dados">
                        <div class="col-xs-6 col-sm-8 col-md-6">
                          <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>
@@ -44,11 +46,6 @@
                      </div>
                    </div></a>
                    <?php }?>
-
-
-
-
-
          </div>
        </div>
         </div>

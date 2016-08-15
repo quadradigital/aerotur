@@ -29,23 +29,38 @@
               foreach ( $myposts_post as $post_post ){
                 setup_postdata( $post_post );
                 $id_post = $post_post->ID;
+                $resumo = get_the_excerpt($id);
                 $titulo_post = get_the_title($id_post);
                 $conteudo_post = wp_strip_all_tags(get_the_content(), false);
                 $link_post = get_post_permalink($id_post);
-                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(1024,768)) ;
-              ?>
+                $categoria = get_the_category( $id_post );
+                $tags = get_tags($id_post);
+                //print_r($tags);
+                //$tags = get_tags();
+                $posttags = get_the_tags($id_post);
+                if ($posttags) {
+                  foreach($posttags as $tag) {
+                    echo $tag->name . ' ';
+                  }
+                }
+                $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
+             ?>
               <div class="col-xs-12">
                 <h2><a style="color: #EDBD7B; !important;" href="<?= $link_post ?>"><?= $titulo_post ?></a></h2>
                 <div class="col-xs-12 img-lista-posts">
-                  <img src="<?= $img_post[0]?>" class="pull-left img-blog-responsive">
+                  <a href="<?= $link_post ?>"><img src="<?= $img_post[0]?>" class="pull-left img-blog-responsive"></a>
                   <div class="col-xs-12 meta-post">
-                      <span class="meta-data"><p><?= get_the_date('j \d\e F \d\e Y',$id_post); ?></p></span>
+                      <a style="color: #333; !important;" href="<?= $link_post ?>"><span class="meta-data"><p><?= get_the_date('j \d\e F \d\e Y',$id_post); ?></p></span></a>
                   </div>
                 </div>
                 <div class="col-xs-12">
-                  <p class="meta-tags"><i class="fa fa-user" aria-hidden="true"></i><span class="meta-titles">Autor: <span class="meta-info-text"><?= get_the_author(); ?></span></span> <i class="fa fa-tag" aria-hidden="true"></i><span class="meta-titles">Categorias: <span class="meta-info-text"></span></span> <i class="fa fa-tags" aria-hidden="true"></i><span class="meta-titles">Tags: <span class="meta-info-text"></span></span></p>
-                      <p class="resumo-post">Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Detraxit consequat et quo num tendi nada. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                  <a href="#" class="btn btn-danger pull-right">LEIA MAIS</a>
+                  <p class="meta-tags"><i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="meta-titles">Autor: <span class="meta-info-text"><?= get_the_author(); ?></span></span> <i class="fa fa-tag" aria-hidden="true"></i>
+                    <span class="meta-titles">Categorias: <span class="meta-info-text"><?= $categoria[0]->name;?></span></span> <i class="fa fa-tags" aria-hidden="true"></i>
+                    <span class="meta-titles">Tags: <span class="meta-info-text"><?= $tag->name;?></span></span></p>
+                      <a style="color: #333; !important;" href="<?= $link_post ?>"><p class="resumo-post"><?= $resumo ?>.</p></a>
+                    </a>
+                  <a href="<?= $link_post ?>" class="btn btn-danger pull-right">LEIA MAIS</a>
                 </div>
               </div>
               <?php }?>

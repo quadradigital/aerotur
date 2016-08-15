@@ -35,12 +35,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-5 col-md-5 blog-box-bg-r">
-                    <div class="col-xs-2 col-sm-1 col-md-1 box-r-comentarios">
-                      <img src="<?php bloginfo('template_url') ?>/assets/img/bubble.png">
-                    </div>
-                    <div class="col-xs-2 col-sm-5 col-md-5 box-r-comentarios">
-                      <a href="#">200 <span class="hidden-xs">comentários</span></a>
-                    </div>
+                    
                     <div class="col-xs-4 col-sm-3 col-md-3 box-social-twitter">
                       <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
@@ -58,7 +53,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
 
               <div class="col-xs-12 col-sm-4 col-md-4 content-blog-sidebar">
                 <h4 class="text-right titulo-sidebar">Você também vai gostar de ler:</h4>
-                
+
                 <?
                 $args_post = array('post_type' => 'post', 'posts_per_page'=>500, 'order'=>'ASC');
                 $myposts_post = get_posts( $args_post );

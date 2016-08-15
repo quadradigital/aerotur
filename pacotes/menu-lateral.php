@@ -25,131 +25,70 @@
                     Todos
                   </label>
                 </div>
-
+                <?php
+                $args_post = array('post_type' => 'filtro_evento', 'posts_per_page'=>400, 'order'=>'ASC');
+                $myposts_post = get_posts( $args_post );
+                foreach ( $myposts_post as $post_post ){
+                    setup_postdata( $post_post );
+                    $id = $post_post->ID;
+                    $filtro = get_filtro($id);
+                ?>
                 <div class="checkbox">
                   <label>
                     <input class="filtro_pacote" id="reveillon" type="checkbox" value="">
-                    Reveillón
+                    <?= $filtro['tipo_evento']?>
                   </label>
                 </div>
+                <?php }?>
+
+                <p>MOEDA</p>
+                <?php
+                $args_post = array('post_type' => 'filtro_moeda', 'posts_per_page'=>400, 'order'=>'ASC');
+                $myposts_post = get_posts( $args_post );
+                foreach ( $myposts_post as $post_post ){
+                    setup_postdata( $post_post );
+                    $id = $post_post->ID;
+                    $filtro = get_filtro($id);
+                ?>
                 <div class="checkbox">
                   <label>
-                    <input class="filtro_pacote" id="carnaval"  type="checkbox" value="">
-                    Carnaval
+                    <input class=""  type="checkbox" value="">
+                    <?= $filtro['tipo_moeda']?>
                   </label>
                 </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote" id="pacotesnacionais" type="checkbox" value="">
-                    Pacotes nacionais
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Pacotes internacionais
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Cruzeiros
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Feriados
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Esportes
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Experiências
-                  </label>
-                </div>
+                <?php }?>
 
                 <p>PARCELAS A PARTIR DE</p>
-
+                <?php
+                $args_post = array('post_type' => 'filtro_preco', 'posts_per_page'=>400, 'order'=>'ASC');
+                $myposts_post = get_posts( $args_post );
+                foreach ( $myposts_post as $post_post ){
+                    setup_postdata( $post_post );
+                    $id = $post_post->ID;
+                    $filtro = get_filtro($id);
+                ?>
                 <div class="checkbox">
                   <label>
                     <input class=""  type="checkbox" value="">
-                    R$ 50,00
+                    <?= $filtro['tipo_preco']?>
                   </label>
                 </div>
-                <div class="checkbox">
-                  <label>
-                    <input class=""  type="checkbox" value="">
-                    R$ 150,00
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class=""  type="checkbox" value="">
-                    R$ 250,00
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class=""  type="checkbox" value="">
-                    R$ 1.000,00
-                  </label>
-                </div>
+                <?php }?>
 
                 <p>LOCALIDADE</p>
-
+                <?php
+                $args_post = array('post_type' => 'filtro_localidade', 'posts_per_page'=>400, 'order'=>'ASC');
+                $myposts_post = get_posts( $args_post );
+                foreach ( $myposts_post as $post_post ){
+                    setup_postdata( $post_post );
+                    $id = $post_post->ID;
+                    $filtro = get_filtro($id);
+                ?>
                 <div class="checkbox">
                   <label>
                     <input class="filtro_pacote"  type="checkbox" value="">
-                    Brasil
+                    <?= $filtro['tipo_localidade']?>
                   </label>
                 </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    América do Sul
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    América Central
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    América do Norte
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Europa
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Ásia
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    África
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
-                    Oceania
-                  </label>
-                </div>
+                <?php }?>
               </div>

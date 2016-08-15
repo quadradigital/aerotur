@@ -37,12 +37,13 @@
       <!--end MONTE SUA VIAGEM -->
 
       <!--start REDES SOCIAIS -->
-      <?php include('passagens_promocionais.php') ?>
+      <!-- alterei para o arquivo de promoções imperdíveis dentro da pasta pacotes -->
+      <?php include('pacotes/promocoes-imperdiveis.php') ?>
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->
       <!-- alterei para o arquivo de promoções imperdíveis dentro da pasta pacotes -->
-      <?php include('pacotes/promocoes-imperdiveis.php') ?>
+      <?php include('pacotes/pacotes-relacionados.php') ?>
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->
@@ -52,6 +53,10 @@
       <!--start REDES SOCIAIS -->
       <?php include('facebook.php') ?>
       <!--end REDES SOCIAIS -->
+
+      <!--start NEWSLETTER -->
+      <?php  include('pacotes/newsletter.php') ?>
+      <!--end NEWSLETTER -->
 
       <!--start REDES SOCIAIS -->
       <?php include('redes-sociais.php') ?>

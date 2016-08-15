@@ -7,9 +7,7 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
-    $newsletter = get_ativar();
  ?>
- <section style="<?php if($newsletter['ativar_news'] == false){echo 'display:none;';} ?>" id="news">
    <div class="container-fluid space-down">
      <div class="row">
        <div class="container">
@@ -33,4 +31,3 @@
         </div>
       </div>
     </div>
-</section>

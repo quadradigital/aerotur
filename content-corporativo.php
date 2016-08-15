@@ -52,6 +52,10 @@
        <!--end MONTE SUA VIAGEM -->
 
        <!--start MONTE SUA VIAGEM -->
+       <?php include('corporativo/redes-sociais.php') ?>
+       <!--end MONTE SUA VIAGEM -->
+
+       <!--start MONTE SUA VIAGEM -->
        <?php include('corporativo/enderecos.php') ?>
        <!--end MONTE SUA VIAGEM -->
 

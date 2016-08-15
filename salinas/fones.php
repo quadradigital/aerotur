@@ -27,7 +27,7 @@
              <p>FONE</p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $fones['telefone']?></p>
+             <p><span id="ddd-tel"><?= $fones['ddd']?></span><?= $fones['telefone']?></p>
            </div>
          </div>
          <div class="col-xs-12 col-sm-3 col-md-3">
@@ -35,7 +35,7 @@
              <p>FAX</p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $fones['telefone2']?></p>
+             <p><span id="ddd-tel"><?= $fones['ddd2']?></span><?= $fones['telefone2']?></p>
            </div>
          </div>
          <div class="col-xs-12 col-sm-3 col-md-3">
@@ -43,7 +43,7 @@
              <p>CELULAR</p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $fones['telefone3']?></p>
+             <p><span id="ddd-tel"><?= $fones['ddd3']?></span><?= $fones['telefone3']?></p>
            </div>
          </div>
          <div class="col-xs-12 col-sm-3 col-md-3">
@@ -51,7 +51,7 @@
              <p>PLANTÃO</p>
            </div>
            <div id="footer-one-tel">
-             <p><?= $fones['telefone4']?></p>
+             <p><span id="ddd-tel"><?= $fones['ddd4']?></span><?= $fones['telefone4']?></p>
            </div>
          </div>
        </div> <!-- FIM footer-one -->

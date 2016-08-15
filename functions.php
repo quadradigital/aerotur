@@ -147,7 +147,6 @@ function get_pacotes($id){
 	$arr['pacote_inclui'] = get_field('pacote_inclui', $id);
 	$arr['resumo'] = get_field('resumo', $id);
 
-
   return $arr;
 }
 
@@ -202,6 +201,16 @@ function get_passagens($id){
   	return $arr;
 }
 
+function get_filtro($id){
+	  $arr['tipo_evento'] = get_field('tipo_evento', $id);
+		$arr['tipo_preco'] = get_field('tipo_preco', $id);
+		$arr['tipo_moeda'] = get_field('tipo_moeda', $id);
+		$arr['tipo_localidade'] = get_field('tipo_localidade', $id);
+
+
+  	return $arr;
+}
+
 /*
 				PÁGINA SALINAS
 */
@@ -223,9 +232,13 @@ function get_salinas_online($id){
 }
 
 function get_fones($id){
+	$arr['ddd'] = get_field('ddd', $id);
 	$arr['telefone'] = get_field('telefone', $id);
+	$arr['ddd2'] = get_field('ddd2', $id);
 	$arr['telefone2'] = get_field('telefone2', $id);
+	$arr['ddd3'] = get_field('ddd3', $id);
 	$arr['telefone3'] = get_field('telefone3', $id);
+	$arr['ddd4'] = get_field('ddd4', $id);
 	$arr['telefone4'] = get_field('telefone4', $id);
 
 	return $arr;
