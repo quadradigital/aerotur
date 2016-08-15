@@ -57,11 +57,11 @@
    </div>
   
   <div class="container space-down">
-    <div class="col-xs-6 pull-left">
-      <button type="button" class="btn btn-danger pull-left btn-posts-red"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-danger btn-posts-red"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
     </div>
-    <div class="col-xs-6 pull-right">
-      <button type="button" class="btn btn-success pull-right btn-posts-green"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-success btn-posts-green"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
     </div>
   </div>
 

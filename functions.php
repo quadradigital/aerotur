@@ -189,6 +189,19 @@ function get_banner_topo($id){
   	return $arr;
 }
 
+function get_passagens($id){
+	  $arr['imagem'] = get_field('imagem', $id);
+		$arr['texto_superior_passagens'] = get_field('texto_superior_passagens', $id);
+		$arr['texto_inferior_passagens'] = get_field('texto_inferior_passagens', $id);
+		$arr['resumo'] = get_field('resumo', $id);
+		$arr['parcelas'] = get_field('parcelas', $id);
+		$arr['valor'] = get_field('valor', $id);
+		$arr['centavos'] = get_field('centavos', $id);
+		$arr['moeda_de_pagamento'] = get_field('moeda_de_pagamento', $id);
+
+  	return $arr;
+}
+
 /*
 				PÁGINA SALINAS
 */

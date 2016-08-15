@@ -33,7 +33,7 @@
       <!--end OFERTA DE PASSAGENS -->
 
       <!--start PASSAGENS AÉREAS PROMOCIONAIS/PACOTES -->
-      <?php include('pacotes.php') ?>
+      <?php include('passagens_promocionais.php') ?>
       <!--end PASSAGENS AÉREAS PROMOCIONAIS/PACOTES -->
 
       <!--start BLOG -->

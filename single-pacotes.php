@@ -37,7 +37,7 @@
       <!--end MONTE SUA VIAGEM -->
 
       <!--start REDES SOCIAIS -->
-      <?php include('pacotes.php') ?>
+      <?php include('passagens_promocionais.php') ?>
       <!--end REDES SOCIAIS -->
 
       <!--start REDES SOCIAIS -->
