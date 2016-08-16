@@ -24,20 +24,20 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse navpersonal">
           <ul class="nav navbar-nav navbar-styles">
-            <li class="dropdown">
-              <a href="/pacotes/" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span></a>
+            <li>
+              <a href="/pacotes/" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/corporativo/" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span></a>
+            <li>
+              <a href="/corporativo/" class="corp-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span></a>
             </li>
-            <li class="dropdown">
-              <a href="http://www.aeroturteen.com.br/" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
+            <li>
+              <a href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
+            <li>
+              <a href="#" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/salinas/" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>
+            <li>
+              <a href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>
             </li>
           </ul>
         </div><!--/.nav-collapse -->

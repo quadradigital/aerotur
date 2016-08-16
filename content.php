@@ -35,7 +35,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-5 col-md-5 blog-box-bg-r">
-                    
+
                     <div class="col-xs-4 col-sm-3 col-md-3 box-social-twitter">
                       <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
@@ -55,7 +55,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                 <h4 class="text-right titulo-sidebar">Você também vai gostar de ler:</h4>
 
                 <?
-                $args_post = array('post_type' => 'post', 'posts_per_page'=>500, 'order'=>'ASC');
+                $args_post = array('post_type' => 'post', 'posts_per_page'=>5, 'order'=>'DESC');
                 $myposts_post = get_posts( $args_post );
                 foreach ( $myposts_post as $post_post ){
                   setup_postdata( $post_post );
@@ -64,24 +64,54 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                   $conteudo_post = wp_strip_all_tags(get_the_content(), false);
                   $link_post = get_post_permalink($id_post);
                   $img_post = wp_get_attachment_image_src( get_post_thumbnail_id($id_post), array(386,285)) ;
+                  if(get_the_ID()!=$id_post){
                 ?>
 
-                <div class="sidebar-posts-extra" style="background-image:url(<?= $img_post[0]?>)">
+                <a href="<?= $link_post ?>"><div class="sidebar-posts-extra" style="background-image:url(<?= $img_post[0]?>)">
+                  <div class="sidebar-img-dados">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                      <div class="sidebar-circulo center-block">
+                        <p class="text-center sidebar-data-dia"><?= get_the_date('j',$id_post); ?></p>
+                        <p class="text-center blog-data-mes"><?= get_the_date('F',$id_post); ?></p>
+                      </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 sidebar-img-text">
+                      <?= $titulo_post ?>
+                    </div>
+                    <div class="resumo-blog-post">
+                    <p><?= get_the_excerpt(); ?></p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+                <?php }
+              }?>
+              </div>
+
+
+
+              <!--
+
+              <div class="col-xs-12">
+                  <div class="sidebar-posts-extra" style="background-image:url(<?= $img_post[0]?>)">
                     <div class="sidebar-img-dados">
-                      <div class="col-xs-2 col-sm-2 col-md-2">
-                        <div class="sidebar-circulo center-block">
-                          <p class="text-center sidebar-data-dia"><?= get_the_date('j',$id_post); ?></p>
-                          <p class="text-center blog-data-mes"><?= get_the_date('F',$id_post); ?></p>
-                        </div>
+                      <div class="col-xs-2 sidebar-circulo center-block">
+                        <p class="text-center sidebar-data-dia"><?= get_the_date('j',$id_post); ?></p>
+                        <p class="text-center blog-data-mes"><?= get_the_date('F',$id_post); ?></p>
                       </div>
                       <div class="col-xs-10 col-sm-10 col-md-10 sidebar-img-text">
                         <a href="<?= $link_post ?>"><?= $titulo_post ?></a>
                       </div>
                     </div>
+                  </div>
                 </div>
 
-                <?php }?>
-              </div>
+
+
+              -->
+
+
+
 
               <!-- INÍCIO COMENTÁRIOS
               <div class="col-xs-12 col-sm-7 col-md-7 col-md-offset-1 content-blog-comentario">

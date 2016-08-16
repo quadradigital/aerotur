@@ -30,6 +30,17 @@ body {
 /* Not required for template or sticky footer method. */
 
 
+.promocao-imper {
+  width: 545px;
+  height: 266px;
+  background-color: #e5e5e5;
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 14px;
+}
+
+
 .busca-passagens {
   position: absolute;
   z-index: 999;
@@ -62,12 +73,14 @@ body {
  * CONFIGURAÇÃO DA PÁGINA DE PACOTES
  */
 
- .caixa-cinza{
+ .promo-a {
+  text-decoration: none !important;
+ }
+
+ .caixa-cinza {
   width: 545px;
   height: 266px;
-  background: #E5E5E5;
-  -webkit-clip-path: polygon(100% 0, 68% 0, 50% 100%, 100% 100%);
-  clip-path: polygon(100% 0, 76% 0, 50% 100%, 100% 100%);
+  background-image: url(../assets/img/promo-grey.png);
  }
 
 .style-pills-top > li > a {   
@@ -352,8 +365,7 @@ PACOTES
 /* caixa da esquerda */
 
 .box-l-promo-imperdivel {
-  margin-top: 15px;
-  padding-left: 20px;
+  padding-left: 6px;
   padding-right: 0px;
 }
 
@@ -369,6 +381,7 @@ PACOTES
   margin-right: -4px;
   margin-bottom: 0px;
   color: #f64450;
+  font-size: 18px;
 }
 
 .box-l-promo-imperdivel h5 {
@@ -388,7 +401,7 @@ PACOTES
 }
 
 .box-v-valor-imperdivel {
-  padding-left: 0px;
+  /*padding-left: 0px;*/
 }
 
 .box-v-valor-imperdivel h5 {

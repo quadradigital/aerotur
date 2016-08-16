@@ -37,7 +37,7 @@
 
      <link href="<?php bloginfo('template_url') ?>/pacotes/css/style-pacotes.css" rel="stylesheet">
      <link href="<?php bloginfo('template_url') ?>/pacotes/css/fonts.css" rel="stylesheet">
-
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
 
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->

@@ -34,7 +34,7 @@
      <!-- Custom styles for this template -->
      <link href="<?php bloginfo('template_url') ?>/corporativo/css/style-corporativo.css" rel="stylesheet">
      <link href="<?php bloginfo('template_url') ?>/corporativo/css/fonts.css" rel="stylesheet">
-
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
      <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/ie-emulation-modes-warning.js"></script>

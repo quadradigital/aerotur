@@ -45,7 +45,7 @@
               ?>
               <!-- SÓ EXIBE A PROMOÇÃO SE ELA FOI DEFINIDA COMO PROMOÇÃO NA SEÇÃO PACOTES -->
               <?php if($pacotes['promocional']){ ?>
-              <a href="<?= $link_post ?>">
+              <a class="promo-a" href="<?= $link_post ?>">
                <div class="promocao-imper" style="background-image:url(<?= $pacotes['banner']['url']?>)">
                 <div class="col-xs-12 col-md-8 box-v-valor-imperdivel">
                    <h5>A PARTIR DE</h5>

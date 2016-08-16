@@ -58,10 +58,10 @@
   
   <div class="container space-down">
     <div class="col-xs-6">
-      <button type="button" class="btn btn-danger btn-posts-red"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
+      <button type="button" class="btn btn-danger btn-posts-red"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
     </div>
     <div class="col-xs-6">
-      <button type="button" class="btn btn-success btn-posts-green"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important;">+ POSTS</a></button>
+      <button type="button" class="btn btn-success btn-posts-green"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
     </div>
   </div>
 

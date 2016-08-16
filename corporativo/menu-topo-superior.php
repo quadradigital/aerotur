@@ -24,21 +24,11 @@
        </div>
        <div id="navbar" class="collapse navbar-collapse navpersonal">
          <ul class="nav navbar-nav navbar-styles">
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle viagens-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GRUPO</a>
-           </li>
-           <li>
-             <a href="/pacotes/" class="dropdown-toggle corp-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS</a>
-           </li>
-           <li class="dropdown">
-             <a href="http://www.aeroturteen.com.br/" class="dropdown-toggle teen-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEEN</a>
-           </li>
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle viaje-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL</a>
-           </li>
-           <li class="dropdown">
-             <a href="/salinas/" class="dropdown-toggle salinas-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALINAS</a>
-           </li>
+           <li><a href="#" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false">GRUPO</a></li>
+           <li><a href="/pacotes/" class="corp-navbar" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS</a></li>
+           <li><a href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false">TEEN</a></li>
+           <li><a href="#" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL</a></li>
+           <li><a href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false">SALINAS</a></li>
          </ul>
        </div><!--/.nav-collapse -->
      </div>

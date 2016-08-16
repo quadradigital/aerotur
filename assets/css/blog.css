@@ -64,6 +64,10 @@ body {
   * 
   */
 
+.div-blog-titulo-img {
+  padding-left: 0px;
+}
+
 .btn-leia-mais {
   margin-top: 160px;
 }
@@ -124,6 +128,7 @@ span.meta-data p {
     height: 125px;
     margin-top: -125px;
     padding-top: 20px;
+    padding-left: 0px;
     font-size: 2em;
     color: #F64450;
     font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
