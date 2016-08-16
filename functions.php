@@ -13,6 +13,7 @@ add_theme_support( 'post-thumbnails' );
 function paginacao($numpages = '', $pagerange = '', $paged='') {
 
 	global $paged;
+	global $wp_query;
 
   if (empty($pagerange)) {
     $pagerange = 2;
@@ -21,7 +22,6 @@ function paginacao($numpages = '', $pagerange = '', $paged='') {
     $paged = 1;
   }
   if ($numpages == '') {
-    global $wp_query;
     $numpages = $wp_query->max_num_pages;
     if(!$numpages) {
         $numpages = 1;
@@ -45,7 +45,6 @@ function paginacao($numpages = '', $pagerange = '', $paged='') {
   );
 
   return paginate_links($pagination_args);
-
 }
 
 function customLoginLogo() {
@@ -184,6 +183,10 @@ function get_pacotes($id){
 	$arr['estadia'] = get_field('estadia', $id);
 	$arr['pacote_inclui'] = get_field('pacote_inclui', $id);
 	$arr['resumo'] = get_field('resumo', $id);
+	$arr['filtro_eventos'] = get_field('filtro_eventos', $id);
+	$arr['filtro_moeda'] = get_field('filtro_moeda', $id);
+	$arr['filtro_preco'] = get_field('filtro_preco', $id);
+	$arr['filtro_localidade'] = get_field('filtro_localidade', $id);
 
   return $arr;
 }
