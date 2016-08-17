@@ -42,7 +42,7 @@
                <?php
                if(!empty($ofertas['companhia_aerea']['url'])){
                ?>
-               <a href="#" class="list-group-item ofertas-item-lista">
+               <a href="<?= $ofertas['link']?>" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
                    <span class="pull-left"><img src="<?= $ofertas['companhia_aerea']['url']?>"></span>
                  </div>
@@ -56,7 +56,7 @@
                <?php }
                if(!empty($ofertas['companhia_aerea2']['url'])){
                 ?>
-               <a href="#" class="list-group-item ofertas-item-lista">
+               <a href="<?= $ofertas['link']?>" class="list-group-item ofertas-item-lista">
                  <div class="col-xs-1 col-sm-1 col-md-1">
                    <span class="pull-left"><img src="<?= $ofertas['companhia_aerea2']['url']?>"></span>
                  </div>
@@ -70,7 +70,7 @@
              <? }
              if(!empty($ofertas['companhia_aerea3']['url'])){
               ?>
-             <a href="#" class="list-group-item ofertas-item-lista">
+             <a href="<?= $ofertas['link']?>" class="list-group-item ofertas-item-lista">
                <div class="col-xs-1 col-sm-1 col-md-1">
                  <span class="pull-left"><img src="<?= $ofertas['companhia_aerea3']['url']?>"></span>
                </div>
@@ -84,7 +84,7 @@
            <? }
            if(!empty($ofertas['companhia_aerea4']['url'])){
             ?>
-           <a href="#" class="list-group-item ofertas-item-lista">
+           <a href="<?= $ofertas['link']?>" class="list-group-item ofertas-item-lista">
              <div class="col-xs-1 col-sm-1 col-md-1">
                <span class="pull-left"><img src="<?= $ofertas['companhia_aerea4']['url']?>"></span>
              </div>
@@ -98,7 +98,7 @@
          <? }
          if(!empty($ofertas['companhia_aerea5']['url'])){
           ?>
-         <a href="#" class="list-group-item ofertas-item-lista">
+         <a href="<?= $ofertas['link']?>" class="list-group-item ofertas-item-lista">
            <div class="col-xs-1 col-sm-1 col-md-1">
              <span class="pull-left"><img src="<?= $ofertas['companhia_aerea5']['url']?>"></span>
            </div>

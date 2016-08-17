@@ -53,6 +53,11 @@ body {
   margin-top: 130px;
 }
 
+
+.nav > li > a {
+  padding: 5px 15px;
+}
+
  /*
   * Configurações do blog
   *
@@ -499,8 +504,7 @@ code {
   background-repeat: no-repeat;
   background-position: bottom;
   border-bottom: hidden;
-  height: 56px;
-  background-size: contain;
+  height: 58px;
 }
 
 .style-pills-top a {
@@ -1514,4 +1518,9 @@ code {
   margin-left: 270px;
 }
 
+}
+
+
+.mensagem_height_contato{
+    height: 107px !important;
 }

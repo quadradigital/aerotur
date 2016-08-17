@@ -43,7 +43,7 @@
                      $pacotes = get_passagens($id2);
                  if(!empty($pacotes['imagem']['url'])){
                  ?>
-                 <div class="slide">
+               <a href="<?= $pacotes['link']?>"><div class="slide">
                    <div class="col-xs-12 col-md-3 promocionais-img" style="background-image:url(<?= $pacotes['imagem']['url']?>)">
                      <div class="promo-dados">
                        <div class="col-xs-6 col-sm-8 col-md-7">
@@ -52,12 +52,13 @@
                        </div>
                        <div class="col-xs-5 col-sm-3 col-md-4">
                          <h5 class="promo-parcelas text-right"><?= $pacotes['parcelas']?> de</h5>
-                         <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento']?><?= $pacotes['valor']?><span class="promo-centavos">,<?= $pacotes['centavos']?></span></h4>
+                         <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento']?><?= $pacotes['valor']?>,<?= $pacotes['centavos']?><span class="promo-centavos">,<?= $pacotes['centavos']?></span></h4>
                        </div>
                          <p class="desc_pacote"><?= $pacotes['resumo']?></p>
                      </div>
                    </div>
-                 </div>
+                 </div></a>
+
                  <?php }
                  }
                  ?>

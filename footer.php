@@ -24,11 +24,11 @@
           <div class="col-xs-12 col-sm-3 col-md-3">
             <h4><?= $rodape['texto_topico_rodape_horizontal']?></h4>
             <ul class="list-unstyled">
-              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
-              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical2']?></li></a>
-              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical3']?></li></a>
-              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical4']?></li></a>
-              <a href="#"><li><?= $rodape['texto_topico_rodape_vertical5']?></li></a>
+              <a href="<?= $rodape['link1']?>" target="_blank"><li><?= $rodape['texto_topico_rodape_vertical1']?></li></a>
+              <a href="<?= $rodape['link2']?>" target="_blank"><li><?= $rodape['texto_topico_rodape_vertical2']?></li></a>
+              <a href="<?= $rodape['link3']?>" target="_blank"><li><?= $rodape['texto_topico_rodape_vertical3']?></li></a>
+              <a href="<?= $rodape['link4']?>" target="_blank"><li><?= $rodape['texto_topico_rodape_vertical4']?></li></a>
+              <a href="<?= $rodape['link5']?>" target="_blank"><li><?= $rodape['texto_topico_rodape_vertical5']?></li></a>
             </ul>
           </div>
          <? } ?>

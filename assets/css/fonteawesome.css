@@ -42,7 +42,7 @@
 }
 
 .box a:hover {
-  background: #6f1b00;
+  background: #b7986d;
 }
 
 .box a:hover p {
@@ -115,7 +115,7 @@
 }
 
 .box-small a:hover {
-  background: #6f1b00 !important;
+  background: #b7986d !important;
 }
 
 .box-small a:hover p {

@@ -29,7 +29,7 @@
                $arr['filtro_localidade'] = get_field('filtro_localidade', $id);
                */
            ?>
-                   <a class="<?= $pacotes['filtro_eventos']?>_div_pacote <?= $pacotes['filtro_preco']?>_pacote allitem_div_pacote" href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
+                   <a class="<?= str_replace(' ','', $pacotes['filtro_localidade'])?>_div_pacote <?= str_replace(' ','', $pacotes['filtro_moeda'])?>_div_pacote <?= str_replace(' ','', $pacotes['filtro_eventos'])?>_div_pacote <?= str_replace(' ','', $pacotes['filtro_preco'])?>_pacote_preco allitem_div_pacote" href="<?= $link_post ?>"><div class="col-xs-12 col-md-4 promo-blocks" style="background-image:url(<?= $pacotes['banner']['url']?>)">
                      <div class="promo-dados">
                        <div class="col-xs-6 col-sm-8 col-md-6">
                          <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>

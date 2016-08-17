@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand center-block" href="#" id="navbar-logo"></a>
+          <a class="navbar-brand center-block" href="<?= get_site_url(); ?>" id="navbar-logo"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse navpersonal">
           <ul class="nav navbar-nav navbar-styles">
@@ -34,7 +34,7 @@
               <a href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
             </li>
             <li>
-              <a href="#" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
+              <a href="http://viajefacil.aerotur.com.br/" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
             </li>
             <li>
               <a href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>

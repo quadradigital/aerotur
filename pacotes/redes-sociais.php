@@ -27,23 +27,23 @@
                  $redessociais = get_redes_sociais($id2);
                  if(!empty($redessociais['facebook'])){
                  ?>
-                 <li><span class="box"><a href="<?= $redessociais['facebook']?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></span></li>
+                 <li><span class="box"><a href="<?= $redessociais['facebook']?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Facebook"></i></a></span></li>
                  <?php }
                  if(!empty($redessociais['instagram'])){
                  ?>
-                 <li><span class="box"><a href="<?= $redessociais['instagram']?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span></li>
+                 <li><span class="box"><a href="<?= $redessociais['instagram']?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="instagram"></i></a></span></li>
                  <?php }
                  if(!empty($redessociais['twitter'])){
                  ?>
-                 <li><span class="box"><a href="<?= $redessociais['twitter']?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></span></li>
+                 <li><span class="box"><a href="<?= $redessociais['twitter']?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a></span></li>
                  <?php }
                  if(!empty($redessociais['vimeo'])){
                  ?>
-                 <li><span class="box"><a href="<?= $redessociais['vimeo']?>" target="_blank"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span></li>
+                 <li><span class="box"><a href="<?= $redessociais['vimeo']?>" target="_blank"><i class="fa fa-vimeo" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Vimeo"></i></a></span></li>
                  <?php }
                  if(!empty($redessociais['flickr'])){
                  ?>
-                 <li><span class="box"><a href="<?= $redessociais['flickr']?>" target="_blank"><i class="fa fa-flickr" aria-hidden="true"></i></a></span></li>
+                 <li><span class="box"><a href="<?= $redessociais['flickr']?>" target="_blank"><i class="fa fa-flickr" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Flickr"></i></a></span></li>
                  <?php }
                }?>
            </ul>

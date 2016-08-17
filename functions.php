@@ -104,10 +104,15 @@ function get_ativar(){
 function get_rodape($id){
 	  $arr['texto_topico_rodape_horizontal'] = get_field('texto_topico_rodape_horizontal', $id);
 	  $arr['texto_topico_rodape_vertical1'] = get_field('texto_topico_rodape_vertical1', $id);
+		$arr['link1'] = get_field('link1', $id);
 	  $arr['texto_topico_rodape_vertical2'] = get_field('texto_topico_rodape_vertical2', $id);
+		$arr['link2'] = get_field('link2', $id);
 	  $arr['texto_topico_rodape_vertical3'] = get_field('texto_topico_rodape_vertical3', $id);
+		$arr['link3'] = get_field('link3', $id);
 	  $arr['texto_topico_rodape_vertical4'] = get_field('texto_topico_rodape_vertical4', $id);
+		$arr['link4'] = get_field('link4', $id);
 	  $arr['texto_topico_rodape_vertical5'] = get_field('texto_topico_rodape_vertical5', $id);
+		$arr['link5'] = get_field('link5', $id);
 
   	return $arr;
 }
@@ -212,6 +217,7 @@ function get_ofertas($id){
 	$arr['companhia_aerea5'] = get_field('companhia_aerea5', $id);
   $arr['destino_companhia_aerea5'] = get_field('destino_companhia_aerea5', $id);
   $arr['valor_inicial_passagem5'] = get_field('valor_inicial_passagem5', $id);
+	$arr['link'] = get_field('link', $id);
 
   return $arr;
 }
@@ -238,6 +244,7 @@ function get_passagens($id){
 		$arr['valor'] = get_field('valor', $id);
 		$arr['centavos'] = get_field('centavos', $id);
 		$arr['moeda_de_pagamento'] = get_field('moeda_de_pagamento', $id);
+		$arr['link'] = get_field('link', $id);
 
   	return $arr;
 }

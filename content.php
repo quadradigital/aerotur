@@ -55,7 +55,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), array(20
                 <h4 class="text-right titulo-sidebar">Você também vai gostar de ler:</h4>
 
                 <?
-                $args_post = array('post_type' => 'post', 'posts_per_page'=>5, 'order'=>'DESC');
+                $args_post = array('post_type' => 'post', 'posts_per_page'=>4, 'order'=>'DESC');
                 $myposts_post = get_posts( $args_post );
                 foreach ( $myposts_post as $post_post ){
                   setup_postdata( $post_post );

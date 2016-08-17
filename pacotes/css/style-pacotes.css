@@ -936,7 +936,8 @@ code {
 }
 
 .line-fixed-top {
-  background-image: url('../../imgs/linepills.png');
+  /*background-image: url('../../imgs/linepills.png');*/
+  border-bottom: 5px solid rgb(189, 155, 107) !important;
   background-color: #9b0d1a;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -950,7 +951,7 @@ code {
   font-family: AileronSemiBold, Helvetica, Verdana, Sans-Serif;
   margin-left: 0px;
   margin-right: 0px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .kill-padding-left {
@@ -1564,12 +1565,17 @@ code {
   background-color: #3333ff;
   background-size: cover;
   background-position: center;
-  width: 32.587%;
+  width: 256px;
   height: 220px;
   margin-left: 3px;
   margin-right: 3px;
   margin-bottom: 6px;
   overflow: hidden;
+}
+
+.promo-blocks > .promo-dados {
+  margin-top: 0px;
+  transition: 900ms;
 }
 
 .promo-img {
@@ -1591,7 +1597,7 @@ code {
     bottom: 10px;
     width: 115%;
     height: 283px;
-    top: 159px;
+    top: 170px;
     transition: 900ms;
 }
 .promo-dados:hover {
@@ -1629,7 +1635,7 @@ code {
   font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
   margin-bottom: 0px;
   padding-bottom: 0px;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
   font-size: 0.7em;
 }
 
@@ -1638,13 +1644,13 @@ code {
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
   margin-top: 0px;
   padding-top: 0px;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .promo-centavos {
     color: #FFFFFF;
     font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
-    font-size: 0.3em;
+    font-size: 0.5em;
     vertical-align: top;
 }
 
@@ -2085,7 +2091,7 @@ code {
 }
 
 .box a:hover {
-  background: #6f1b00;
+  background: #b7986d;
 }
 
 .box a:hover p {
@@ -2158,7 +2164,7 @@ code {
 }
 
 .box-small a:hover {
-  background: #6f1b00 !important;
+  background: #b7986d !important;
 }
 
 .box-small a:hover p {
@@ -2213,3 +2219,7 @@ code {
 
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
+
+.padding_0_pacote{
+  padding: 0px;
+}

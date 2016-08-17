@@ -29,6 +29,9 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+.nav > li > a {
+  padding: 5px 15px;
+}
 
 .busca-passagens {
   position: absolute;
@@ -1578,7 +1581,7 @@ code {
 }
 
 .box a:hover {
-  background: #6f1b00;
+  background: #b7986d;
 }
 
 .box a:hover p {
@@ -1651,7 +1654,7 @@ code {
 }
 
 .box-small a:hover {
-  background: #6f1b00 !important;
+  background: #b7986d !important;
 }
 
 .box-small a:hover p {

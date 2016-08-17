@@ -20,14 +20,14 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand center-block" href="#" id="navbar-logo"></a>
+         <a class="navbar-brand center-block" href="<?= get_site_url(); ?>" id="navbar-logo"></a>
        </div>
        <div id="navbar" class="collapse navbar-collapse navpersonal">
          <ul class="nav navbar-nav navbar-styles">
-           <li><a href="#" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false">GRUPO</a></li>
+           <li><a href="<?= get_site_url(); ?>" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false">GRUPO</a></li>
            <li><a href="/pacotes/" class="corp-navbar" role="button" aria-haspopup="true" aria-expanded="false">VIAGENS</a></li>
            <li><a href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false">TEEN</a></li>
-           <li><a href="#" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL</a></li>
+           <li><a href="http://viajefacil.aerotur.com.br/" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false">VIAJE FÁCIL</a></li>
            <li><a href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false">SALINAS</a></li>
          </ul>
        </div><!--/.nav-collapse -->

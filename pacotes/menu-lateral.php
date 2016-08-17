@@ -21,7 +21,7 @@
 
                 <div class="checkbox">
                   <label>
-                    <input class="filtro_pacote" id="allitem" type="checkbox" checked value="">
+                    <input name="evento" class="filtro_pacote" id="allitem" type="checkbox" checked value="">
                     Todos
                   </label>
                 </div>
@@ -35,13 +35,21 @@
                 ?>
                 <div class="checkbox">
                   <label>
-                    <input class="filtro_pacote" id="reveillon" type="checkbox" value="">
+                    <input name="evento" class="filtro_pacote" id="<?= str_replace(' ','', $filtro['tipo_evento']) ?>" type="checkbox" value="">
                     <?= $filtro['tipo_evento']?>
                   </label>
                 </div>
                 <?php }?>
 
                 <p>MOEDA</p>
+
+                <div class="checkbox">
+                  <label>
+                    <input name="moeda" class="filtro_pacote" id="allitem" type="checkbox" checked value="">
+                    Todos
+                  </label>
+                </div>
+
                 <?php
                 $args_post = array('post_type' => 'filtro_moeda', 'posts_per_page'=>400, 'order'=>'ASC');
                 $myposts_post = get_posts( $args_post );
@@ -52,13 +60,21 @@
                 ?>
                 <div class="checkbox">
                   <label>
-                    <input class=""  type="checkbox" value="">
+                    <input name="moeda" class="filtro_pacote" id="<?= str_replace(' ','', $filtro['tipo_moeda']) ?>" type="checkbox" value="">
                     <?= $filtro['tipo_moeda']?>
                   </label>
                 </div>
                 <?php }?>
 
                 <p>PARCELAS A PARTIR DE</p>
+                  
+                  <div class="checkbox">
+                  <label>
+                    <input name="preco" class="filtro_pacote_parcela" id="allitem_parcela" type="checkbox" checked value="">
+                    Todos
+                  </label>
+                </div>
+
                 <?php
                 $args_post = array('post_type' => 'filtro_preco', 'posts_per_page'=>400, 'order'=>'ASC');
                 $myposts_post = get_posts( $args_post );
@@ -69,13 +85,21 @@
                 ?>
                 <div class="checkbox">
                   <label>
-                    <input class=""  type="checkbox" value="">
+                    <input name="preco" class="" id="<?= $filtro['tipo_preco']?>" type="checkbox" value="">
                     <?= $filtro['tipo_preco']?>
                   </label>
                 </div>
                 <?php }?>
 
                 <p>LOCALIDADE</p>
+
+                <div class="checkbox">
+                  <label>
+                    <input name="local" class="filtro_pacote" id="allitem" type="checkbox" checked value="">
+                    Todos
+                  </label>
+                </div>
+
                 <?php
                 $args_post = array('post_type' => 'filtro_localidade', 'posts_per_page'=>400, 'order'=>'ASC');
                 $myposts_post = get_posts( $args_post );
@@ -86,7 +110,7 @@
                 ?>
                 <div class="checkbox">
                   <label>
-                    <input class="filtro_pacote"  type="checkbox" value="">
+                    <input name="local" id="<?= str_replace(' ','', $filtro['tipo_localidade']) ?>" class="filtro_pacote"  type="checkbox" value="">
                     <?= $filtro['tipo_localidade']?>
                   </label>
                 </div>
