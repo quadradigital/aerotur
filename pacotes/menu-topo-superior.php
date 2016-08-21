@@ -25,19 +25,19 @@
         <div id="navbar" class="collapse navbar-collapse navpersonal">
           <ul class="nav navbar-nav navbar-styles">
             <li>
-              <a href="/pacotes/" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span></a>
+              <a target="_parent" href="/pacotes/" class="viagens-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viagens-navbar"><span id="menu-text-viagens">VIAGENS</span></a>
             </li>
             <li>
-              <a href="/corporativo/" class="corp-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span></a>
+              <a target="_parent" href="/corporativo/" class="corp-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="corp-navbar"><span id="menu-text-corp">CORPORATIVO</span></a>
             </li>
             <li>
-              <a href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
+              <a target="_parent" href="http://www.aeroturteen.com.br/" class="teen-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="teen-navbar"><span id="menu-text-teen">TEEN</span></a>        
             </li>
             <li>
-              <a href="http://viajefacil.aerotur.com.br/" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
+              <a target="_parent" href="http://www.viajefacil.aerotur.com.br/" class="viaje-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="viaje-navbar"><span id="menu-text-viaje">VIAJE FÁCIL</span></a>
             </li>
             <li>
-              <a href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>
+              <a target="_parent" href="/salinas/" class="salinas-navbar" role="button" aria-haspopup="true" aria-expanded="false" id="salinas-navbar"><span id="menu-text-salinas">SALINAS</span></a>
             </li>
           </ul>
         </div><!--/.nav-collapse -->

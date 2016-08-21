@@ -10,6 +10,7 @@
     $contato_plantao = get_ativar();
  ?>
  <section style="<?php if($contato_plantao['ativar_contato_plantao'] == false){echo 'display:none;';} ?>" id="contato">
+  <div id="sessao_contato"></div>
    <div id="contato"></div>
    <div class="container-fluid">
      <div class="row">

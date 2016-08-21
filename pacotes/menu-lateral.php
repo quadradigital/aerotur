@@ -81,12 +81,15 @@
                 foreach ( $myposts_post as $post_post ){
                     setup_postdata( $post_post );
                     $id = $post_post->ID;
-                    $filtro = get_filtro($id);
+                    // $filtro = get_filtro($id);
+                    $de = get_field('de',$id);
+                    $ate = get_field('ate',$id);
+                    $titulo = get_the_title($id);
                 ?>
                 <div class="checkbox">
                   <label>
-                    <input name="preco" class="" id="<?= $filtro['tipo_preco']?>" type="checkbox" value="">
-                    <?= $filtro['tipo_preco']?>
+                    <input name="preco" class="filtro_pacote_parcela" ate="<?= $ate ?>" de="<?= $de ?>" type="checkbox" value="">
+                    <?= $titulo ?>
                   </label>
                 </div>
                 <?php }?>

@@ -29,7 +29,11 @@
 
           </iframe>
         </div>
-       
+
+
+
+
+
          <?php
          $args_post = array('post_type' => 'banner_topo', 'posts_per_page'=>400);
          $myposts_post = get_posts( $args_post );
@@ -37,11 +41,40 @@
            setup_postdata( $post_post );
            $id2 = $post_post->ID;
            $banner_topo = get_banner_topo($id2);
+
+           // print_r($banner_topo);
+
+           $moeda = get_field('Moeda',$id2);
+
            if(!empty($banner_topo['banner']['url']&&$banner_topo['local']=='Outras Páginas')){
          ?>
-            <li>
-              <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>">
+
+            <li class="slide_topo_banner" style="background-image:url(<?= $banner_topo['banner']['url']?>);">
+              <!-- <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>"> -->
+            <div class="info_foto_banner">
+              <p class="linha_um"><span class="bnn-titulo"><?= $banner_topo['linha1']?></span></p>
+              <p class="linha_dois"><span class="bnn-lugar"><?= $banner_topo['linha2']?></span></p>
+              <p class="linha_tres"><span class="bnn-apartir">A PARTIR DE <span class="bnn-parcela"><?= $banner_topo['parcela']?></span> DE</span></p>
+              <p class="linha_quatro"><span class="bnn-moeda"><?= $moeda ?></span><span class="bnn-vlr"><?= $banner_topo['valor']?></span><span class="bnn-centavos">,<?= $banner_topo['centavos']?></span></p>
+
+              <button type="button" class="btn_tenho_int btn btn-danger btn-info-banner pull-down"><a  href="#sessao_contato" style="color: #fff; !important; text-decoration: none !important;">TENHO INTERESSE</a></button>
+            </div>
             </li>
+
+
+            <li class="slide_topo_banner" style="background-image:url(<?= $banner_topo['banner']['url']?>);">
+              <!-- <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>"> -->
+            <div class="info_foto_banner">
+              <p class="linha_um"><span class="bnn-titulo"><?= $banner_topo['linha1']?></span></p>
+              <p class="linha_dois"><span class="bnn-lugar"><?= $banner_topo['linha2']?></span></p>
+              <p class="linha_tres"><span class="bnn-apartir">A PARTIR DE <span class="bnn-parcela"><?= $banner_topo['parcela']?></span> DE</span></p>
+              <p class="linha_quatro"><span class="bnn-moeda"><?= $moeda ?></span><span class="bnn-vlr"><?= $banner_topo['valor']?></span><span class="bnn-centavos">,<?= $banner_topo['centavos']?></span></p>
+
+              <button type="button" class="btn_tenho_int btn btn-danger btn-info-banner pull-down"><a href="#sessao_contato" style="color: #fff; !important; text-decoration: none !important;">TENHO INTERESSE</a></button>
+            </div>
+            </li>
+
+
          <?php }
        } ?>
        </ul>

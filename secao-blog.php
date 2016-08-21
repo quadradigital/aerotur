@@ -56,6 +56,7 @@
                  <?php $cont2++;?>
                  <p><a href="<?= $aerotur[$i][$cont2] ?>" style="color: #fff; !important;"><?php $cont2++; echo $aerotur[$i][$cont2]; ?></a></p>
                  <?php $cont2=0; } ?>
+                 <button type="button" class="btn btn-danger btn-posts-red pull-down"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
                </div>
               </div>
               <div class="col-md-6 side-r-correction">
@@ -67,7 +68,7 @@
                   ?>
                  <h5><?= strftime('%d de %B de %Y', strtotime($xml->channel->item[$i]->pubDate))?></h5>
                  <h3><?= $xml->channel->item[$i]->title?></h3>
-                 <p><a href="<?= $xml->channel->item[$i]->link?>" style="color: #fff; !important;"><?php
+                 <p><a class="a-sessao-blog" href="<?= $xml->channel->item[$i]->link?>" style="color: #fff; !important;"><?php
                  $conteudo=$xml->channel->item[$i]->description;
                  if (strlen($conteudo) > 180){
                    $conteudo = substr($conteudo, 0, 180);
@@ -76,6 +77,7 @@
                  echo $conteudo;
                     ?></a></p>
                  <?php } ?>
+                 <button type="button" class="btn btn-success btn-posts-green pull-down"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
                </div>
               </div>
             </div>
@@ -84,12 +86,3 @@
        </div>
      </div>
    </div>
-
-  <div class="container space-down">
-    <div class="col-xs-6">
-      <button type="button" class="btn btn-danger btn-posts-red"><a href="http://aeroturnovo.quadradigital.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
-    </div>
-    <div class="col-xs-6">
-      <button type="button" class="btn btn-success btn-posts-green"><a href="http://www.aeroturteen.com.br/blog/" style="color: #fff; !important; text-decoration: none !important;">+ POSTS</a></button>
-    </div>
-  </div>

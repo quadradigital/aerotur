@@ -7,6 +7,11 @@
  * @since Aeroteen 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
+ $id = $post->ID;
+ $cont = get_post_meta($post->ID,'_cont_temp');
+  if (!add_post_meta($post->ID, '_cont_temp', '1', true ) ) {
+    update_post_meta($post->ID, '_cont_temp', $cont[0]+1);
+  }
 ?>
 
 <!--start  HEADER  -->

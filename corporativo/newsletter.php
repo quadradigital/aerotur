@@ -7,6 +7,7 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
+ $newsletter = get_newletter();
  ?>
  <div class="container-fluid space-down">
  <div class="row">
@@ -17,14 +18,16 @@
          <h2 id="subtitulo-color-inverted">NEWSLETTER</h2>
        </div>
        <div class="col-xs-12 col-md-6 newsletter-form-position">
-         <form class="form-inline">
+         <form action="<?= $newsletter['link_mailchimp'] ?>" method="post" class="form-inline">
            <div class="form-group">
-             <input type="text" class="form-control" id="exampleInputName2" placeholder="Digite seu nome">
+             <input type="text" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Digite seu nome">
            </div>
            <div class="form-group">
-             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Digite seu email">
+             <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Digite seu email">
            </div>
-           <button type="submit" class="btn btn-danger">OK</button>
+           <input class="btn btn-danger" type="submit" value="OK">
+           <!--<button type="submit" class="btn btn-danger">OK</button>-->
+           <h3 class="msg_confi2" style="display:none;">E-mail Cadastrado.</h3>
          </form>
        </div>
      </div>

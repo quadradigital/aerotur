@@ -90,6 +90,29 @@
         });
         </script>
 
+        <script>
+              $('#form_contato_topo').submit(function() {
+                var dados = $('#form_contato_topo').serialize();
+                $.ajax({
+                type: 'POST',
+                dataType: 'html',
+                url: 'http://aeroturnovo.quadradigital.com.br/wp-content/themes/aerotur/envia_pagina_topo.php',
+                async: true,
+                data: dados,
+        /*
+          error: function(enviado) {
+              alert(dados);
+              },
+        */
+          success: function(enviado) {
+              alert("enviado para ed@quadradigital.com.br");
+              }
+
+              });
+                return false;
+              });
+         </script>
+
         </body>
 
         </html>

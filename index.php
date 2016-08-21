@@ -49,7 +49,7 @@
       <!--end NEWSLETTER -->
 
       <!--start RAZÕES -->
-      <?php include('razoes.php') ?>
+      <?php include('corporativo/razoes.php') ?>
       <!--end RAZÕES -->
 
       <!--start CONTATO -->

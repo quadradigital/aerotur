@@ -30,6 +30,140 @@ body {
 /* Not required for template or sticky footer method. */
 
 
+/*
+ * Informações do banner superior
+ */
+
+ .info_foto_banner {
+  width: 275px;
+  height: 176px;
+  position: absolute;
+  background: rgba(0,0,0,.7);
+  z-index: 9999;
+  margin-left: 739px;
+  margin-top: 189px;
+  padding-left: 10px;
+ }
+
+.btn-info-banner {
+  position: relative;
+  bottom: 0;
+  margin-left: -10px;
+  float: left;
+  margin-top: 20px;
+}
+
+.bnn-titulo {
+  font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
+  font-size: 2.5em;
+  color: #FFF;
+}
+
+.bnn-lugar {
+  font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
+  font-size: 2.5em;
+  color: #FFF;
+}
+
+.bnn-apartir {
+  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
+  font-size: 1.2em;
+  color: #FFF;
+}
+
+.bnn-parcela {
+  font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
+  font-size: inherit;
+  color: #FFF;  
+}
+
+.bnn-moeda {
+  font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+  font-size: 1.3em;
+  color: #FFF;
+}
+
+.bnn-vlr {
+  font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+  font-size: 3em;
+  color: #B7986D;
+}
+
+.bnn-centavos {
+  font-family: AileronBlack, Helvetica, Verdana, Sans-Serif;
+  font-size: 1.6em;
+  color: #B7986D;
+  position: absolute;
+}
+
+.linha_dois {
+  margin-top: -25px;
+}
+
+.linha_quatro {
+  margin-top: -15px;
+}
+
+/*
+ * MONTE SUA VIAGEM
+ */
+
+.outer-div:hover .outer-form {
+  width: 377px;
+  height: 320px;
+  background-color: #b7986d;
+  transition: 900ms;
+  margin-top: -320px;
+  z-index: 99999999999;
+  opacity: 1 !important;
+}
+
+.outer-form {
+  padding-top: 20px;
+  z-index: 99999999999;
+  width: 377px;
+  height: 320px;
+  background-color: transparent;
+  margin-top: -320px;
+  transition: 900ms;
+  display: block;
+  position: relative;
+  opacity: 0 !important;
+}
+
+.mont-form-box {
+  display: none !important;
+  background-color: #b7986d;
+  z-index: 99999999999;
+  opacity: 0 !important;
+}
+
+.mont-form-box:hover {
+  display: block;
+  z-index: 99999999999;
+  opacity: 1 !important;
+  transition: 900ms;
+}
+
+.monte-box-form-footer {
+  background-image: url('imgs/rounded-retangle.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: block !important;
+  width: 378px;
+  height: 63px;
+  margin-top: -1px;
+  margin-left: 0px;
+  position: relative;
+  z-index: 0;
+  opacity: 1 !important;
+}
+
+
+.pacote-valor-l{
+  padding-left: 5px;
+}
+
 .promocao-imper {
   width: 545px;
   height: 266px;
@@ -38,13 +172,14 @@ body {
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 14px;
+  background-size: cover;
 }
 
 
 .busca-passagens {
   position: absolute;
   z-index: 999;
-  margin-left: 450px;
+  margin-left: 162px;
   margin-top: 130px;
 }
 
@@ -76,7 +211,20 @@ body {
  .promo-a {
   text-decoration: none !important;
  }
-
+/*
+ .promocao-imper::before{
+    background-color: rgba(10, 10, 20, 0.11) !important;
+    content: " " !important;
+    height: 266px !important;
+    width: 549px !important;
+    position: absolute !important;
+    left: 16px;
+ }
+ 
+  .promocao-imper:hover .promocao-imper::before{
+   background-color: none !important;
+ }
+*/
  .caixa-cinza {
   width: 545px;
   height: 266px;
@@ -395,7 +543,7 @@ PACOTES
 .box-l-promo-imperdivel p {
   font-size: 0.7em;
   font-family: AileronRegular, Helvetica, Verdana, Sans-Serif;
-  margin-right: -4px;
+  margin-right: 0px;
   margin-top: 25px;
   color: #787878;
 }
@@ -1058,7 +1206,7 @@ code {
 
 .monte-sua-viagem {
   padding-top: 15px;
-  padding-right: 90px;
+  padding-right: 0px;
   color: #FFFFFF;
   font-size: 1.6em;
   font-family: AileronHeavy, Helvetica, Verdana, Sans-Serif;
@@ -1323,23 +1471,23 @@ code {
 
 #titulo-color {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: -15px;
   color: #b7986d;
-  font-size: 2.0em;
+  font-size: 2.35em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
 }
 
 #subtitulo-color {
   margin-top: 0px;
   color: #ba232d;
-  font-size: 3.5em;
+  font-size: 6.2em;
   font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
 }
 
 #titulo-color-inverted {
   margin-top: 25px;
   margin-left: 20px;
-  margin-bottom: 0px;
+  margin-bottom: -14px;
   color: #B7986D;
   font-size: 2.0em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
@@ -1350,7 +1498,7 @@ code {
   margin-left: 20px;
   margin-bottom: 0px;
   color: #9B0D1A;
-  font-size: 3.5em;
+  font-size: 4.2em;
   font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
 }
 
@@ -1375,7 +1523,7 @@ code {
 
 #titulo-red {
   margin-top: 18px;
-  margin-bottom: 0px;
+  margin-bottom: -10px;
   color: #CB454E;
   font-size: 2.0em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
@@ -1499,6 +1647,7 @@ code {
 
 .footer-four {
   background-color: #474747;
+  padding-bottom: 20px;
   height: 100% ;
 }
 
@@ -2222,4 +2371,10 @@ code {
 
 .padding_0_pacote{
   padding: 0px;
+}
+
+.slide_topo_banner{
+    background-size: cover;
+    width: 100%;
+    height: 580px;
 }

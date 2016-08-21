@@ -53,7 +53,7 @@
                        <h5 class="promo-title"><?= $pacotes['texto_superior_pacote']?></h5>
                        <h4 class="promo-subtitle"><?= $pacotes['texto_inferior_pacote']?></h4>
                      </div>
-                     <div class="col-xs-5 col-sm-3 col-md-5">
+                     <div class="col-xs-5 col-sm-3 col-md-5 pacote-valor-l">
                        <h5 class="promo-parcelas text-right">A partir de <?= $pacotes['parcelas']?> de</h5>
                        <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento'].$pacotes['valor']?></h4>
                      </div>

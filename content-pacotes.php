@@ -20,11 +20,11 @@
        <!-- end MENU TOPO -->
 
        <!--start BANNER TOPO -->
-       <?php include('pacotes/banner-topo.php') ?>
+       <?php include('banner-topo.php') ?>
        <!--end BANNER TOPO -->
 
        <!--start MONTE SUA VIAGEM -->
-       <?php include('pacotes/monte-sua-viagem.php') ?>
+       <?php include('monte-sua-viagem.php') ?>
        <!--end MONTE SUA VIAGEM -->
 
        <!--start MENU LATERAL -->

@@ -450,6 +450,7 @@ code {
   background-image: url("../../imgs/navviagens-corpo2.png");
   height: 53px;
   width: 153px;
+  padding-left: 25px !important;
   padding-top: 20px !important;
   background-color: transparent !important;
 }
@@ -459,6 +460,7 @@ code {
   background-image: url("../../imgs/navviagens-corpo.png");
   height: 53px;
   width: 153px;
+  padding-left: 20px !important;
   padding-top: 20px !important;
   background-color: transparent !important;
 }
@@ -467,6 +469,7 @@ code {
   color: #2DB672 !important;
   background-image: url("../../imgs/navteen-f.png");
   height: 53px;
+  padding-left: 30px !important;
   width: 153px;
   padding-top: 20px !important;
   background-color: transparent !important;
@@ -487,6 +490,7 @@ code {
   background-image: url("../../imgs/navsalinas-f.png");
   height: 53px;
   width: 153px;
+  padding-left: 25px !important;
   padding-top: 20px !important;
   background-color: transparent !important;
 }
@@ -845,7 +849,7 @@ code {
 }
 
 #hr-phone {
-  margin-top: 28px;
+  margin-top: 40px;
   margin-bottom: 28px;
   border-top: 1px solid #E5E5E5;
   width: auto;
@@ -1150,7 +1154,7 @@ code {
     color: #A5A5A5;
     width: 208px;
     text-align: center;
-    margin: 27px auto;
+    margin: 16px auto;
 }
 
 .div_form_all_b input {
@@ -1174,20 +1178,27 @@ code {
     cursor: pointer;
     margin: 16px auto;
     display: block;
-    padding: 8px 35px;
+    padding: 8px 89px;
 }
+
+
 
 .div_form_all_b button:hover {
    background-color:  #195E85;
 }
 
-
+.corpora_p {
+    margin: -5px !important;
+    font-size: 11px;
+    text-align: left !important;
+    margin-left: 36px !important;
+}
 
 #titulo-color {
   margin-top: 0px;
-  margin-bottom: -7px;
+  margin-bottom: -15px;
   color: #BA976F;
-  font-size: 1.2em;
+  font-size: 2.35em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
   margin-left: 2px;
 }
@@ -1195,16 +1206,16 @@ code {
 #subtitulo-color {
   margin-top: 0px;
   color: #045179;
-  font-size: 3.5em;
+  font-size: 6.2em;
   font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
 }
 
 #titulo-color-inverted {
   margin-top: 25px;
   margin-left: 20px;
-  margin-bottom: 0px;
+  margin-bottom: -14px;
   color: #B7986D;
-  font-size: 2.0em;
+  font-size: 2.35em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
 }
 
@@ -1213,7 +1224,7 @@ code {
   margin-left: 20px;
   margin-bottom: 0px;
   color: #0C93B9;
-  font-size: 3.5em;
+  font-size: 4.2em;
   font-family: BebasNeueBold, Helvetica, Verdana, Sans-Serif;
 }
 .btn.btn-danger{
@@ -1241,7 +1252,7 @@ code {
 
 #titulo-red {
   margin-top: 18px;
-  margin-bottom: 0px;
+  margin-bottom: -10px;
   color: #0E94BA;
   font-size: 2.0em;
   font-family: BebasNeueBook, Helvetica, Verdana, Sans-Serif;
@@ -1366,6 +1377,7 @@ code {
 .footer-four {
   background-color: #474747;
   height: 100% ;
+  padding-bottom: 20px;
 }
 
 #footer-four {
@@ -1656,7 +1668,7 @@ code {
   }
 
   #hr-phone {
-    margin-top: 28px;
+    margin-top: 40px;
     margin-bottom: 28px;
     border-top: 1px solid #E5E5E5;
     width: auto;

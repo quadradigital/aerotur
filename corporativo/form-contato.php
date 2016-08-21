@@ -7,7 +7,8 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
- ?>
+ ?>   
+ <div id="sessao_contato"></div>
  <div class="container-fluid">
    <div class="row">
      <div class="container">

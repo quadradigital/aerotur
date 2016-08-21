@@ -29,8 +29,10 @@
             <div class="div_form_all_b">
                 <p>Sistema de Gestão de Viagens Corporativas</p>
                 <form>
-                    <input name="login" placeholder="Digite seu login">
-                    <input placeholder="Digite sua senha">
+                    <p class="corpora_p">Digite seu login</p>
+                    <input name="login" placeholder="">
+                    <p class="corpora_p">Digite sua senha</p>
+                    <input placeholder="">
                     <button type="submit">ENTRAR</button>
                 </form>
             </div>

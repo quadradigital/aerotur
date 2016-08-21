@@ -1,7 +1,5 @@
 <?php
 /**
- * The Footer template for our theme
- *
  * @package aerotur
  * @subpackage aerotur
  * @since Aerotur 1.0
@@ -10,7 +8,7 @@
 
 add_theme_support( 'post-thumbnails' );
 
-function paginacao($numpages = '', $pagerange = '', $paged='') {
+function paginacao($numpages = '', $pagerange = '', $paged='', $url='') {
 
 	global $paged;
 	global $wp_query;
@@ -29,8 +27,8 @@ function paginacao($numpages = '', $pagerange = '', $paged='') {
   }
 
   $pagination_args = array(
-    'base'            => get_pagenum_link(1) . '%_%',
-    'format'          => 'page/%#%',
+    'base'            => get_site_url() . '%_%',
+    'format'          => $url,
     'total'           => $numpages,
     'current'         => $paged,
     'show_all'        => False,
@@ -60,6 +58,17 @@ function customLoginLogo() {
 	}
 }
 add_action('login_head', 'customLoginLogo');
+
+function get_newletter(){
+	$args_post = array('post_type' => 'newsletter', 'posts_per_page'=>1);
+	$myposts_post = get_posts( $args_post );
+	foreach ( $myposts_post as $post_post ){
+		setup_postdata( $post_post );
+		$id = $post_post->ID;
+		$arr['link_mailchimp'] = get_field('link_mailchimp',$id);
+	}
+	return $arr;
+}
 
 function get_ativar(){
 	$args_post = array('post_type' => 'secoes', 'posts_per_page'=>1);
@@ -231,6 +240,12 @@ function get_monte_sua_viagem($id){
 function get_banner_topo($id){
 	  $arr['banner'] = get_field('banner', $id);
 		$arr['local'] = get_field('local', $id);
+		$arr['linha1'] = get_field('linha1', $id);
+		$arr['linha2'] = get_field('linha2', $id);
+		$arr['parcela'] = get_field('parcela', $id);
+		$arr['moeda'] = get_field('moeda', $id);
+		$arr['valor'] = get_field('valor', $id);
+		$arr['centavos'] = get_field('centavos', $id);
 
   	return $arr;
 }

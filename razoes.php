@@ -26,7 +26,7 @@
   <div class="row">
     <div class="container">
       <div class="col-xs-12 col-sm-12 col-md-12">
-        <ul id="slippry-demo">
+        <ul id="slippry">
           <?php
           $args_post = array('post_type' => 'razoes_aerotur', 'posts_per_page'=>400);
         	$myposts_post = get_posts( $args_post );

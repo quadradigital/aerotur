@@ -10,7 +10,7 @@
     $monte = get_ativar();
  ?>
  <section style="<?php if($monte['ativar_monte'] == false){echo 'display:none;';} ?>" id="monte">
-   <div class="container-fluid space-down">
+   <div class="container-fluid container_testehover space-down">
      <div class="row">
        <div class="container">
          <div class= "col-xs-12 col-md-12 no-padding-right">
@@ -22,7 +22,43 @@
                $id2 = $post_post->ID;
                $monte = get_monte_sua_viagem($id2);
             ?>
-           <span class="pull-right monte-sua-viagem"><?= $monte['texto_botao']?></span>
+            <div class="outer-div">
+              <div class="pull-right outer-form">
+                <div class="col-xs-12 monte-form-box">
+                  <form method="post" id="form_contato_topo">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="inputNome" name="inputNome" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Telefone">
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="inputDe" name="inputDe" placeholder="De">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="inputAte" name="inputAte" placeholder="Até">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="inputCidade" name="inputCidade" placeholder="Cidade">
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">ENVIAR</button>
+                  </form>
+                </div>
+              </div> <!-- /OUTER FORM -->
+              <div class="monte-box-form-footer pull-right">
+                <span class="center-block text-center monte-sua-viagem">Monte sua viagem</span>
+              </div>
+            </div>
+
            <? } ?>
          </div>
        </div>

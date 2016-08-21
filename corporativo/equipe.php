@@ -29,10 +29,15 @@
                <li class="li_slide_equipe">
                  <?php
                  $aux=0;
+                 $aux2=FALSE;
                  $args_post = array('post_type' => 'equipe_corporativo', 'posts_per_page'=>500);
                  $myposts_post = get_posts( $args_post );
                  foreach ( $myposts_post as $post_post ){
-                   $aux+=1;
+                   $aux++;
+                   if($aux2){
+                     echo "<li>";
+                     $aux2=FALSE;
+                   }
                    setup_postdata( $post_post );
                    $id = $post_post->ID;
                    $equipe = get_equipe($id);
@@ -46,9 +51,13 @@
                      </div>
                   <?php
                   if($aux==6){
-                      echo "</li><li>";
+                      echo "</li>";
                       $aux=0;
+                      $aux2=TRUE;
                   }
+                }
+                if(!$aux2){
+                  echo "</li>";
                 }
                ?>
              </ul>

@@ -51,8 +51,8 @@
                          <h4 class="promo-subtitle"><?= $pacotes['texto_inferior_passagens']?></h4>
                        </div>
                        <div class="col-xs-5 col-sm-3 col-md-4">
-                         <h5 class="promo-parcelas text-right"><?= $pacotes['parcelas']?> de</h5>
-                         <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento']?><?= $pacotes['valor']?>,<?= $pacotes['centavos']?><span class="promo-centavos">,<?= $pacotes['centavos']?></span></h4>
+                         <h5 class="promo-parcelas text-right">A partir de <?= $pacotes['parcelas']?> de</h5>
+                         <h4 class="promo-valor text-right"><?= $pacotes['moeda_de_pagamento']?><?= $pacotes['valor']?><span class="promo-centavos">,<?= $pacotes['centavos']?></span></h4>
                        </div>
                          <p class="desc_pacote"><?= $pacotes['resumo']?></p>
                      </div>

@@ -37,9 +37,11 @@
            $banner_topo = get_banner_topo($id2);
            if(!empty($banner_topo['banner']['url']&&$banner_topo['local']=='Outras Páginas')){
          ?>
-            <li>
-              <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>">
+            <li class="slide_topo_banner" style="background-image:url(<?= $banner_topo['banner']['url']?>);">
+              <!-- <img class="img-responsive" src="<?= $banner_topo['banner']['url']?>"> -->
             </li>
+
+            
          <?php }
        } ?>
        </ul>

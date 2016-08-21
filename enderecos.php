@@ -9,6 +9,7 @@
  */
     $enderecos = get_ativar();
  ?>
+ <div id="sessao_lojas"></div>
  <section style="<?php if($enderecos['ativar_enderecos'] == false){echo 'display:none;';} ?>" id="enderecos">
  <div class="container-fluid" id="bg-footer-one">
    <div class="row">

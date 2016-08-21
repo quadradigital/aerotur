@@ -22,14 +22,33 @@
       <div class="container-fluid space-down">
         <div class="container">
           <div class="row">
-            <div class="col-xs-1 col-sm-12 col-md-12">
+            <div class="col-xs-1 col-sm-8 col-md-8">
               <?php
               $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-              $custom_args = array(
-                  'post_type' => 'post',
-                  'posts_per_page' => 2,
-                  'paged' => $paged
-              );
+              if(isset($_GET['tag'])){
+                $custom_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 5,
+                    'tag' => $_GET['tag'],
+                    'paged' => $paged
+                  );
+                $format = "/blog/page/%#%/?tag=".$_GET['tag'];
+              }else if(isset($_GET['categoria'])){
+                $custom_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 5,
+                    'category_name' => $_GET['categoria'],
+                    'paged' => $paged
+                  );
+                $format = "/blog/page/%#%/?categoria=".$_GET['categoria'];
+              }else{
+                $custom_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 5,
+                    'paged' => $paged
+                  );
+                $format = "/blog/page/%#%";
+              }
               $custom_query = new WP_Query( $custom_args );
               if ( $custom_query->have_posts() ) :
                 while ( $custom_query->have_posts() ) : $custom_query->the_post();
@@ -48,8 +67,21 @@
                 <div class="col-xs-12">
                   <p class="meta-tags"><i class="fa fa-user" aria-hidden="true"></i>
                     <span class="meta-titles">Autor: <span class="meta-info-text"><?= get_the_author(); ?></span></span> <i class="fa fa-tag" aria-hidden="true"></i>
-                    <span class="meta-titles">Categorias: <span class="meta-info-text"><?= $categoria[0]->name;?></span></span> <i class="fa fa-tags" aria-hidden="true"></i>
-                    <span class="meta-titles">Tags: <span class="meta-info-text"><?php if ($posttags) { foreach($posttags as $tag) { echo $tag->name . ' '; } }?></span></span></p>
+                    <span class="meta-titles">Categorias: <span class="meta-info-text">
+                      <?php if ($categoria) {
+                        foreach($categoria as $categoria) {
+                          ?><a href="/blog/?categoria=<?php echo $categoria->slug." ";?>"><?php echo $categoria->name." ";?></a>
+                  <?php }
+                      }?>
+                    </span></span>
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <span class="meta-titles">Tags: <span class="meta-info-text">
+                      <?php if ($posttags) {
+                        foreach($posttags as $tag) {
+                          ?><a href="/blog/?tag=<?php echo $tag->slug." ";?>"><?php echo $tag->name." ";?></a>
+                  <?php }
+                      }?>
+                      </span></span></p>
                       <a style="color: #333; !important;" href="<?= get_post_permalink(); ?>"><p class="resumo-post"><?= get_the_excerpt(); ?></p></a>
                     </a>
                   <a href="<?= get_post_permalink(); ?>" class="btn btn-danger pull-right">LEIA MAIS</a>
@@ -57,7 +89,7 @@
               </div>
               <?php
               endwhile;
-              $links = paginacao($custom_query->max_num_pages,"",$paged);
+              $links = paginacao($custom_query->max_num_pages,"",$paged,$format);
               if ($links) {
               ?>
               Página <?= $paged ?> de <?= $custom_query->max_num_pages ?>
@@ -68,6 +100,69 @@
               ?>
               <p><?php _e( 'Sem Posts.' ); ?></p>
               <?php endif; ?>
+            </div>
+            <div class="col-xs-1 col-md-4 sidebar_blog_estilo">
+
+              <div id="sidebar_blog_titulo"><h4>CATEGORIAS</h4></div> <!-- TITULO -->
+
+                <ul class="list-unstyled"> <!-- LOOP DENTRO DO UL -->
+                  <?php
+           				$args = array('child_of' => get_cat_ID('post'), 'hide_empty'=>0, 'orderby' => 'name', 'order' => 'ASC');
+           				$categories = get_categories( $args );
+           				foreach($categories as $category) {
+           			?>
+                  <li class="categoria_estilo"><a href="/blog/?categoria=<?= $category->slug ?>"><?= $category->name;?></a></li>
+            <?php }?>
+                </ul>
+
+              <div id="sidebar_blog_titulo"><h4>MAIS VISTOS</h4></div> <!-- TITULO -->
+
+                <div class="row">
+                  <?php
+                                $args = array( 'post_type' => 'post', 'posts_per_page'=>3, 'meta_key'=>'_cont_temp','orderby' => 'meta_value_num','order'=> 'DESC');
+                                $myposts = get_posts( $args );
+                                foreach ( $myposts as $post ){
+                                    setup_postdata( $post );
+                                    $id = $post->ID;
+                                    $img = wp_get_attachment_image_src( get_post_thumbnail_id($id), array(2000,2000)) ;
+                                    $views = get_post_meta($id,'_cont_temp');
+                  ?>
+
+                  <a href="<?= get_post_permalink();?>">
+                    <div class="col-xs-12">
+                      <div class="lateral-blog-img" style="background-image:url(<?= $img[0] ?>)"></div>  <!-- INSIRA AQUI DENTRO DA IMAGEM -->
+                      <h3 class="l-t-noticia"><?= get_the_title();?></h3>
+                      <p class="l-t-info">Visualizações: <span><?= $views[0] ?></span></p>
+                      <p class="l-t-info-e"><?= get_the_date('j \d\e F \d\e Y'); ?></p>
+                    </div>
+                  </a>
+<?php }?>
+                </div>
+
+              <div id="sidebar_blog_titulo"><h4>TAGS</h4></div> <!-- TITULO -->
+
+                <ul class="list-unstyled"> <!-- LOOP DENTRO DO UL -->
+                  <?php
+                  $custom_args = array(
+                      'post_type' => 'post',
+                      'orderby' => 'name',
+                      'order' => 'DESC',
+                      'posts_per_page' => 5000
+                  );
+                  $custom_query = new WP_Query( $custom_args );
+                  if ( $custom_query->have_posts() ) :
+                    while ( $custom_query->have_posts() ) : $custom_query->the_post();
+                      $posttags = get_the_tags();
+                      if ($posttags) {
+                        foreach($posttags as $tag) {
+           			?>
+                  <li class="categoria_estilo"><a href="/blog/?tag=<?=$tag->slug?>"><?=$tag->name?></a></li>
+              <?php }
+                  }
+                    endwhile;
+                    endif;
+                  ?>
+                </ul>
             </div>
           </div>
         </div>

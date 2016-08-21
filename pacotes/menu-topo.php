@@ -15,11 +15,11 @@
    <div class="container">
      <div class="col-xs-12 col-sm-5 col-md-5 col-md-offset-4 kill-padding-left">
        <ul class="nav nav-pills style-pills-top">
-         <li role="presentation"><a href="#">EMPRESA</a></li>
-         <li role="presentation"><a href="#">PACOTES</a></li>
-         <li role="presentation"><a href="#">BLOG</a></li>
-         <li role="presentation"><a href="#">LOJAS</a></li>
-         <li role="presentation"><a href="#">CONTATO</a></li>
+          <li role="presentation"><a href="http://aeroturnovo.quadradigital.com.br/corporativo/#sessao_empresa" id="btnempresa">EMPRESA</a></li>
+          <!-- <li role="presentation"><a href="http://aeroturnovo.quadradigital.com.br/pacotes/">PACOTES</a></li> -->
+          <li role="presentation"><a href="http://aeroturnovo.quadradigital.com.br/blog/">BLOG</a></li>
+          <li role="presentation"><a href="#sessao_lojas" id="btnlojas">LOJAS</a></li>
+          <li role="presentation"><a href="#sessao_contato" id="btncontato">CONTATO</a></li>
        </ul>
      </div>
     <!--start REDES SOCIAIS TOPO -->

@@ -17,11 +17,12 @@
 		$mail->AddAddress('dev@quadradigital.com.br', 'Aerotur Teste Form Contato');
 		$mail->IsHTML(true);
 		$mail->Subject  = "Aerotur Teste Form Contato";
-		$mail->Body = 'Name: '.$_POST['name'].
-					'<br>Telefone: '.$_POST['telefone'].
-					'<br>E-mail: '.$_POST['email'].
-					'<br>Mensagem: '.$_POST['mensagem'];
-
+		$mail->Body = 'Nome: '.$_POST['inputNome'].
+					'<br>Telefone: '.$_POST['inputTelefone'].
+					'<br>E-mail: '.$_POST['inputEmail'].
+					'<br>De: '.$_POST['inputDe'].
+					'<br>Até: '.$_POST['inputAte'].
+					'<br>Cidade: '.$_POST['inputCidade'];
 		$enviado = $mail->Send();
 		$mail->ClearAllRecipients();
 		$mail->ClearAttachments();
