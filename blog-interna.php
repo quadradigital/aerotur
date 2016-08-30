@@ -24,7 +24,15 @@
           <div class="row">
             <div class="col-xs-1 col-sm-8 col-md-8">
               <?php
-              $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+              //$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+              $paged = get_query_var('paged');
+
+
+              if($paged == 0){
+                $paged = 1;
+              }
+
               if(isset($_GET['tag'])){
                 $custom_args = array(
                     'post_type' => 'post',
@@ -44,7 +52,7 @@
               }else{
                 $custom_args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 5,
+                    'posts_per_page' => 2,
                     'paged' => $paged
                   );
                 $format = "/blog/page/%#%";
@@ -89,12 +97,40 @@
               </div>
               <?php
               endwhile;
-              $links = paginacao($custom_query->max_num_pages,"",$paged,$format);
-              if ($links) {
               ?>
-              Página <?= $paged ?> de <?= $custom_query->max_num_pages ?>
-                  <?= $links ?>
-              <?php }
+              <ul class="pagination">
+                <?php
+                  if($paged!=1){
+                ?>
+                 <li>
+                    <a tyle="<?php if($paged == 1){ echo 'pointer-events: none; cursor: default;'; } ?>" href="<?= get_site_url(); ?>/blog/page/<?= $paged-1 ?>" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <?php
+                }
+
+                for ($i=1; $i <= $custom_query->max_num_pages; $i++) {
+                  if($paged!=$i){
+                ?>
+                          <li><a href="<?= get_site_url(); ?>/blog/page/<?= $i?>"><?= $i ?></a></li>
+                  <?php
+                  }
+                }
+
+                  if($paged!=$custom_query->max_num_pages){
+
+                 ?>
+                 <li>
+                    <a style="<?php if($paged == $custom_query->max_num_pages){ echo 'pointer-events: none; cursor: default;'; } ?>" href="<?= get_site_url(); ?>/blog/page/<?= $paged+1 ?>" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <?php
+              }
+              ?>
+              </ul>
+<?php
               wp_reset_postdata();
               else:
               ?>

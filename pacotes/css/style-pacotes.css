@@ -2378,3 +2378,19 @@ code {
     width: 100%;
     height: 580px;
 }
+
+
+
+#sidebar_blog_titulo {
+  width: 100%;
+  height: 40px;
+  background-color: #474747;
+  color: #FFF;
+  margin-bottom: 25px;
+}
+
+#sidebar_blog_titulo h4 {
+  margin-left: 20px;
+  padding-top: 12px;
+  font-size: 1.2em;
+}

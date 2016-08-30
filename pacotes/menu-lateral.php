@@ -16,8 +16,7 @@
               <div class="col-xs-12 col-md-3">
                 <span>Filtros:</span>
 
-
-                <p>TIPO</p>
+                <div id="sidebar_blog_titulo"><h4>TIPO</h4></div>
 
                 <div class="checkbox">
                   <label>
@@ -41,7 +40,7 @@
                 </div>
                 <?php }?>
 
-                <p>MOEDA</p>
+                <div id="sidebar_blog_titulo"><h4>MOEDA</h4></div>
 
                 <div class="checkbox">
                   <label>
@@ -66,7 +65,7 @@
                 </div>
                 <?php }?>
 
-                <p>PARCELAS A PARTIR DE</p>
+                <div id="sidebar_blog_titulo"><h4>PARCELAS A PARTIR DE</h4></div>
                   
                   <div class="checkbox">
                   <label>
@@ -94,7 +93,7 @@
                 </div>
                 <?php }?>
 
-                <p>LOCALIDADE</p>
+                <div id="sidebar_blog_titulo"><h4>LOCALIDADE</h4></div>
 
                 <div class="checkbox">
                   <label>

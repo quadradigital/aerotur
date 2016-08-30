@@ -19,23 +19,23 @@
            $redessociais = get_redes_sociais($id2);
            if(!empty($redessociais['facebook'])){
            ?>
-           <li><a href="<?= $redessociais['facebook']?>" target="_blank"><img src="<?php bloginfo('template_url') ?>/corporativo/imgs/facebook.png" height="31" width="31" class="center-block"></a></li>
-           <?php }
-           if(!empty($redessociais['instagram'])){
-           ?>
-           <li><a href="<?= $redessociais['instagram']?>" target="_blank"><img src="<?php bloginfo('template_url') ?>/corporativo/imgs/instagram.png" height="31" width="31" class="center-block"></a></li>
-           <?php }
-           if(!empty($redessociais['twitter'])){
-           ?>
-           <li><a href="<?= $redessociais['twitter']?>" target="_blank"><img src="<?php bloginfo('template_url') ?>/corporativo/imgs/twitter.png" height="31" width="31" class="center-block"></a></li>
-           <?php }
-           if(!empty($redessociais['vimeo'])){
-           ?>
-           <li><a href="<?= $redessociais['vimeo']?>" target="_blank"><img src="<?php bloginfo('template_url') ?>/corporativo/imgs/vimeo.png" height="31" width="31" class="center-block"></a></li>
-           <?php }
-           if(!empty($redessociais['flickr'])){
-           ?>
-           <li><a href="<?= $redessociais['flickr']?>" target="_blank"><img src="<?php bloginfo('template_url') ?>/corporativo/imgs/flickr.png" height="31" width="31" class="center-block"></a></li>
+           <li><span class="box-small-c"><a href="<?= $redessociais['facebook']?>" target="_blank"><i class="fa fa-facebook fa-small" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Facebook"></i></a></span></li>
+          <?php }
+          if(!empty($redessociais['instagram'])){
+          ?>
+          <li><span class="box-small-c"><a href="<?= $redessociais['instagram']?>" target="_blank"><i class="fa fa-instagram fa-small" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Instagram"></i></a></span></li>
+          <?php }
+          if(!empty($redessociais['twitter'])){
+          ?>
+          <li><span class="box-small-c"><a href="<?= $redessociais['twitter']?>" target="_blank"><i class="fa fa-twitter fa-small" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a></span></li>
+          <?php }
+          if(!empty($redessociais['vimeo'])){
+          ?>
+          <li><span class="box-small-c"><a href="<?= $redessociais['vimeo']?>" target="_blank"><i class="fa fa-vimeo fa-small" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Vimeo"></i></a></span></li>
+          <?php }
+          if(!empty($redessociais['flickr'])){
+          ?>
+          <li><span class="box-small-c"><a href="<?= $redessociais['flickr']?>" target="_blank"><i class="fa fa-flickr fa-small" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Flickr"></i></a></span></li>
            <?php }
          }?>
    </ul>

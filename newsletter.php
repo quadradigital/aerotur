@@ -7,7 +7,7 @@
  * @since Aerotur 1.0
  * Author: Pedro Schneider [ Web Design / pedro@woones.com ], Ramon Carvalho [ Front-end / ramon@oakz.org ], Ed Moura [ Back-end / http://thechacal.github.io/ ]
  */
-    $newsletter = get_newletter();
+
  ?>
    <div class="container-fluid space-down">
      <div class="row">
@@ -18,7 +18,16 @@
               <h2 id="subtitulo-color-inverted">NEWSLETTER</h2>
             </div>
             <div class="col-xs-12 col-md-6 newsletter-form-position">
-              <form action="<?= $newsletter['link_mailchimp'] ?>" method="post" class="form-inline">
+              <?php
+              $args_post = array('post_type' => 'newsletter');
+              $myposts_post = get_posts( $args_post );
+              foreach ( $myposts_post as $post_post ){
+                setup_postdata( $post_post );
+                $id = $post_post->ID;
+                 $newsletter = get_newletter($id);
+                 ?>
+              <form action="<?php if($newsletter['tipo_de_newsletter']=='Outros') echo $newsletter['link_mailchimp']; ?>" method="post" class="form-inline">
+<?php }?>
                 <div class="form-group">
                   <input type="text" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Digite seu nome">
                 </div>

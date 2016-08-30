@@ -69,7 +69,7 @@
 
      <link href="<?php bloginfo('template_url') ?>/assets/css/fonts.css" rel="stylesheet">
 
-<link href="<?php bloginfo('template_url') ?>/assets/css/fonteawesome.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url') ?>/assets/css/fonteawesome.css" rel="stylesheet">
      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
      <script src="<?php bloginfo('template_url') ?>/assets/js/ie-emulation-modes-warning.js"></script>

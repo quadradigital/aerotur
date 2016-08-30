@@ -8,43 +8,6 @@
 
 add_theme_support( 'post-thumbnails' );
 
-function paginacao($numpages = '', $pagerange = '', $paged='', $url='') {
-
-	global $paged;
-	global $wp_query;
-
-  if (empty($pagerange)) {
-    $pagerange = 2;
-  }
-  if (empty($paged)) {
-    $paged = 1;
-  }
-  if ($numpages == '') {
-    $numpages = $wp_query->max_num_pages;
-    if(!$numpages) {
-        $numpages = 1;
-    }
-  }
-
-  $pagination_args = array(
-    'base'            => get_site_url() . '%_%',
-    'format'          => $url,
-    'total'           => $numpages,
-    'current'         => $paged,
-    'show_all'        => False,
-    'end_size'        => 1,
-    'mid_size'        => $pagerange,
-    'prev_next'       => True,
-    'prev_text'       => __('&laquo;'),
-    'next_text'       => __('&raquo;'),
-    'type'            => 'plain',
-    'add_args'        => false,
-    'add_fragment'    => ''
-  );
-
-  return paginate_links($pagination_args);
-}
-
 function customLoginLogo() {
 	$args_post = array('post_type' => 'logo_painel_admin', 'posts_per_page'=>1);
 	$myposts_post = get_posts( $args_post );
@@ -59,14 +22,10 @@ function customLoginLogo() {
 }
 add_action('login_head', 'customLoginLogo');
 
-function get_newletter(){
-	$args_post = array('post_type' => 'newsletter', 'posts_per_page'=>1);
-	$myposts_post = get_posts( $args_post );
-	foreach ( $myposts_post as $post_post ){
-		setup_postdata( $post_post );
-		$id = $post_post->ID;
+function get_newletter($id){
 		$arr['link_mailchimp'] = get_field('link_mailchimp',$id);
-	}
+		$arr['tipo_de_newsletter'] = get_field('tipo_de_newsletter',$id);
+
 	return $arr;
 }
 

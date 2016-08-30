@@ -1903,3 +1903,6 @@ code {
 .mensagem_height_contato{
     height: 107px !important;
 }
+
+
+.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}

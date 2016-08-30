@@ -61,7 +61,7 @@
         <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/ie10-viewport-bug-workaround.js"></script>
 
         <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/slippry.js"></script>
-        <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/scripts.js"></script>
+        <script src="<?php bloginfo('template_url') ?>/assets/js/scripts.js"></script>
         <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/r.js"></script>
 
         <script src="<?php bloginfo('template_url') ?>/corporativo/assets/js/jquery.bxslider.min.js"></script>
